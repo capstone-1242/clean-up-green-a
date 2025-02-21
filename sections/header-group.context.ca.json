@@ -1,0 +1,16 @@
+
+ {
+  "parent": "header-group.json",
+  "context": {
+    "market": "ca"
+  },
+  "sections": {
+    "header": {
+      "settings": {
+        "color_scheme": "scheme-3af10807-605a-4c0f-b593-5295a25d6b93",
+        "logo_position": "top-left"
+      },
+      "blocks": {}
+    }
+  }
+}
