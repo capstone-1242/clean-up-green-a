@@ -1,3 +1,17 @@
+body {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+p, a, button, input, textarea {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+
+
 :root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;
