@@ -12,8 +12,18 @@
     {%- endif -%}
 
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
-      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+            {% comment %}
+            what i have done is -- added google font.
+            {% endcomment %}
+
     {%- endunless -%}
+    {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+  <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+{%- endunless -%}
+
 
     <title>
       {{ page_title }}
@@ -302,6 +312,7 @@
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
+    {% render 'simran' %}
 
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
@@ -310,7 +321,25 @@
     {% sections 'header-group' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {{ content_for_layout }}
+                                   {% comment %}
+                             {{ content_for_layout }}
+                                  {% endcomment %}
+{% if template == 'index' %}
+  <!-- Show the Hero Banner only on the homepage -->
+  {% include 'hero-banner' %}
+  {% include 'perfect-for' %}
+  {% include 'works-on' %}
+   {% section 'testimonials' %}
+
+
+
+
+
+{% endif %}
+{% if template == 'page.industrial-solutions' %}
+  {% include 'industrial-solutions' %}
+{% endif %}
+
     </main>
 
     {% sections 'footer-group' %}
