@@ -326,9 +326,9 @@
                                   {% endcomment %}
 {% if template == 'index' %}
   <!-- Show the Hero Banner only on the homepage -->
-  {% include 'hero-banner' %}
-  {% include 'perfect-for' %}
-  {% include 'works-on' %}
+  {% section 'hero-banner' %}
+  {%  section 'perfect-for' %}
+  {% section 'works-on' %}
    {% section 'testimonials' %}
 
 
@@ -337,7 +337,7 @@
 
 {% endif %}
 {% if template == 'page.industrial-solutions' %}
-  {% include 'industrial-solutions' %}
+  {% render 'industrial-solutions' %}
 {% endif %}
 
     </main>
