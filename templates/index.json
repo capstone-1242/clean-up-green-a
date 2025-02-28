@@ -73,7 +73,7 @@
     }
   },
   "order": [
-    "image_banner",
+    // "image_banner", - we dont want this here.
     "perfect-for",
     "works-on",
   ]
