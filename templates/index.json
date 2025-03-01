@@ -1,7 +1,7 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "hero-banner": {
+      "type": "hero-banner",
       "blocks": {
         "heading": {
           "type": "heading",
@@ -70,11 +70,15 @@
         "mobile_content_alignment": "center",
         "color_scheme": "scheme-1"
       }
+    },
+    "testimonials": {
+      "type": "testimonials"
     }
   },
   "order": [
-    // "image_banner", - we dont want this here.
+    "hero-banner",
     "perfect-for",
     "works-on",
+    "testimonials"
   ]
 }
