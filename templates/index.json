@@ -4,7 +4,7 @@
       "type": "hero-banner",
       "blocks": {
         "heading": {
-          "type": "heading",
+          "type": "text",
           "settings": {
             "heading": "Browse our latest products",
             "heading_size": "h0"
