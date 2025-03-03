@@ -71,13 +71,14 @@
       <a href="{{ section.settings.button_link }}" style="background-color: #1c2324; color: #9db497; font-weight: bold; text-decoration: none; padding: 15px 30px; border-radius: 25px; display: inline-flex; align-items: center; justify-content: center; margin-top: 20px;">
         {{ section.settings.button_text }}
         {% if section.settings.button_icon != blank %}
-          <img src="{{ section.settings.button_icon | img_url: '20x20' }}" alt="Icon" style="width: 20px; height: 20px; margin-left: 8px;">
+          <img src="{{ section.settings.button_icon | file_url: '20x20' }}" alt="Icon" style="width: 20px; height: 20px; margin-left: 8px;">
         {% endif %}
       </a>
     </div>
     <div class="hero-right" style="flex: 1;">
       {% if section.settings.hero_image != blank %}
-        <img src="{{ section.settings.hero_image | img_url: 'master' }}" alt="Hero Banner Image" style="width: 100%; height: auto; object-fit: cover;">
+        <!-- Use file_url for the specific image you want -->
+        <img src="{{ 'industry-hero-image.jpg' | file_url }}" alt="Hero Banner Image" style="width: 100%; height: auto; object-fit: cover;">
       {% endif %}
     </div>
   </div>

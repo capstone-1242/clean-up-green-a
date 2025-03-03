@@ -1,9 +1,39 @@
-{% layout 'theme' %}
+<!-- Hero Section -->
+<section class="hero-section">
+  <h1>{{ 'how-to-use' }}</h1>
+</section>
 
-<div class="how-to-use-page" style="padding: 20px; max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif;">
-  <h1 style="font-size: 2.5em; margin-bottom: 20px; text-align: center;">How to Use Our Products</h1>
+<!-- Content Section -->
+<section class="content-section">
+  <h2>How to Use</h2>
+  <p>We know oil spills and stains can be an annoying problem around the house. We offer a complete line of household solutions for stains and spills of all sizes. Great for residential homes, acreages, ranches and farms. </p>
+</section>
 
-  <p style="font-size: 1.2em; line-height: 1.8;">
-    Welcome to our guide! Here’s everything you need to know to get the best out of our products. Follow these easy steps and tips to maximize your experience.
-  </p>
-</div>
+<!-- Cards Section -->
+<section class="content-section">
+  <div class="card-container">
+      <!-- Card 1 -->
+      <div class="card">
+          <img src="{{ 'image-1.jpg' | file_url }}" alt="image 1">
+          <h3>Clean a Pooling Oil Spill</h3>
+          <p>Clean-Up Green Oil Spill Powder is used for all types of pooling oil spills. It works on hard surfaces such as asphalt, concrete or compacted soil, and also on water. </p>
+          <a href="#"></a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+          <img src="{{ 'image-2.jpg' | file_url }}" alt="image 2">
+          <h3>Clean an Oil Stain</h3>
+          <p>Clean-Up Green Oil Two Step Liquid is used for stains on all surfaces including rock, concrete, asphalt, and wood. It also helps eliminate oil smells.</p>
+          <a href="#"></a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+          <img src="{{ 'image-3.jpg' | file_url }}" alt="image 3">
+          <h3>Clean an Oil Spill in Soil</h3>
+          <p>Spills in soils can be quite problematic as they create toxic conditions and can be very tricky to clean with conventional mng oil from gravel, sand, and soil.</p>
+          <a href="#">Learn More</a>
+      </div>
+  </div>
+</section>

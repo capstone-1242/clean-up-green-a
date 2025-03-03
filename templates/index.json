@@ -70,11 +70,20 @@
         "mobile_content_alignment": "center",
         "color_scheme": "scheme-1"
       }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "settings": {
+        "heading": "What Our Customers Say",
+        "color_scheme": "scheme-2"
+      }
     }
   },
   "order": [
-    "hero-banner", 
+    "hero-banner",
     "perfect-for",
     "works-on",
+    "testimonials"
+
   ]
 }
