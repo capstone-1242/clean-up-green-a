@@ -18,7 +18,7 @@
 
 Here is an image showing how to push changes to your live Shopify theme:
 
-![Theme Push](theme-push.png)
+![screenshot](screenshot.png)
 
 Follow the steps below to push your changes:
 1. Use `shopify theme push --store your-store-url` to push changes.
