@@ -12,13 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
@@ -51,7 +44,6 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "description",
         "price",
@@ -99,7 +91,7 @@
         "column_btPAH8": {
           "type": "column",
           "settings": {
-            "title": "Product Details",
+            "title": "Description",
             "text": "<p>Clean-Up Green Oil Spill Liquid is a unique absorbent offering solutions to remediate and clean-up hydrocarbon spills from hard surfaces and soils. Through a patented micro-encapsulation process, hazardous characteristics like ignitability, corrosively, reactivity and toxicity are quickly eliminated. This two-part solution rapidly desorbs, emulsifies and binds spilled materials into a solid, inert, stable residue. Oil is pulled from solid surfaces and associated fumes and odors are eliminated on contact. OS Liquid dries into a non-hazardous silica (sand) that effectively locks the hazardous components into a stable, environmentally safe residue.</p>",
             "link_label": "",
             "link": ""
@@ -130,7 +122,7 @@
         "column_bd6UEg"
       ],
       "settings": {
-        "title": "Multicolumn",
+        "title": "Product Details",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",

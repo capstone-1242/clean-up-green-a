@@ -12,13 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
@@ -51,7 +44,6 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "description",
         "price",
@@ -81,7 +73,7 @@
         "column_hXUxXT": {
           "type": "column",
           "settings": {
-            "title": "Product Details",
+            "title": "Description",
             "text": "<p>Clean-Up Green Powder is a patented super-absorbent polymer. Its unique attributes can reduce the time and costs associated with remediation and the clean-up of a wide variety of fuel, oil and other hydrocarbon spills on water or on hard surfaces. OS Powder provides a fast, simple, safe and affordable means for not just absorption, but microencapsulation of oil. Spills are permanently encapsulated on contact and the end product floats indefinitely and exceeds EPA leaching guidelines for non-hazardous disposal. OS Powder will reduce the risk liability and costs.</p>",
             "link_label": "",
             "link": ""
@@ -112,7 +104,7 @@
         "column_xeWiQA"
       ],
       "settings": {
-        "title": "Multicolumn",
+        "title": "Product Details",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",

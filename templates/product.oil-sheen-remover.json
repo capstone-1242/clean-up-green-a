@@ -12,13 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
@@ -51,7 +44,6 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "description",
         "price",
@@ -92,7 +84,7 @@
         "column_CdRccb"
       ],
       "settings": {
-        "title": "Features",
+        "title": "Product Details",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
