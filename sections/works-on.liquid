@@ -1,47 +1,96 @@
-<div class="works-on-section" style="background-color: white; padding: 40px 0; display: flex; justify-content: center;">
-  <div style="max-width: 1200px; width: 100%; text-align: center;">
+<div class="works-on-section">
+  <div class="works-on-container">
     <!-- Heading -->
-    <h2 class="text-center" style="color: black; font-size: 4rem; font-weight: bold; margin-bottom: 40px;">Works on</h2>
-  
+    <h2 class="works-on-heading">Works on</h2>
+
     <!-- Images and Text Section -->
-    <div class="image-grid grid grid--1-col grid--md-2-col grid--lg-3-col grid--xl-6-col" style="display: grid; gap: 10px; justify-items: center; justify-content: center; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));">
-      
+    <div class="image-grid">
       <!-- Image 1 -->
-      <div class="image-item" style="background-color: #f1f1f1; padding: 10px; border-radius: 7px; text-align: center;">
-        <img src="{{ 'rock.png' | file_url }}" alt="Rock" width="300" height="200" style="width: 100%; height: auto; border-radius: 7px;">
-        <h3 style="font-size: 2rem; color: black; margin-top: 1px; background-color: #f1f1f1; padding: 1px; border-radius: 5px;">Rrrock</h3>
+      <div class="image-item">
+        <img src="{{ 'rock.webp' | file_url }}" alt="Rock" width="300" height="200">
+        <h3>Rock</h3>
       </div>
 
       <!-- Image 2 -->
-      <div class="image-item" style="background-color: #f1f1f1; padding: 10px; border-radius: 7px; text-align: center;">
-        <img src="{{ 'conncrete.png' | file_url }}" alt="Concrete" width="300" height="200" style="width: 100%; height: auto; border-radius: 7px;">
-        <h3 style="font-size: 2rem; color: black; margin-top: 1px; background-color: #f1f1f1; padding: 1px; border-radius: 5px;">Concrete</h3>
+      <div class="image-item">
+        <img src="{{ 'concrete.webp' | file_url }}" alt="Concrete" width="300" height="200">
+        <h3>Concrete</h3>
       </div>
 
       <!-- Image 3 -->
-      <div class="image-item" style="background-color: #f1f1f1; padding: 10px; border-radius: 7px; text-align: center;">
-        <img src="{{ 'soil.png' | file_url }}" alt="Soil" width="300" height="200" style="width: 100%; height: auto; border-radius: 7px;">
-        <h3 style="font-size: 2rem; color: black; margin-top: 1px; background-color: #f1f1f1; padding: 1px; border-radius: 5px;">Soil</h3>
+      <div class="image-item">
+        <img src="{{ 'soil.webp' | file_url }}" alt="Soil" width="300" height="200">
+        <h3>Soil</h3>
       </div>
 
       <!-- Image 4 -->
-      <div class="image-item" style="background-color: #f1f1f1; padding: 10px; border-radius: 7px; text-align: center;">
-        <img src="{{ 'sand.png' | file_url }}" alt="Sand" width="300" height="200" style="width: 100%; height: auto; border-radius: 7px;">
-        <h3 style="font-size: 2rem; color: black; margin-top: 1px; background-color: #f1f1f1; padding: 1px; border-radius: 5px;">Sand</h3>
+      <div class="image-item">
+        <img src="{{ 'sand.webp' | file_url }}" alt="Sand" width="300" height="200">
+        <h3>Sand</h3>
       </div>
 
       <!-- Image 5 -->
-      <div class="image-item" style="background-color: #f1f1f1; padding: 10px; border-radius: 7px; text-align: center;">
-        <img src="{{ 'wood.png' | file_url }}" alt="Wood" width="300" height="200" style="width: 100%; height: auto; border-radius: 7px;">
-        <h3 style="font-size: 2rem; color: black; margin-top: 1px; background-color: #f1f1f1; padding: 1px; border-radius: 5px;">Wood</h3>
+      <div class="image-item">
+        <img src="{{ 'wood.webp' | file_url }}" alt="Wood" width="300" height="200">
+        <h3>Wood</h3>
       </div>
 
       <!-- Image 6 -->
-      <div class="image-item" style="background-color: #f1f1f1; padding: 10px; border-radius: 7px; text-align: center;">
-        <img src="{{ 'water.png' | file_url }}" alt="Water" width="300" height="200" style="width: 100%; height: auto; border-radius: 7px;">
-        <h3 style="font-size: 2rem; color: black; margin-top: 1px; background-color: #f1f1f1; padding: 1px; border-radius: 5px;">Water</h3>
+      <div class="image-item">
+        <img src="{{ 'water.webp' | file_url }}" alt="Water" width="300" height="200">
+        <h3>Water</h3>
       </div>
-
     </div>
   </div>
 </div>
+<style>
+  .works-on-section {
+    background-color: white;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .works-on-container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .works-on-heading {
+    color: black;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+
+  .image-grid {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .image-item {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 7px;
+    text-align: center;
+  }
+
+  .image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+  }
+
+  .image-item h3 {
+    font-size: 2rem;
+    color: black;
+    margin-top: 1px;
+    background-color: #f1f1f1;
+    padding: 1px;
+    border-radius: 5px;
+  }
+</style>
