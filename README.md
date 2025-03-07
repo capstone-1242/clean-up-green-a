@@ -21,7 +21,7 @@ Here is an image showing how to push changes to your live Shopify theme:
 ![screenshot](screenshot.png)
 
 Follow the steps below to push your changes:
-1. Use `shopify theme push --store your-store-url` to push changes.
+1. Use `shopify theme push --store cleanup-green` to push changes.
 2. Select the LIVE > DAWN theme to update the live store.
 
 
