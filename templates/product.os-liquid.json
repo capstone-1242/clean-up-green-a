@@ -1,0 +1,155 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "description",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "multicolumn_P93VRA": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_btPAH8": {
+          "type": "column",
+          "settings": {
+            "title": "Product Details",
+            "text": "<p>Clean-Up Green Oil Spill Liquid is a unique absorbent offering solutions to remediate and clean-up hydrocarbon spills from hard surfaces and soils. Through a patented micro-encapsulation process, hazardous characteristics like ignitability, corrosively, reactivity and toxicity are quickly eliminated. This two-part solution rapidly desorbs, emulsifies and binds spilled materials into a solid, inert, stable residue. Oil is pulled from solid surfaces and associated fumes and odors are eliminated on contact. OS Liquid dries into a non-hazardous silica (sand) that effectively locks the hazardous components into a stable, environmentally safe residue.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8TNLNw": {
+          "type": "column",
+          "settings": {
+            "title": "Features",
+            "text": "<ul><li>Cleans up old and new stains, oil odours, and small spills</li><li>Simple 2 step liquid solution.</li><li>Apply step 1, then apply step 2</li><li>Clean-up Green liquid turns into a silica powder when dry</li><li>Safe to leave in place or sweep up and discard in your garbage bin.</li><li>Reacts on contact</li><li>Removes hazardous spill properties instantly</li><li>Eliminated odor and ignitability</li><li>Absorbs oil from hard surfaces and soil</li><li>Leaves surfaces safe for nature and wildlife</li><li>Dries into an environmentally safe and stable silica</li><li>Exceeds EPA leaching guidelines for non-hazardous disposal</li>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bd6UEg": {
+          "type": "column",
+          "settings": {
+            "title": "Works On",
+            "text": "<ul><li>Heating Oil</li><li>Gasoline</li><li>Kerosene</li><li>Power Steering Fluids</li><li>Jet Fuel</li><li>Hydraulic Fluids</li><li>Motor Oil</li><li>Diesel</li></ul>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_btPAH8",
+        "column_8TNLNw",
+        "column_bd6UEg"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "How To Use",
+        "button_link": "shopify://pages/how-to-use",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "multicolumn_P93VRA"
+  ]
+}
