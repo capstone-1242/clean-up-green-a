@@ -9,7 +9,28 @@
   "market": [],
   "order": [],
   "page": [],
-  "product": [],
+  "product": [
+    {
+      "key": "color-pattern",
+      "namespace": "shopify",
+      "name": "Color",
+      "description": "Defines the primary color or pattern, such as blue or striped",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "dispenser-type",
+      "namespace": "shopify",
+      "name": "Dispenser type",
+      "description": "Specifies the format for dispensing the product, typically in health and beauty; e.g. stick, jar",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    }
+  ],
   "variant": [],
   "shop": []
 }
