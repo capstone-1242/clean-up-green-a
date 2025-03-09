@@ -3595,3 +3595,61 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+/* adding new css for Navigation */
+/* for css, i think we are gonna have to use sass, but for now i am adding it here... */
+
+/* Dropdown Menu */
+.header__submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  min-width: 150px;
+  padding: 5px 0;
+}
+
+/* Show dropdown on hover */
+.menu-item:hover .header__submenu {
+  display: block;
+}
+
+/* Prevent content underneath from overlapping */
+.header__inline-menu {
+  position: relative;
+  z-index: 1;
+}
+
+/* SVG Icon Styling */
+.menu-item svg {
+  width: 10px; 
+  height: 10px;
+  margin-left: 5px;
+  transition: transform 0.2s, fill 0.2s;
+  fill: #b0b0b0;
+}
+
+/* Rotate icon on hover */
+.menu-item:hover svg {
+  transform: rotate(180deg);
+  fill: #ffffff; 
+}
+
+/* Adjusting link padding and alignment */
+.menu-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+/* Optional: Style for active or hovered menu items */
+.menu-item:hover .main-link,
+.menu-item .main-link:focus {
+    text-decoration: underline;
+  text-decoration-color: green;
+}
+
+
+

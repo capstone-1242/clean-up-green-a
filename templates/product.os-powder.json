@@ -1,0 +1,147 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "description",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "multicolumn_KKmUBP": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_hXUxXT": {
+          "type": "column",
+          "settings": {
+            "title": "Description",
+            "text": "<p>Clean-Up Green Powder is a patented super-absorbent polymer. Its unique attributes can reduce the time and costs associated with remediation and the clean-up of a wide variety of fuel, oil and other hydrocarbon spills on water or on hard surfaces. OS Powder provides a fast, simple, safe and affordable means for not just absorption, but microencapsulation of oil. Spills are permanently encapsulated on contact and the end product floats indefinitely and exceeds EPA leaching guidelines for non-hazardous disposal. OS Powder will reduce the risk liability and costs.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_C4iKAF": {
+          "type": "column",
+          "settings": {
+            "title": "Features",
+            "text": "<ul><li>Easy to use powder. Simply apply to spill and let it do the work.</li><li>Will only absorb what it needs. Any excess powder can be reused.</li><li>Does not absorb water.</li><li>Environmentally safe complete encapsulation.</li><li>Does not leave oily residue.</li><li>Instant absorption on contact.</li><li>FDA listed non-toxic.</li><li>Absorbed powder bonds together into floating mats.</li><li>Float indefinitely for easy retrieval.</li><li>Will not adhere to shorelines or other materials.</li><li>Hydrocarbons are contained permanently.</li><li>Exceeds EPA leaching guidelines for non-hazardous disposal.</li><li>Can be recycled or used as a bulk energy source.</li></ul>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xeWiQA": {
+          "type": "column",
+          "settings": {
+            "title": "Cleans Up",
+            "text": "<ul><li>Crude Oil</li><li>Heating Oil</li><li>Gasoline</li><li>Kerosene</li><li>Power Steering Fluids</li><li>Jet Fuel</li><li>Hydraulic Fluids</li><li>Motor Oil</li><li>Diesel</li></ul>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_hXUxXT",
+        "column_C4iKAF",
+        "column_xeWiQA"
+      ],
+      "settings": {
+        "title": "Product Details",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "How To Use",
+        "button_link": "shopify://pages/how-to-use",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multicolumn_KKmUBP",
+    "related-products"
+  ]
+}
