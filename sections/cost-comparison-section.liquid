@@ -1,0 +1,30 @@
+<section class="cost-comparison">
+  <h2>{{ section.settings.title }}</h2>
+  <p>Below is a cost comparison of an actual 900L diesel spill in gravel and the clean-up costs associated with it. This spill happened in the summer of 2020 in Alberta.</p>
+
+  <dl class="comparison">
+    <div class="comparison-item">
+      <dt>Traditional Remediation</dt>
+      <dd>TOTAL Cost: $21,097.00</dd>
+    </div>
+    <div class="comparison-item">
+      <dt>Clean-Up Green Remediation</dt>
+      <dd>TOTAL Cost with Clean-Up Green: $9,800</dd>
+      <dd class="note">*Estimated cost savings using Clean-Up Green liquid solution and powder for a comparable spill. Estimated 52% cost reduction.*</dd>
+    </div>
+  </dl>
+</section>
+
+{% schema %}
+{
+  "name": "Cost Comparison Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Save Time & Liquid"
+    }
+  ]
+}
+{% endschema %}
