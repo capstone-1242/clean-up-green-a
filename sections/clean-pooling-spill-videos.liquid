@@ -1,6 +1,8 @@
-{% comment %} {% schema %}
+{% schema %}
 {
     "name": "Video Section",
+    "tag": "section",
+    "class": "video-section",
     "settings": [
         {
             "type": "text",
@@ -9,9 +11,13 @@
             "default": "Cleaning Up Diesel From Hard Surface"
         },
         {
-            "type": "url",
+            "type": "video_url",
             "id": "video_url_1",
-            "label": "YouTube Video URL",
+            "label": "YouTube / Vimeo Video URL",
+            "accept": [
+              "youtube",
+              "vimeo"
+            ]
         },
         {
             "type": "text",
@@ -20,9 +26,13 @@
             "default": "Video 2 Heading"
         },
         {
-            "type": "url",
+            "type": "video_url",
             "id": "video_url_2",
-            "label": "YouTube Video 2 URL",
+            "label": "YouTube / Vimeo URL",
+            "accept": [
+              "youtube",
+              "vimeo"
+            ]
         }
         ],
         "presets": [
@@ -35,89 +45,21 @@
 
 {% endschema %}
 
-<div class="video-section">
-    {% if section.settings.video_url_1 %}
-      {% if section.settings.video_title_1 %}
-        <h2 class="video-title">{{ section.settings.video_title_1 }}</h2>
-      {% endif %}
+<section class="video-section">
       <div class="video-container">
+        <h2 class="video-title">{{ section.settings.video_title_1 }}</h2>
         <iframe width="560" height="315" src="https://www.youtube.com/watch?v=mPrdrc5xsFs&list=TLGGHEIy5Uhtzq4wODAzMjAyNQ&t=94s{{ section.settings.video_url_1 | split: 'v=' | last }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-    {% endif %}
     
-    {% if section.settings.video_url_2 %}
-      {% if section.settings.video_title_2 %}
-        <h2 class="video-title">{{ section.settings.video_title_2 }}</h2>
-      {% endif %}
       <div class="video-container">
+        <h2 class="video-title">{{ section.settings.video_title_2 }}</h2>
         <iframe width="550" height="330" src="https://www.youtube.com/watch?v=mPrdrc5xsFs&list=TLGGHEIy5Uhtzq4wODAzMjAyNQ&t=94s{{ section.settings.video_url_2 | split: 'v=' | last }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-    {% endif %}
 
-  </div> {% endcomment %}
+  </section> 
 
 
 {% comment %} <iframe frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" src="pending" title="Cleaning Up Diesel From Hard Surface"></iframe> {% endcomment %}
 
 {% comment %} <iframe frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" src="https://www.youtube.com/watch?v=mPrdrc5xsFs&list=TLGGHEIy5Uhtzq4wODAzMjAyNQ&t=94s" title="Removing Diesel on Water"></iframe> {% endcomment %}
 
-{% comment %} {% style %}
-  .video-section {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-  }
-
-  .video-container {
-      width: 48%;
-      max-width: 600px;
-  }
-
-  @media (max-width: 768px) {
-      .video-container {
-          width: 100%;
-      }
-  }
-{% endstyle %}
-
-<section id="{{ section.id }}">
-    <div class="page-width">
-        <div class="video-section">
-            {% if section.settings.video_url_1 %}
-                <div class="video-container">
-                    {{ section.settings.video_url_1 | video_tag: autoplay: true, loop: false, muted: true, controls: true }}
-                </div>
-            {% endif %}
-            
-            {% if section.settings.video_url_2 %}
-                <div class="video-container">
-                    {{ section.settings.video_url_2 | video_tag: autoplay: true, loop: false, muted: true, controls: true }}
-                </div>
-            {% endif %}
-        </div>
-    </div>
-</section>
-
-{% schema %}
-  {
-    "name": "Two Videos",
-    "settings": [
-      {
-        "type": "text",
-        "id": "video_url_1",
-        "label": "Video 1 Embed"
-      },
-      {
-        "type": "text",
-        "id": "video_url_2",
-        "label": "Video 2 Embed"
-      }
-    ],
-    "presets": [
-      {
-        "name": "Two Videos"
-      }
-    ]
-  }
-{% endschema %} {% endcomment %}
