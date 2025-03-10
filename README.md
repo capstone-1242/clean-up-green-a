@@ -30,7 +30,14 @@ Follow the steps below to push your changes:
 - **Use Upload images**: To use images uploaded to the files , you can reference them using the {{ file_url }} filter.
 - ---> <img src="{{ 'example-image.jpg' | file_url }}" alt="Example Image">
 
-
+## link css
+    you have to call your stylesheet in theme.liquid, in order to make it work.
+    go to your theme.liquid and do ctrl+F , search for "stylesheet",and after that 
+    paste your css link..
+     for example- 
+    {{ 'section-cost-comparison.css' | asset_url | stylesheet_tag }}
+   
+--
 ## Rendering Sections in Shopify Liquid vs JSON
 
 ### 1. **Rendering Sections in Liquid Files**

@@ -59,26 +59,21 @@
 }
 {% endschema %}
 
-<section class="hero-banner" style="background-color: {{ section.settings.background_color }}; padding: 0;">
-  <div class="container" style="display: flex; justify-content: space-between; align-items: center; background-color: #9db497; border-radius: 15px; overflow: hidden;">
-    <div class="hero-left" style="flex: 1; color: {{ section.settings.text_color }}; padding: 40px; background-color: #9db497; border-radius: 15px;">
-      <h1 style="background-color: #1c2324; font-size: 5rem; font-weight: bold; color: #9db497; padding: 20px; border-radius: 8px;">
-        {{ section.settings.heading }}
-      </h1>
-      <p style="background-color: #ffffff; font-size: 1.2rem; padding: 20px; border-radius: 8px; color: #333;">
-        {{ section.settings.description }}
-      </p>
-      <a href="{{ section.settings.button_link }}" style="background-color: #1c2324; color: #9db497; font-weight: bold; text-decoration: none; padding: 15px 30px; border-radius: 25px; display: inline-flex; align-items: center; justify-content: center; margin-top: 20px;">
+<section class="hero-banner">
+  <div class="container">
+    <div class="hero-left">
+      <h1>{{ section.settings.heading }}</h1>
+      <p>{{ section.settings.description }}</p>
+      <a href="{{ section.settings.button_link }}" class="hero-button">
         {{ section.settings.button_text }}
         {% if section.settings.button_icon != blank %}
-          <img src="{{ section.settings.button_icon | file_url: '20x20' }}" alt="Icon" style="width: 20px; height: 20px; margin-left: 8px;">
+          <img src="{{ section.settings.button_icon | file_url }}" alt="Icon" class="button-icon">
         {% endif %}
       </a>
     </div>
-    <div class="hero-right" style="flex: 1;">
+    <div class="hero-right">
       {% if section.settings.hero_image != blank %}
-        <!-- Use file_url for the specific image you want -->
-        <img src="{{ 'industry-hero-image.jpg' | file_url }}" alt="Hero Banner Image" style="width: 100%; height: auto; object-fit: cover;">
+        <img src="{{ section.settings.hero_image | file_url }}" alt="Hero Banner Image" class="hero-image">
       {% endif %}
     </div>
   </div>
