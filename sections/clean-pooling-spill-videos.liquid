@@ -1,0 +1,65 @@
+{% schema %}
+{
+    "name": "Video Section",
+    "tag": "section",
+    "class": "video-section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "video_title_1",
+            "label": "Video 1 Title",
+            "default": "Cleaning Up Diesel From Hard Surface"
+        },
+        {
+            "type": "video_url",
+            "id": "video_url_1",
+            "label": "YouTube / Vimeo Video URL",
+            "accept": [
+              "youtube",
+              "vimeo"
+            ]
+        },
+        {
+            "type": "text",
+            "id": "video_title_2",
+            "label": "Video 2 Title",
+            "default": "Video 2 Heading"
+        },
+        {
+            "type": "video_url",
+            "id": "video_url_2",
+            "label": "YouTube / Vimeo URL",
+            "accept": [
+              "youtube",
+              "vimeo"
+            ]
+        }
+        ],
+        "presets": [
+        {
+            "name": "Default",
+            "category": "Custom"
+        }
+    ]
+  }
+
+{% endschema %}
+
+<section class="video-section">
+      <div class="video-container">
+        <h2 class="video-title">{{ section.settings.video_title_1 }}</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=mPrdrc5xsFs&list=TLGGHEIy5Uhtzq4wODAzMjAyNQ&t=94s{{ section.settings.video_url_1 | split: 'v=' | last }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    
+      <div class="video-container">
+        <h2 class="video-title">{{ section.settings.video_title_2 }}</h2>
+        <iframe width="550" height="330" src="https://www.youtube.com/watch?v=mPrdrc5xsFs&list=TLGGHEIy5Uhtzq4wODAzMjAyNQ&t=94s{{ section.settings.video_url_2 | split: 'v=' | last }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+  </section> 
+
+
+{% comment %} <iframe frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" src="pending" title="Cleaning Up Diesel From Hard Surface"></iframe> {% endcomment %}
+
+{% comment %} <iframe frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" src="https://www.youtube.com/watch?v=mPrdrc5xsFs&list=TLGGHEIy5Uhtzq4wODAzMjAyNQ&t=94s" title="Removing Diesel on Water"></iframe> {% endcomment %}
+
