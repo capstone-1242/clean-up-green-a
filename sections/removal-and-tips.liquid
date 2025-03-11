@@ -1,0 +1,83 @@
+<section class="removal-section">
+  <h4>{{ section.settings.removal_heading }}</h4>
+  <ul>
+    <li>{{ section.settings.removal_list_1 }}</li>
+    <li>{{ section.settings.removal_list_2 }}</li>
+    <li>{{ section.settings.removal_list_3 }}</li>
+    <li>{{ section.settings.removal_list_4 }}</li>
+  </ul>
+</section>
+
+<section class="quick-tips-section">
+  <h6>{{ section.settings.quick_tips_heading }}</h6>
+  <div class="quick-tips-images">
+    {% if section.settings.image_1 != blank %}
+      <img src="{{ section.settings.image_1 | file_url }}" alt="Removal Step 1">
+    {% endif %}
+    {% if section.settings.image_2 != blank %}
+      <img src="{{ section.settings.image_2 | file_url }}" alt="Removal Step 2">
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Removal & Quick Tips",
+  "settings": [
+    {
+      "type": "text",
+      "id": "removal_heading",
+      "label": "Removal Heading",
+      "default": "Removal"
+    },
+    {
+      "type": "textarea",
+      "id": "removal_list_1",
+      "label": "List Item 1",
+      "default": "Quickly Turns oil into a non-hazardous silica for safe disposal."
+    },
+    {
+      "type": "textarea",
+      "id": "removal_list_2",
+      "label": "List Item 2",
+      "default": "Environmentally safe - Permanent, non toxic encapsulation."
+    },
+    {
+      "type": "textarea",
+      "id": "removal_list_3",
+      "label": "List Item 3",
+      "default": "Will absorb 10X its weight."
+    },
+    {
+      "type": "textarea",
+      "id": "removal_list_4",
+      "label": "List Item 4",
+      "default": "Powder will only use what it needs to absorb and encapsulate hydrocarbons."
+    },
+    {
+      "type": "text",
+      "id": "quick_tips_heading",
+      "label": "Quick Tips Heading",
+      "default": "Quick Tips"
+    },
+    {
+      "type": "text",
+      "id": "image_1",
+      "label": "Image 1 Filename",
+      "default": "removal-step-1.webp"
+    },
+    {
+      "type": "text",
+      "id": "image_2",
+      "label": "Image 2 Filename",
+      "default": "removal-step-2.webp"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Removal & Quick Tips"
+    }
+  ]
+}
+{% endschema %}
+

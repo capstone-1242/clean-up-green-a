@@ -1,0 +1,40 @@
+<section class="about-section">
+
+
+
+  <p>{{ section.settings.about_description1 }}</p>
+
+  <p>{{ section.settings.about_description2 }}</p>
+
+
+</section>
+
+{% comment %} <link rel="stylesheet" href="{{ 'tclp.css' | asset_url }}"> {% endcomment %}
+
+{% schema %}
+{
+  "name": "About Section",
+  "settings": [
+  
+    {
+      "id": "about_description1",
+      "type": "textarea",
+      "label": "About Description 1",
+      "default": "Clean-Up Green offers the ground breaking patented Oil Solutions product technology to the Canadian market. This technology redefines how oil spills and stains are cleaned up. With its original designed purpose for remediating the atmosphere from chemical warfare agents, it soon became apparent that this new technology could work equally well on all types of oils. Clean-Up Green offers this technology to you in the form of a powder, for cleaning up standing oil or oil on water, as well as a liquid version for cleaning up stains, small spills, or oil in soil. Contact us today to discover the right solution for you."
+    },
+    {
+      "id": "about_description2",
+      "type": "textarea",
+      "label": "About Description 2",
+      "default": "Clean-Up Green offers the ground breaking patented Oil Solutions product technology to the Canadian market. This technology redefines how oil spills and stains are cleaned up. With its original designed purpose for remediating the atmosphere from chemical warfare agents, it soon became apparent that this new technology could work equally well on all types of oils. Clean-Up Green offers this technology to you in the form of a powder, for cleaning up standing oil or oil on water, as well as a liquid version for cleaning up stains, small spills, or oil in soil. Contact us today to discover the right solution for you."
+    }
+ 
+
+  ],
+  "presets": [
+    {
+      "name": "About Section"
+    }
+  ]
+}
+{% endschema %}
