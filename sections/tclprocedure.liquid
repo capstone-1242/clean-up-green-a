@@ -2,7 +2,7 @@
   <h2>The Toxicity Characteristic Leaching Procedure (TCLP)</h2>
 
   <div>
-    <img src="{{ section.settings.footprint-bg | file_url }}" alt="TCLP Image side">
+    <img src="{{ section.settings.footprint-hero-image | file_url }}" alt="TCLP Image side" />
   </div>
 
   <p>{{ section.settings.tclp_description }}</p>
@@ -21,9 +21,10 @@
   "name": "TCLP Section",
   "settings": [
     {
-      "id": "footprint-bg",
-      "type": "image_picker",
-      "label": "TCLP Image"
+      "id": "footprint-hero-image",
+      "type": "text",
+      "label": "TCLP Image Filename",
+      "default": "footprint-bg.webp"
     },
     {
       "id": "tclp_description",
@@ -45,7 +46,7 @@
     },
     {
       "id": "tclp_button_link",
-      "type": "url",
+      "type": "text",
       "label": "Button Link",
       "default": "https://www.epa.gov/hw-sw846/sw-846-test-method-1311-toxicity-characteristic-leaching-procedure"
     }

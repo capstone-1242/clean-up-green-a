@@ -1,0 +1,83 @@
+<div class="application-tips-section">
+  <h4>{{ section.settings.how_to_apply_heading }}</h4>
+  <ol>
+    <li>{{ section.settings.step_1 }}</li>
+    <li>{{ section.settings.step_2 }}</li>
+    <li>{{ section.settings.step_3 }}</li>
+  </ol>
+
+  <div class="quick-tip-section">
+    <h6>{{ section.settings.quick_tip_heading }}</h6>
+    <p>{{ section.settings.quick_tip_text }}</p>
+    <div class="quick-tip-images">
+      {% if section.settings.image_1 != blank %}
+        <img src="{{ section.settings.image_1 | file_url }}" alt="Application Step 1">
+      {% endif %}
+      {% if section.settings.image_2 != blank %}
+        <img src="{{ section.settings.image_2 | file_url }}" alt="Application Step 2">
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Application & Tips",
+  "settings": [
+    {
+      "id": "how_to_apply_heading",
+      "type": "text",
+      "label": "How to Apply Heading",
+      "default": "How to Apply"
+    },
+    {
+      "id": "step_1",
+      "type": "text",
+      "label": "Step 1",
+      "default": "Spread powder over a spill on water or a hard surface until excess white polymer remains on the surface."
+    },
+    {
+      "id": "step_2",
+      "type": "text",
+      "label": "Step 2",
+      "default": "Apply by hand or use a hand spreader, blower or other conventional methods for spreading out the powder."
+    },
+    {
+      "id": "step_3",
+      "type": "text",
+      "label": "Step 3",
+      "default": "You will notice the powder start to work upon contact."
+    },
+    {
+      "id": "quick_tip_heading",
+      "type": "text",
+      "label": "Quick Tip Heading",
+      "default": "Quick Tip"
+    },
+    {
+      "id": "quick_tip_text",
+      "type": "textarea",
+      "label": "Quick Tip Text",
+      "default": "Add your quick tip text here."
+    },
+    {
+      "id": "image_1",
+      "type": "text",
+      "label": "Image 1 Filename",
+      "default": "application-step-1.webp"
+    },
+    {
+      "id": "image_2",
+      "type": "text",
+      "label": "Image 2 Filename",
+      "default": "application-step-2.webp"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Application & Tips"
+    }
+  ]
+}
+{% endschema %}
+
