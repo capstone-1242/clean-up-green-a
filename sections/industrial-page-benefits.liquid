@@ -1,0 +1,128 @@
+<section class="benefits-section">
+  <div class="benefits-content">
+    <h2>{{ section.settings.benefits_heading }}</h2>
+    <p>{{ section.settings.benefits_description }}</p>
+
+    <div class="benefits-lists">
+      <div class="benefits-list">
+        <ul>
+          <li>{{ section.settings.list1_item1 }}</li>
+          <li>{{ section.settings.list1_item2 }}</li>
+          <li>{{ section.settings.list1_item3 }}</li>
+          <li>{{ section.settings.list1_item4 }}</li>
+          <li>{{ section.settings.list1_item5 }}</li>
+        </ul>
+      </div>
+
+      <div class="benefits-list">
+        <ul>
+          <li>{{ section.settings.list2_item1 }}</li>
+          <li>{{ section.settings.list2_item2 }}</li>
+          <li>{{ section.settings.list2_item3 }}</li>
+          <li>{{ section.settings.list2_item4 }}</li>
+          <li>{{ section.settings.list2_item5 }}</li>
+          <li>{{ section.settings.list2_item6 }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Benefits Section",
+  "settings": [
+    {
+      "id": "benefits_heading",
+      "type": "text",
+      "label": "Benefits Heading",
+      "default": "Who can benefit from Clean-Up Green?"
+    },
+    {
+      "id": "benefits_description",
+      "type": "textarea",
+      "label": "Benefits Description",
+      "default": "Clean-Up Green oil solutions are ideal for emergency spills of any size. They are also convenient to have on hand as part of your organization’s risk management and quick response."
+    },
+    {
+      "type": "header",
+      "content": "List 1"
+    },
+    {
+      "id": "list1_item1",
+      "type": "text",
+      "label": "List 1 Item 1",
+      "default": "Oil & Gas"
+    },
+    {
+      "id": "list1_item2",
+      "type": "text",
+      "label": "List 1 Item 2",
+      "default": "Fire Departments"
+    },
+    {
+      "id": "list1_item3",
+      "type": "text",
+      "label": "List 1 Item 3",
+      "default": "Municipalities"
+    },
+    {
+      "id": "list1_item4",
+      "type": "text",
+      "label": "List 1 Item 4",
+      "default": "Airports & Aviation"
+    },
+    {
+      "id": "list1_item5",
+      "type": "text",
+      "label": "List 1 Item 5",
+      "default": "Railroad Maintenance"
+    },
+    {
+      "type": "header",
+      "content": "List 2"
+    },
+    {
+      "id": "list2_item1",
+      "type": "text",
+      "label": "List 2 Item 1",
+      "default": "Gas Stations"
+    },
+    {
+      "id": "list2_item2",
+      "type": "text",
+      "label": "List 2 Item 2",
+      "default": "Emergency Response"
+    },
+    {
+      "id": "list2_item3",
+      "type": "text",
+      "label": "List 2 Item 3",
+      "default": "Environmental Cleanup teams"
+    },
+    {
+      "id": "list2_item4",
+      "type": "text",
+      "label": "List 2 Item 4",
+      "default": "Petroleum Transport"
+    },
+    {
+      "id": "list2_item5",
+      "type": "text",
+      "label": "List 2 Item 5",
+      "default": "Marinas"
+    },
+    {
+      "id": "list2_item6",
+      "type": "text",
+      "label": "List 2 Item 6",
+      "default": "Commercial Fishing"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Benefits Section"
+    }
+  ]
+}
+{% endschema %}

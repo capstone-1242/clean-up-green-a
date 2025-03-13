@@ -1,0 +1,152 @@
+<section class="about-section">
+  <div class="remediation-comparison">
+    <h2>{{ section.settings.comparison_heading }}</h2>
+
+    <div class="traditional-remediation">
+      <h3>{{ section.settings.traditional_heading }}</h3>
+      <ul>
+        <li><strong>{{ section.settings.traditional_item1_title }}</strong> {{ section.settings.traditional_item1_description }}</li>
+        <li><strong>{{ section.settings.traditional_item2_title }}</strong> {{ section.settings.traditional_item2_description }}</li>
+        <li><strong>{{ section.settings.traditional_item3_title }}</strong> {{ section.settings.traditional_item3_description }}</li>
+        <li><strong>{{ section.settings.traditional_item4_title }}</strong> {{ section.settings.traditional_item4_description }}</li>
+      </ul>
+    </div>
+
+    <div class="green-remediation">
+      <h3>{{ section.settings.green_heading }}</h3>
+      <ul>
+        <li><strong>{{ section.settings.green_item1_title }}</strong> {{ section.settings.green_item1_description }}</li>
+        <li><strong>{{ section.settings.green_item2_title }}</strong> {{ section.settings.green_item2_description }}</li>
+        <li><strong>{{ section.settings.green_item3_title }}</strong> {{ section.settings.green_item3_description }}</li>
+        <li><strong>{{ section.settings.green_item4_title }}</strong> {{ section.settings.green_item4_description }}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Remediation Comparison",
+  "settings": [
+    {
+      "id": "comparison_heading",
+      "type": "text",
+      "label": "Comparison Heading",
+      "default": "How do you clean up a spill quickly and effectively?"
+    },
+    {
+      "id": "traditional_heading",
+      "type": "text",
+      "label": "Traditional Remediation Heading",
+      "default": "Traditional Remediation"
+    },
+    {
+      "id": "traditional_item1_title",
+      "type": "text",
+      "label": "Traditional Item 1 Title",
+      "default": "Sorbent Materials:"
+    },
+    {
+      "id": "traditional_item1_description",
+      "type": "text",
+      "label": "Traditional Item 1 Description",
+      "default": "Only soaks up the mess but does not encapsulate the hydrocarbons."
+    },
+    {
+      "id": "traditional_item2_title",
+      "type": "text",
+      "label": "Traditional Item 2 Title",
+      "default": "Not Safe For Landfill Disposal:"
+    },
+    {
+      "id": "traditional_item2_description",
+      "type": "text",
+      "label": "Traditional Item 2 Description",
+      "default": "Most waste is toxic and must still be disposed of using a Hydrovac and cleaning facility."
+    },
+    {
+      "id": "traditional_item3_title",
+      "type": "text",
+      "label": "Traditional Item 3 Title",
+      "default": "Expensive Disposals:"
+    },
+    {
+      "id": "traditional_item3_description",
+      "type": "text",
+      "label": "Traditional Item 3 Description",
+      "default": "Must be disposed of in an approved remediation facility. Costs up to $800 per 55-gal drum."
+    },
+    {
+      "id": "traditional_item4_title",
+      "type": "text",
+      "label": "Traditional Item 4 Title",
+      "default": "Costs Time:"
+    },
+    {
+      "id": "traditional_item4_description",
+      "type": "text",
+      "label": "Traditional Item 4 Description",
+      "default": "Cleanup time, including arranging transport to a remediation facility, is time-consuming."
+    },
+    {
+      "id": "green_heading",
+      "type": "text",
+      "label": "Clean-Up Green Remediation Heading",
+      "default": "Clean-Up Green Remediation"
+    },
+    {
+      "id": "green_item1_title",
+      "type": "text",
+      "label": "Green Item 1 Title",
+      "default": "Instant Encapsulation:"
+    },
+    {
+      "id": "green_item1_description",
+      "type": "text",
+      "label": "Green Item 1 Description",
+      "default": "Permanently encapsulates the hydrocarbons. Will not leach over time."
+    },
+    {
+      "id": "green_item2_title",
+      "type": "text",
+      "label": "Green Item 2 Title",
+      "default": "DSL Listed Landfill Safe:"
+    },
+    {
+      "id": "green_item2_description",
+      "type": "text",
+      "label": "Green Item 2 Description",
+      "default": "No Hydrovac needed! Safe for landfill disposal in both Canada and the US."
+    },
+    {
+      "id": "green_item3_title",
+      "type": "text",
+      "label": "Green Item 3 Title",
+      "default": "Avoided Costs:"
+    },
+    {
+      "id": "green_item3_description",
+      "type": "text",
+      "label": "Green Item 3 Description",
+      "default": "Avoid up to $800 per 55-gal drum in disposal fees."
+    },
+    {
+      "id": "green_item4_title",
+      "type": "text",
+      "label": "Green Item 4 Title",
+      "default": "Save Time:"
+    },
+    {
+      "id": "green_item4_description",
+      "type": "text",
+      "label": "Green Item 4 Description",
+      "default": "Save on clean-up time. Easy to use and easy to dispose of."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Remediation Comparison"
+    }
+  ]
+}
+{% endschema %}
