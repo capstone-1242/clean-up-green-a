@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch; 
-  background: #9bd866;
+  /* background: #9bd866; */
 }
 
 .image-with-text__media-item,
