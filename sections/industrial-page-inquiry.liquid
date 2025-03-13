@@ -1,0 +1,59 @@
+<section class="inquire-section">
+  <div class="inquire-content">
+    <h3>{{ section.settings.heading }}</h3>
+    <p>{{ section.settings.phone1 }}</p>
+    <p>{{ section.settings.phone2 }}</p>
+
+    <p>{{ section.settings.inquiry_text }}</p>
+    <a href="{{ section.settings.contact_link }}">{{ section.settings.contact_link_text }}</a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Inquire Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Inquire with our authorized dealers:"
+    },
+    {
+      "type": "text",
+      "id": "phone1",
+      "label": "Phone Number 1",
+      "default": "(780) 849-1201"
+    },
+    {
+      "type": "text",
+      "id": "phone2",
+      "label": "Phone Number 2",
+      "default": "(780) 968-0722"
+    },
+    {
+      "type": "textarea",
+      "id": "inquiry_text",
+      "label": "Inquiry Text",
+      "default": "For additional product inquiries and questions, please get in touch with us below."
+    },
+    {
+      "type": "text",
+      "id": "contact_link",
+      "label": "Contact Link",
+      "default": "/contact"
+    },
+    {
+      "type": "text",
+      "id": "contact_link_text",
+      "label": "Contact Link Text",
+      "default": "Contact Us"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Inquire Section"
+    }
+  ]
+}
+{% endschema %}
