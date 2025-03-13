@@ -1,64 +1,84 @@
-# clean-up-green-a - Fantastic Five (Alec, Audrey, Liam, Madison,and Simran)
+# Clean-Up Green - Fantastic Five 
+Members = Alec, Audrey, Liam, Madison, and Simran
 
-# Shopify Theme Development Instructions
+## Shopify Theme Development Instructions
 
 ### Store Information
 - **Store Name**: Cleanup Green  
-- **Store URL**: [https://cleanup-green.myshopify.com/](https://cleanup-green.myshopify.com/)
-- **Password**: maiwul
+- **Store URL**: [https://cleanup-green.myshopify.com/](https://cleanup-green.myshopify.com/)  
+- **Password**: maiwul  
 
-## useful commands
- 1. shopify theme dev -e development
-  >> use this command to work in local environment(shopify.theme.toml file is required to use this)
-  2. shopify theme dev  (alternative, if first doesn't work)
-   ## Use the following command to push your theme changes to the main website:
-      shopify theme push --store cleanup-green
+## Useful Commands
 
-## Theme Push Process
+### Local Development
+To work in a local environment, use:
+```sh
+shopify theme dev -e development
+```
+(*Ensure `shopify.theme.toml` is configured correctly*)  
 
-Here is an image showing how to push changes to your live Shopify theme:
+If the above command doesn't work, try:
+```sh
+shopify theme dev
+```
 
+### Pushing Theme Changes
+To push your theme changes to the main website, use:
+```sh
+shopify theme push --store cleanup-green
+```
+
+### Theme Push Process
+Follow these steps to push your changes to the live Shopify theme:
+1. Use the command:
+   ```sh
+   shopify theme push --store cleanup-green
+   ```
+2. Select **LIVE > DAWN** theme to update the live store.
+
+Here is an example image showing the process:
 ![screenshot](screenshot.png)
 
-Follow the steps below to push your changes:
-1. Use `shopify theme push --store cleanup-green` to push changes.
-2. Select the LIVE > DAWN theme to update the live store.
+---
+## Image Handling in Shopify
 
+### **Uploading Images**
+- Do **not** upload images into the `assets` folder.
+- Instead, upload them to **Content > Files** on the main website.
 
-### What's New:
-- **Upload images**: Do not upload images into the assets folder, instead upload them to `contents > files` on the main website
-- **Use Upload images**: To use images uploaded to the files , you can reference them using the {{ file_url }} filter.
-- ---> <img src="{{ 'example-image.jpg' | file_url }}" alt="Example Image">
+### **Using Uploaded Images**
+Once an image is uploaded to **Files**, reference it in your theme using the `file_url` filter:
+```liquid
+<img src="{{ 'example-image.jpg' | file_url }}" alt="Example Image">
+```
 
-## link css
-    you have to call your stylesheet in theme.liquid, in order to make it work.
-    go to your theme.liquid and do ctrl+F , search for "stylesheet",and after that 
-    paste your css link..
-     for example- 
-    {{ 'section-cost-comparison.css' | asset_url | stylesheet_tag }}
-   
---
+---
+## Linking CSS in Shopify
+To apply custom styles, you must link your CSS in `theme.liquid`:
+1. Open `theme.liquid`
+2. Press `Ctrl + F` and search for "stylesheet"
+3. Add your CSS link below existing stylesheets:
+   ```liquid
+   {{ 'section-cost-comparison.css' | asset_url | stylesheet_tag }}
+   ```
+
+---
 ## Rendering Sections in Shopify Liquid vs JSON
 
-### 1. **Rendering Sections in Liquid Files**
+### **1. Rendering Sections in Liquid Files**
+In Shopify, sections are rendered within Liquid templates using the `{% section %}` tag:
 
-In Shopify, sections are rendered within Liquid templates using the `section` tag. This allows you to dynamically include and display content sections defined in your theme.
-
-# Example in Liquid:
-
-If you have a section called `hero-banner.liquid` in your `sections` directory, you can render it in a Liquid template like this:
-
+#### Example in Liquid:
+If you have a section called `hero-banner.liquid` in the `sections` directory, include it in a template like this:
 ```liquid
-{% section 'hero-banner' %} 
+{% section 'hero-banner' %}
+```
 
-# 2. Rendering Sections in JSON Files
-Sections can also be referenced in Shopify's JSON templates, which are used in Shopify's Online Store 2.0. JSON files are used for creating theme layouts, and sections are defined in the sections array.
+### **2. Rendering Sections in JSON Files**
+Shopify's Online Store 2.0 uses JSON templates for layout definitions, where sections are defined within the `sections` array.
 
-Example in JSON:
-In the index.json file, sections are referenced like this:
-
-json
-Copy code
+#### Example in JSON (index.json):
+```json
 {
   "sections": {
     "hero-banner": {
@@ -70,10 +90,22 @@ Copy code
   },
   "order": ["hero-banner"]
 }
+```
 
-### Summary:
-- **Liquid Rendering**: Sections are rendered using `{% section 'section-name' %}`.
-- **JSON Rendering**: Sections are defined in the JSON file with the `sections` key, and the `order` key controls the sequence of sections.
-- **Difference**: Liquid renders the section immediately in the template, while JSON defines the sections and their layout order for Online Store 2.0 templates.
+### **Summary**
+- **Liquid Rendering**: Uses `{% section 'section-name' %}` to directly render sections within a template.
+- **JSON Rendering**: Sections are defined in the JSON file with the `sections` key, and the `order` key controls their layout sequence.
+- **Key Difference**: Liquid renders sections immediately in templates, while JSON defines layout order for Shopify’s Online Store 2.0.
 
+---
+## License  
+This Shopify theme is developed for Cleanup Green and is subject to Shopify’s [Theme License Agreement](https://www.shopify.com/legal/terms).  
+
+- Any modifications to Shopify's base themes (like Dawn) must comply with Shopify’s licensing rules.  
+- The theme is intended for use within the Cleanup Green Shopify store and **should not be resold or distributed** without permission.  
+
+For more details, review Shopify’s official license terms: [https://www.shopify.com/legal/terms](https://www.shopify.com/legal/terms).  
+
+---
+### **Happy Coding! 🎉**
 

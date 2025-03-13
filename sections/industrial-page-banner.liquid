@@ -1,0 +1,22 @@
+{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+{{ 'custom-image-with-text.css' | asset_url | stylesheet_tag }}
+
+
+
+<div class="image-with-text">
+  <div class="image-with-text__grid">
+   
+    <div class="image-with-text__text-item">
+      <div class="image-with-text__content">
+        <h2 class="industrial-title">Industrial Solutions</h2>
+        <p>Oil spills are an inevitable part of the industrial sector. Left unchecked, these spills quickly become time-consuming and costly to clean. Furthermore, the ramifications of the environmental damage caused by a spill can cause unwanted attention and can lead to expensive government fines.</p>
+        <a href="/contact">Get a Free Quote</a>
+      </div>
+    </div>
+    <div class="image-with-text__media-item">
+      <div class="image-with-text__media">
+        <img src="{{ 'industry-bg.webp' | file_url }}" alt="industrial Banner" class="industrial-banner-img">
+      </div>
+    </div>
+  </div>
+</div>
