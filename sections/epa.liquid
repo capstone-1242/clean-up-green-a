@@ -1,0 +1,47 @@
+<section class="epa_section">
+<div>
+    <h2>{{ section.settings.epa_heading }}</h2>
+    <p>{{ section.settings.epa_text}}</p>
+    <p>{{ section.settings.epa_text2}}</p>
+</div>
+<div>
+    <img width="" height="" src="{{  }}">
+    <p>{{ section.settings.epa_subheading }}</p>
+</div>
+</section>
+
+{% schema %}
+{ "name" : "EPA Section",
+    "settings" : [
+        {
+            "id": "epa_heading",
+            "type" : "text",    
+            "label" : "EPA Heading",
+            "default" : "Clean-Up Green offers Oil Solutions products that meets and exceeds the standard of the US EPA Method 1311 (recognized in Canada)."
+            
+        },
+        {
+            "id" :"epa_text",
+            "type": "text",
+            "label": "EPA Text",
+            "default": "The working process of both the liquid and powder solutions turns all hydrocarbon waste into a non-toxic and non-hazardous silica that will not leach over time. This means that it is safe for landfill disposal." 
+        },
+        {
+            "id" : "epa_text2",
+            "type": "text",
+            "label": "EPA Text 2",
+            "default" : "We always recommend that any waste be disposed of according to municipal, provincial, and federal laws surrounding the disposal of these types of wastes."
+        },
+        {
+            "id": "epa_subheading",
+            "type" : "text",
+            "label" : "EPA Subheading",
+            "default" : "Feel good about the environment with Clean-Up Green!"
+        }
+
+    ]
+
+}
+
+
+{% endschema %}
