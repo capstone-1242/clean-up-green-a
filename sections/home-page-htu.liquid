@@ -1,0 +1,53 @@
+<section>
+    <div>
+        <h2>{{ section.settings.htu_heading }}</h2>
+        <p>{{ section.settings.htu_text }}</p>
+    </div>
+    <div>
+        <a>{{ section.settings.button_text }}</a>
+        <a>{{ section.settings.button_text2 }}</a>
+        <a>{{ section.settings.button_text3 }}</a>
+    </div>
+</section>
+
+
+{% schema %}
+
+{"name": "Home Page HTU",
+  "settings":[{
+    "id": "htu_heading",
+    "type": "text",
+    "label": "HTU Heading",
+    "default": "How to Use Our Products"
+},
+{
+    "id" : "htu_text",
+    "type": "text",
+    "label": "HTU Text",
+    "default": "Clean-Up Green oil solutions products comes in a two step liquid solution and powder form. Each form has its designated use. Find out which solution you need for your job by clicking the links above or scrolling through the info below."
+
+},
+{
+    "id": "button_text",
+    "type": "text",
+    "label": "HTU Button",
+    "default": "Clean a Pooling Oil Spill"
+},
+{
+    "id": "button_text2",
+    "type": "text",
+    "label": "HTU Button 2",
+    "default": "Clean an Oil Stain"
+}, 
+{
+    "id": "button_text3",
+    "type": "text",
+    "label": "HTU Button 3",
+    "default": "Clean an Oil Spill in Soil"
+}
+] }
+
+
+
+
+{% endschema %}
