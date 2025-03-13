@@ -1,4 +1,4 @@
-/* .testimonials-wrapper {
+.testimonials-wrapper {
   background-color: #fafafa;
   padding: 40px 0;
   display: flex;
@@ -59,4 +59,4 @@
   .testimonial-container {
     grid-template-columns: 1fr;
   }
-} */
+}
