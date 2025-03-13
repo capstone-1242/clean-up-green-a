@@ -98,5 +98,14 @@ Shopify's Online Store 2.0 uses JSON templates for layout definitions, where sec
 - **Key Difference**: Liquid renders sections immediately in templates, while JSON defines layout order for Shopify’s Online Store 2.0.
 
 ---
+## License  
+This Shopify theme is developed for Cleanup Green and is subject to Shopify’s [Theme License Agreement](https://www.shopify.com/legal/terms).  
+
+- Any modifications to Shopify's base themes (like Dawn) must comply with Shopify’s licensing rules.  
+- The theme is intended for use within the Cleanup Green Shopify store and **should not be resold or distributed** without permission.  
+
+For more details, review Shopify’s official license terms: [https://www.shopify.com/legal/terms](https://www.shopify.com/legal/terms).  
+
+---
 ### **Happy Coding! 🎉**
 
