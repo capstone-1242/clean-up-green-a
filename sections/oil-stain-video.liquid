@@ -1,0 +1,50 @@
+<div class="oil-stain-video-section">
+    <h3>How to Use the Two Step Liquid</h3>
+    <div>
+        <div>
+            {% comment %} this is where video goes {% endcomment %}
+        </div>
+        <ul>
+            <li>{{ section.settings.list1 | newline_to_br }}</li>
+            <li>{{ section.settings.list2 | newline_to_br }}</li>
+            <li>{{ section.settings.list3 | newline_to_br }}</li>
+            <li>{{ section.settings.list4 | newline_to_br }}</li>
+        </ul>
+    </div>
+</div>
+{% schema %}
+    {
+        "name": "use description section",
+        "settings": [
+            {
+              "id": "list1",
+              "type": "textarea",
+              "label": "Step 1",
+              "default": "Simple 2 STEP Liquid solution to clean up oil stains and oil odours"
+            },
+            {
+              "id": "list2",
+              "type": "textarea",
+              "label": "Step 2",
+              "default": "Works well on old and new stains"
+            },
+            {
+              "id": "list3",
+              "type": "textarea",
+              "label": "Step 3",
+              "default": "Works on Rock, Concrete, Asphalt, Soil, Sand, Water, Wood"
+            },
+            {
+              "id": "list4",
+              "type": "textarea",
+              "label": "Step 4",
+              "default": "Important! Do not pre-mix STEP 1 & STEP 2 together in advance. Apply individually one at a time to the stain or spill."
+            }
+          ],
+          "presets": [
+            {
+              "name": "use description section"
+            }
+          ]
+        }
+        {% endschema %}
