@@ -7,6 +7,12 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
 
+    {% comment %} Google Fonts {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
@@ -266,8 +272,6 @@
    
    
     {{ 'section-cost-comparison.css' | asset_url | stylesheet_tag }}
-{{ 'section-custom-form.css' | asset_url | stylesheet_tag }}
-
     {% comment %} {{ 'section-testimonials.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
     {%- if settings.cart_type == 'drawer' -%}
