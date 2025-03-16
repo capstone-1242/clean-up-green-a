@@ -1,18 +1,18 @@
   /* banner css */
-  .contact-banner {
+  .contact-banner , .footprint-banner{
     position: relative;
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
   }
   
-  .contact-banner-img {
+  .contact-banner-img, .footprint-banner-img {
     width: 100%;
     height: auto;
     display: block;
   }
   
-  .contact-title {
+  .contact-title, .footprint-title {
     position: absolute;
     top: 50%;
     left: 50%;
