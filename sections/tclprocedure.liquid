@@ -1,18 +1,27 @@
-<div class="tclp-section">
-  <h2>The Toxicity Characteristic Leaching Procedure (TCLP)</h2>
+{{ 'section-tclprocedure.css' | asset_url | stylesheet_tag }}
 
-  <div>
-    <img src="{{ section.settings.footprint-hero-image | file_url }}" alt="TCLP Image side" />
+
+<section class="tclp">
+  <h2 class="tclp-title">The Toxicity Characteristic Leaching Procedure (TCLP)</h2>
+
+  <div class="tclp-container">
+    <!-- Image Column -->
+    <img 
+      src="{{ section.settings.footprint-hero-image | file_url }}" 
+      alt="TCLP Image side" 
+      class="tclp-image">
+
+    <!-- Text Column -->
+    <div class="tclp-content">
+      <p>{{ section.settings.tclp_description }}</p>
+      <h4>{{ section.settings.tclp_subheading }}</h4>
+      <a href="{{ section.settings.tclp_button_link }}" class="tclp-button">
+        {{ section.settings.tclp_button_text }}
+      </a>
+    </div>
   </div>
+</section>
 
-  <p>{{ section.settings.tclp_description }}</p>
-
-  <h4>{{ section.settings.tclp_subheading }}</h4>
-
-  <a href="{{ section.settings.tclp_button_link }}" class="tclp-button">
-    {{ section.settings.tclp_button_text }}
-  </a>
-</div>
 
 {% comment %} <link rel="stylesheet" href="{{ 'tclp.css' | asset_url }}"> {% endcomment %}
 
@@ -24,7 +33,7 @@
       "id": "footprint-hero-image",
       "type": "text",
       "label": "TCLP Image Filename",
-      "default": "footprint-bg.webp"
+      "default": "epa-website.png"
     },
     {
       "id": "tclp_description",
