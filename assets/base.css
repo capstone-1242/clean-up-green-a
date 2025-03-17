@@ -3617,7 +3617,8 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
-/* adding new css for Navigation */
+
+/******************** adding new css for Navigation ******************/
 /* for css, i think we are gonna have to use sass, but for now i am adding it here... */
 
 /* Dropdown Menu */
