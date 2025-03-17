@@ -1,23 +1,26 @@
 <div class="comparison-section">
     <h2>See the difference</h2>
-    <div>
-        <img 
-            src="{{ 'service-comparison-1.webp' | file_url }}"
-            alt="Image of crew cleaning a spill"
-            width="280"
-            height="auto"
-            style="max-width: 100%; height: auto;"
-        >
-        <small>Before</small>
-    </div>
-    <div>
-        <img 
-            src="{{ 'service-comparison-2.webp' | file_url }}"
-            alt="Image of a oil-free concrete floor"
-            width="280"
-            height="auto"
-            style="max-width: 100%; height: auto;"
-        >
-        <small>After</small>
+    <div class="images-section">
+        <div class="image-container">
+            <img
+                src="{{ 'service-comparison-1.webp' | file_url }}"
+                alt="Image of crew cleaning a spill"
+                width="280"
+                height="auto"
+                style="max-width: 100%; height: auto;"
+            >
+            <p class="text-overlay">Before</p>
+        </div>
+        <div class="image-container">
+            <img
+                src="{{ 'service-comparison-2.webp' | file_url }}"
+                alt="Image of a oil-free concrete floor"
+                width="280"
+                height="auto"
+                style="max-width: 100%; height: auto;"
+            >
+            <p class="text-overlay">After</p>
+        </div>
     </div>
 </div>
+

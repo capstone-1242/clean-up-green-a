@@ -1,0 +1,73 @@
+.service-page-content {
+    padding: 0 1rem;
+}
+
+/* Offer Service Styling */
+
+.service-list {
+    padding: 0px;
+    list-style-type: none;
+}
+
+.service-list li {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.service-list svg {
+    flex-shrink: 0;
+    height: 24px;
+    max-height: 24px;
+    width: 24px;
+  }
+  
+  /* Comparison Section */
+
+.comparison-section h2 {
+      text-align: center;
+  }
+
+.images-section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    border-radius: 1rem;
+    min-width: 17.5rem;
+
+}
+
+.text-overlay {
+    position: absolute;
+    top: 80%;
+    left: 43%;
+    color: #FFF;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Styles for mobile screens */
+@media screen and (max-width: 749px) { 
+
+}
+
+/* Styles for tablets */
+@media screen and (min-width: 750px) and (max-width: 989px) { 
+
+}
+
+
+/* Styles for desktops and larger screens */
+@media screen and (min-width: 990px) { 
+    
+}
