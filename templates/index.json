@@ -15,6 +15,13 @@
         "description": "We provide the best solutions tailored to your requirements."
       }
     },
+    "home-htu": {
+      "type": "home-page-htu",
+      "settings": {
+        "heading": "Perfect For Your Needs",
+        "description": "We provide the best solutions tailored to your requirements."
+      }
+    },
     "works-on": {
       "type": "works-on",
       "settings": {
@@ -33,6 +40,7 @@
   "order": [
     "hero-banner",
     "perfect-for",
+    "home-htu",
     "works-on",
     "testimonials"
   ]

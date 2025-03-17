@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="{{ 'section-tclp.css' | asset_url }}">
+<section>
+<h2> {{ section.settings.tclp_heading }}   </h2>
+<div class="tclp-container">
+    <div>
+        <img src="{{ 'epa-website.png' | file_url }}" alt="EPA Website Screenshot">
+    </div>
+    <div class="tclp-inner-container">
+        <p>{{ section.settings.tclp_text }}</p>
+        <div>
+            <p>{{section.settings.tclp_text2 }}</p>
+            <a href="#">{{ section.settings.tclp_button}}</a>
+        </div>
+    </div>
+</div>
+</section>
+
+{% schema %}
+
+{ "name" : "TCLP Section",
+    "settings" : [
+        {
+            "id":  "tclp_heading",
+            "type": "text",
+            "label": "TCLP Heading",
+            "default": "The Toxicity Characteristic Leaching Procedure (TCLP)"
+        } ,
+        {
+            "id":  "tclp_text",
+            "type": "text",
+            "label": "TCLP Text",
+            "default": "TCLP (US EPA Method 1311) is designed the mobility of both organic and inorganic analytes present in liquid, solid, and multiphasic wastes. It is used to classify these wastes as hazardous or non-hazardous based on leachability. THis method is used in Canada, the USA and elsewhere across the world to determine the anticipated movement of contaminatnts under acidic conditions over time. In Canada this product is DSL listed as landfill safe."
+        } , 
+        {
+            "id":  "tclp_text2",
+            "type": "text",
+            "label": "TCLP Text 2",
+            "default": "Learn more about TCLP from the official United States Environmental Protection Agency website: "
+        } , {
+            "id":  "tclp_button",
+            "type": "text",
+            "label": "TCLP Text",
+            "default": "Learn More about TCLP"
+        } , 
+    ]}
+
+{% endschema %}

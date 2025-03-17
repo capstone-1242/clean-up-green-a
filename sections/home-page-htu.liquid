@@ -1,12 +1,17 @@
+<link rel="stylesheet" href="{{ 'section-home-page-htu.css' | asset_url }}">
 <section>
-    <div>
-        <h2>{{ section.settings.htu_heading }}</h2>
-        <p>{{ section.settings.htu_text }}</p>
-    </div>
-    <div>
-        <a>{{ section.settings.button_text }}</a>
-        <a>{{ section.settings.button_text2 }}</a>
-        <a>{{ section.settings.button_text3 }}</a>
+    <div class="home-htu-container">
+        <div>
+            <h2>{{ section.settings.htu_heading }}</h2>
+            <p>{{ section.settings.htu_text }}</p>
+        </div>
+       <ul class="home-htu-ul">
+           
+                <li><a href="#">{{ section.settings.button_text }}</a></li>
+                <li><a href="#">{{ section.settings.button_text2 }}</a></li>
+                <li><a href="#">{{ section.settings.button_text3 }}</a></li>
+       </ul>
+        
     </div>
 </section>
 

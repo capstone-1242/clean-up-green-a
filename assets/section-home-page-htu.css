@@ -1,0 +1,22 @@
+.home-htu-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.home-htu-container div, .home-htu-container ul{
+width: 50%;
+}
+
+
+.home-htu-ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.home-htu-ul li{
+    display: inline-block;
+    width: fit-content;
+}
