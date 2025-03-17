@@ -3624,7 +3624,7 @@ details-disclosure > details {
 .header__submenu {
   display: none;
   position: absolute;
-  top: 66%;
+  top: 100%;
   left: 0;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
