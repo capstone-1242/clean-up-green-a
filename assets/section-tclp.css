@@ -1,0 +1,10 @@
+.tclp-container{
+    display: flex;
+
+}
+
+.tclp-inner-container{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}

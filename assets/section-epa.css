@@ -1,0 +1,7 @@
+.epa_section{
+    display: flex;
+}
+
+.epa_section div:nth-of-type(2){
+    text-align: center;
+}
