@@ -1,3 +1,5 @@
+{{ 'section-works-on.css' | asset_url | stylesheet_tag }}
+
 <div class="works-on-section">
   <div class="works-on-container">
     <!-- Heading -->
@@ -43,54 +45,3 @@
     </div>
   </div>
 </div>
-{% comment %} <style>
-  .works-on-section {
-    background-color: white;
-    padding: 40px 0;
-    display: flex;
-    justify-content: center;
-  }
-
-  .works-on-container {
-    max-width: 1200px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .works-on-heading {
-    color: black;
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 40px;
-  }
-
-  .image-grid {
-    display: grid;
-    gap: 10px;
-    justify-items: center;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  }
-
-  .image-item {
-    background-color: #f1f1f1;
-    padding: 10px;
-    border-radius: 7px;
-    text-align: center;
-  }
-
-  .image-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 7px;
-  }
-
-  .image-item h3 {
-    font-size: 2rem;
-    color: black;
-    margin-top: 1px;
-    background-color: #f1f1f1;
-    padding: 1px;
-    border-radius: 5px;
-  }
-</style> {% endcomment %}

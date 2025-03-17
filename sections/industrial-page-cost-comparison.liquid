@@ -1,0 +1,73 @@
+<section class="cost-comparison">
+  <div class="cost-comparison-content">
+    <h2>{{ section.settings.title }}</h2>
+    <p>{{ section.settings.description }}</p>
+
+    <dl class="comparison">
+      <div class="comparison-item">
+        <dt>{{ section.settings.traditional_label }}</dt>
+        <dd>{{ section.settings.traditional_cost }}</dd>
+      </div>
+      <div class="comparison-item">
+        <dt>{{ section.settings.green_label }}</dt>
+        <dd>{{ section.settings.green_cost }}</dd>
+        <dd class="note">{{ section.settings.green_note }}</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Cost Comparison Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Save Time & Liquid"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Below is a cost comparison of an actual 900L diesel spill in gravel and the clean-up costs associated with it. This spill happened in the summer of 2020 in Alberta."
+    },
+    {
+      "type": "text",
+      "id": "traditional_label",
+      "label": "Traditional Remediation Label",
+      "default": "Traditional Remediation"
+    },
+    {
+      "type": "text",
+      "id": "traditional_cost",
+      "label": "Traditional Remediation Cost",
+      "default": "TOTAL Cost: $21,097.00"
+    },
+    {
+      "type": "text",
+      "id": "green_label",
+      "label": "Clean-Up Green Remediation Label",
+      "default": "Clean-Up Green Remediation"
+    },
+    {
+      "type": "text",
+      "id": "green_cost",
+      "label": "Clean-Up Green Remediation Cost",
+      "default": "TOTAL Cost with Clean-Up Green: $9,800"
+    },
+    {
+      "type": "textarea",
+      "id": "green_note",
+      "label": "Clean-Up Green Remediation Note",
+      "default": "*Estimated cost savings using Clean-Up Green liquid solution and powder for a comparable spill. Estimated 52% cost reduction.*"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cost Comparison Section"
+    }
+  ]
+}
+{% endschema %}

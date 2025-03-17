@@ -1,0 +1,69 @@
+{{ 'section-tclprocedure.css' | asset_url | stylesheet_tag }}
+
+
+<section class="tclp">
+  <h2 class="tclp-title">The Toxicity Characteristic Leaching Procedure (TCLP)</h2>
+
+  <div class="tclp-container">
+    <!-- Image Column -->
+    <img 
+      src="{{ section.settings.footprint-hero-image | file_url }}" 
+      alt="TCLP Image side" 
+      class="tclp-image">
+
+    <!-- Text Column -->
+    <div class="tclp-content">
+      <p>{{ section.settings.tclp_description }}</p>
+      <h4>{{ section.settings.tclp_subheading }}</h4>
+      <a href="{{ section.settings.tclp_button_link }}" class="tclp-button">
+        {{ section.settings.tclp_button_text }}
+      </a>
+    </div>
+  </div>
+</section>
+
+
+{% comment %} <link rel="stylesheet" href="{{ 'tclp.css' | asset_url }}"> {% endcomment %}
+
+{% schema %}
+{
+  "name": "TCLP Section",
+  "settings": [
+    {
+      "id": "footprint-hero-image",
+      "type": "text",
+      "label": "TCLP Image Filename",
+      "default": "epa-website.png"
+    },
+    {
+      "id": "tclp_description",
+      "type": "textarea",
+      "label": "TCLP Description",
+      "default": "TCLP (US EPA Method 1311) is designed to determine the mobility of both organic and inorganic analytes present in liquid, solid, and multiphasic wastes. It is used to classify these wastes as hazardous or non-hazardous based on leachability. This method is used in Canada, the USA, and elsewhere across the world to determine the anticipated movement of contaminants under acidic conditions over time. In Canada, this product is DSL-listed as landfill safe."
+    },
+    {
+      "id": "tclp_subheading",
+      "type": "text",
+      "label": "Subheading",
+      "default": "Learn more about TCLP from the official United States Environmental Protection Agency website:"
+    },
+    {
+      "id": "tclp_button_text",
+      "type": "text",
+      "label": "Button Text",
+      "default": "Learn More about TCLP"
+    },
+    {
+      "id": "tclp_button_link",
+      "type": "text",
+      "label": "Button Link",
+      "default": "https://www.epa.gov/hw-sw846/sw-846-test-method-1311-toxicity-characteristic-leaching-procedure"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TCLP Section"
+    }
+  ]
+}
+{% endschema %}

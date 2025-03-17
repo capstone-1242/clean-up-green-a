@@ -1,0 +1,24 @@
+{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+{{ 'custom-image-with-text.css' | asset_url | stylesheet_tag }}
+
+
+
+<div class="image-with-text">
+  <div class="image-with-text__grid">
+   
+    <div class="image-with-text__media-item">
+      <div class="image-with-text__media">
+        <img src="{{ 'all-products.webp' | file_url }}" alt="Home Banner" class="img">
+      </div>
+    </div>
+   
+    <div class="image-with-text__text-item">
+      <div class="image-with-text__content">
+        <h2 class="industrial-title">About Clean-Up Green</h2>
+        <p>Clean Up Green Inc. is a Canadian based company specializing in environmentally friendly solutions for cleaning up oil spills. We provide effective Oil Solutions products that are not only safe for the environment, but significantly reduce the clean up costs typically associated with oil spills...</p>
+        <a href="/about">More About Us</a>
+      </div>
+    </div>
+   
+  </div>
+</div>

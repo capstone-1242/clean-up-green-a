@@ -1,0 +1,45 @@
+<section>
+
+  <div>
+    <img src="{{ section.settings.footprint-hero-image | file_url }}" alt="TCLP Image side" />
+  </div>
+  <h2>Learn more about Clean-Up Green’s environmental footprint</h2>
+
+
+  <a href="{{ section.settings.footprint_button_link }}" class="footprint-button">
+    {{ section.settings.footprint_button_text }}
+  </a>
+</section>
+
+{% comment %} <link rel="stylesheet" href="{{ 'tclp.css' | asset_url }}"> {% endcomment %}
+
+{% schema %}
+{
+  "name": "About Footprint Section",
+  "settings": [
+    {
+      "id": "footprint-hero-image",
+      "type": "text",
+      "label": "TCLP Image Filename",
+      "default": "footprint-bg.webp"
+    },
+    {
+      "id": "footprint_button_text",
+      "type": "text",
+      "label": "Button Text",
+      "default": "Read about Our Footprint"
+    },
+    {
+      "id": "footprint_button_link",
+      "type": "text",
+      "label": "Button Link",
+      "default": "/pages/our-footprint"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TCLP Section"
+    }
+  ]
+}
+{% endschema %}

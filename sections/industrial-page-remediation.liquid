@@ -1,0 +1,34 @@
+{{ 'section-remediation.css' | asset_url | stylesheet_tag }}
+
+
+<section class="remediation-options">
+  <div class="remediation-options-content">
+    <p>{{ section.settings.paragraph1 }}</p>
+    <p>{{ section.settings.paragraph2 }}</p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Remediation Options",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "paragraph1",
+      "label": "Paragraph 1",
+      "default": "Most remediation options involve a combination of extensive and invasive excavation or an application of a chemical solution that is harmful to the user and the environment. Both methods result in excessive costs and both require spill clean up waste to be hauled away and disposed of at waste treatment facilities."
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph2",
+      "label": "Paragraph 2",
+      "default": "Clean-Up Green oil solutions technology is the safe effective way of permanently cleaning all types of spills. Clean-Up Green will save you time and expensive cleanup costs."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Remediation Options"
+    }
+  ]
+}
+{% endschema %}

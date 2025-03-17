@@ -1,0 +1,22 @@
+{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+{{ 'custom-image-with-text.css' | asset_url | stylesheet_tag }}
+
+
+
+<div class="image-with-text">
+  <div class="image-with-text__grid">
+   
+    <div class="image-with-text__text-item">
+      <div class="image-with-text__content">
+        <h2 class="industrial-title">Clean an Oil Stain</h2>
+        <p>Clean-Up Green Oil Two Step Liquid is used for stains on all surfaces including rock, concrete, asphalt, and wood. It also helps eliminate oil smells.</p>
+        <a href="/">Buy OS Liquid</a>
+      </div>
+    </div>
+    <div class="image-with-text__media-item">
+      <div class="image-with-text__media">
+        <img src="{{ 'industry-bg.webp' | file_url }}" alt="industrial Banner" class="industrial-banner-img">
+      </div>
+    </div>
+  </div>
+</div>

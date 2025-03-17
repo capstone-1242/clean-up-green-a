@@ -1,0 +1,71 @@
+{{ 'section-custom-form.css' | asset_url | stylesheet_tag }}
+
+
+<section class="contact-container">
+<section class="custom-contact-form">
+  <h2>Got Questions? Send us a message</h2>
+  {% form 'contact' %}
+    {%- if form.posted_successfully? -%}
+      <p style="color: green;">{{ 'templates.contact.form.post_success' | t }}</p>
+    {%- endif -%}
+
+    <div class="name-fields">
+      <div class="form-group">
+        <label for="contact[first_name]">First Name</label>
+        <input type="text" id="contact[first_name]" name="contact[first_name]" required>
+        {%- if form.errors contains 'first_name' -%}
+          <p class="form-error">{{ form.errors.translated_fields.first_name | capitalize }} {{ form.errors.messages.first_name }}</p>
+        {%- endif -%}
+      </div>
+
+      <div class="form-group">
+        <label for="contact[last_name]">Last Name</label>
+        <input type="text" id="contact[last_name]" name="contact[last_name]" required>
+        {%- if form.errors contains 'last_name' -%}
+          <p class="form-error">{{ form.errors.translated_fields.last_name | capitalize }} {{ form.errors.messages.last_name }}</p>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="contact[email]">Email</label>
+      <input type="email" id="contact[email]" name="contact[email]" required>
+      {%- if form.errors contains 'email' -%}
+        <p class="form-error">{{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="form-group">
+      <label for="contact[phone]">Phone Number</label>
+      <input type="tel" id="contact[phone]" name="contact[phone]">
+      {%- if form.errors contains 'phone' -%}
+        <p class="form-error">{{ form.errors.translated_fields.phone | capitalize }} {{ form.errors.messages.phone }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="form-group">
+      <label for="contact[body]">Message</label>
+      <textarea id="contact[body]" name="contact[body]" rows="5" required></textarea>
+      {%- if form.errors contains 'body' -%}
+        <p class="form-error">{{ form.errors.translated_fields.body | capitalize }} {{ form.errors.messages.body }}</p>
+      {%- endif -%}
+    </div>
+
+    <button type="submit" class="contact-submit">Send</button>
+  {% endform %}
+</section>
+
+<section class="contact-info">
+  {% comment %} <h3 class="contact-heading">Contact Information</h3> {% endcomment %}
+  <p class="contact-address">
+    <i class="fas fa-map-marker-alt"></i> Clean-Up Green Inc.<br>
+    36, 52502 RR 25, Parkland County, AB T7Y 2M2
+  </p>
+  <p class="contact-phone">
+    <i class="fas fa-phone-alt"></i> <a href="tel:+17805420486">(780) 542-0486</a>
+  </p>
+  <p class="contact-email">
+    <i class="fas fa-envelope"></i> <a href="mailto:inquire@cleanupgreen.ca">inquire@cleanupgreen.ca</a>
+  </p>
+</section>
+</section>
