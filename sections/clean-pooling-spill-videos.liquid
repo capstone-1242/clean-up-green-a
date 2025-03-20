@@ -1,7 +1,7 @@
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: calc({{ section.settings.padding_top }}px * 0.75);
-    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px * 0.75);
   }
 
   @media screen and (min-width: 750px) {
@@ -9,35 +9,107 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+
+    .video-container-flex {
+      display: flex;
+      justify-content: space-between;
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    .video-container-flex .video-wrapper {
+      width: 48%;
+    }
+
+    .video-container-flex .video-container {
+      position: relative;
+      padding-bottom: 56.25%; 
+      height: 0;
+    }
+
+    .video-container-flex .video-container video,
+    .video-container-flex .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-container-flex .video-wrapper h3 {
+      color: #000;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+
+  .video-container iframe, .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 {%- endstyle -%}
+
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="section-{{ section.id }}-padding">
-    {{ section.settings.custom_liquid }}
+    <div class="video-container-flex">
+      <div class="video-wrapper">
+        <h3>Oil Spills on Hard Surfaces</h3>
+        <div class="video-container">
+          <video width="100%" controls>
+            <source src="{{ section.settings.file_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <div class="video-wrapper">
+        <h3>Oil Spills on Water</h3>
+        <div class="video-container">
+          <iframe width="560" height="315" src="{{ section.settings.video_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 {% schema %}
 {
-  "name": "t:sections.custom-liquid.name",
+  "name": "Custom Video",
   "tag": "section",
   "class": "section",
   "settings": [
     {
-      "type": "liquid",
-      "id": "custom_liquid",
-      "label": "t:sections.custom-liquid.settings.custom_liquid.label",
-      "info": "t:sections.custom-liquid.settings.custom_liquid.info"
+      "type": "text",
+      "id": "video_url",
+      "label": "YouTube Video URL",
+      "info": "Enter the URL of your YouTube video.",
+      "default": "https://www.youtube.com/embed/mPrdrc5xsFs?si=pdn0ejr3kEF4pdCm"
+    },
+    {
+      "type": "text",
+      "id": "file_url",
+      "label": "Clean Diesel Video",
+      "info": "Upload or select your Clean Diesel video file.",
+      "default": "https://cdn.shopify.com/videos/c/o/v/67e478a3651b42acaca2527ff60f8947.mp4"
     },
     {
       "type": "color_scheme",
       "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
+      "label": "Color scheme",
       "default": "scheme-1"
     },
     {
       "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
+      "content": "Section padding"
     },
     {
       "type": "range",
@@ -46,7 +118,7 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
+      "label": "Padding top",
       "default": 40
     },
     {
@@ -56,13 +128,13 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
+      "label": "Padding bottom",
       "default": 52
     }
   ],
   "presets": [
     {
-      "name": "t:sections.custom-liquid.presets.name"
+      "name": "Custom Video"
     }
   ]
 }
