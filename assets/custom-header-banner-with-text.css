@@ -1,3 +1,11 @@
+/* Typography */
+.industrial-title {
+  color: var(--color-heading-deep-green);
+  font-weight: 700;
+  font-size: 6rem;
+}
+
+/* Layout */
 .image-with-text-banner__grid {
     display: flex;
     justify-content: space-between;
