@@ -21,7 +21,7 @@
 
 /* Individual Cards */
 .solution-card {
-  width: 40%;
+  max-width: 500px;
   background: var(--color-primary-palest-green);
   border-radius: 10px;
   overflow: hidden;
