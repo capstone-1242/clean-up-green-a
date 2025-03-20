@@ -30,11 +30,11 @@
 }
 
 .dark-bg {
-  background-color: #323232;
+  background-color: var(--color-medium-dark-grey);
 }
 
 .green-bg {
-  background-color: #668A55;
+  background-color: var(--color-primary-palest-green);
 }
 
 .light-text {
