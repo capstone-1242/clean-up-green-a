@@ -22,6 +22,7 @@
   height: 100%;
   object-fit: cover;
 }
+
 @media (max-width: 650px) { 
   .image-with-text__media-item {
     display: none; 
