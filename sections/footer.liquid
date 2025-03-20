@@ -1,6 +1,6 @@
 {% schema %}
 {
-  "name": "Custom Navigation",
+  "name": "Custom Footer",
   "settings": [],
   "blocks": [
     {
@@ -17,7 +17,7 @@
   ],
   "presets": [
     {
-      "name": "Custom Navigation",
+      "name": "Custom Footer",
       "blocks": [
         {
           "type": "link_list"
@@ -28,24 +28,66 @@
 }
 {% endschema %}
 
-{%- for block in section.blocks -%}
-  {%- if block.type == 'link_list' -%}
-    {%- if block.settings.menu != blank -%}
-      {%- assign menu = linklists[block.settings.menu] -%}
-      {%- if menu != blank -%}
-        <ul class="custom-footer footer-block__details-content list-unstyled">
-          {%- for link in menu.links -%}
-            <li class="footer-links">
-              <a
-                href="{{ link.url }}"
-                class=" link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
-              >
-                {{ link.title | escape }}
-              </a>
-            </li>
-          {%- endfor -%}
-        </ul>
+<section class="footer">
+  <div class="custom-footer">
+    <div class="footer-logo">
+      <img src="{{ 'clean-up-green-logo_1.png' | file_url }}" alt="Clean-Up Green Logo" />
+    </div>
+  
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'link_list' and block.settings.menu != blank -%}
+        {%- assign menu = linklists[block.settings.menu] -%}
+        {%- if menu != blank -%}
+          <ul class="footer-links">
+            {%- for link in menu.links -%}
+              <li>
+                <a
+                  href="{{ link.url }}"
+                  class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
+                >
+                  {{ link.title | escape }}
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
       {%- endif -%}
-    {%- endif -%}
-  {%- endif -%}
-{%- endfor -%}
+    {%- endfor -%}
+  
+    <div class="footer-contact">
+      <div>
+        <p>
+          <svg width="23" height="15" viewBox="0 0 23 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.02622 7.5L0 12.2048V2.79519L7.02622 7.5ZM15.9738 7.5L23 12.2048V2.79519L15.9738 7.5ZM14.9472 8.18942L11.8057 10.2923C11.7132 10.3529 11.6066 10.3846 11.5 10.3846C11.3934 10.3846 11.2868 10.3529 11.1943 10.2923L8.0528 8.18942L0.46561 13.2692L0.0252439 13.5635C0.162683 14.3769 0.852683 15 1.68293 15H21.3171C22.1473 15 22.8373 14.3798 22.9748 13.5635L22.5316 13.2692L14.9472 8.18942ZM11.5 9.11827L22.5316 1.73077L22.9748 1.43654C22.8373 0.620192 22.1473 0 21.3171 0H1.68293C0.852683 0 0.162683 0.623077 0.0252439 1.43654L0.46561 1.73077L11.5 9.11827Z" fill="#EDEDED"/>
+            </svg><a href="mailto:inquiries@cleanupgreen.ca">inquiries@cleanupgreen.ca</a>
+        </p>
+        <p>
+          <svg width="13" height="21" viewBox="0 0 13 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.487705 0C0.205349 0 0 0.205349 0 0.487705V20.0729C0 20.3552 0.205349 20.5606 0.487705 20.5606H12.3723C12.6547 20.5606 12.86 20.3552 12.86 20.0729V0.487705C12.86 0.205349 12.6547 0 12.3723 0L0.487705 0ZM2.56687 2.56687H10.2675V15.4012H2.56687V2.56687ZM6.41717 16.6846C7.13589 16.6846 7.7006 17.2493 7.7006 17.9681C7.7006 18.6868 7.13589 19.2515 6.41717 19.2515C5.69844 19.2515 5.13373 18.6868 5.13373 17.9681C5.13373 17.2493 5.69844 16.6846 6.41717 16.6846Z" fill="#EDEDED"/>
+            </svg>
+             <a href="tel:7805420486">(780) 542-0486</a>
+        </p>
+      </div>
+      <div>
+        <p>
+          <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 0C4.02 0 0 4.02 0 9C0 15 9 24 9 24C9 24 18 15 18 9C18 4.02 13.98 0 9 0ZM9 3C12.33 3 15 5.7 15 9C15 12.33 12.33 15 9 15C5.7 15 3 12.33 3 9C3 5.7 5.7 3 9 3Z" fill="white"/>
+            </svg>
+            Clean-Up Green Inc.<br>
+          36, 85230 RR 25<br>
+          Parkland County, AB<br>
+          T7Y 2M2
+        </p>
+        </div>
+      
+    </div>
+  
+  </div>
+  <hr class="footer-divider">
+  
+  <p class="footer-copyright">
+    &copy; All copyrights belong to Clean-Up Green 2025
+  </p>
+</section>
+
+
