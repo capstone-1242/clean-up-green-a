@@ -1,0 +1,11 @@
+/* {% comment %} for footer {% endcomment %} */
+.custom-footer{
+  background-color: #1c2324;
+}
+.custom-footer a {
+  color: white;
+}
+.custom-footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
