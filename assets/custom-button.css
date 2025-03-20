@@ -1,10 +1,10 @@
 .button-rounded {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 30px;
   background-color: #1e2422;
   color: #d1dccb;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 100px;
   text-decoration: none;
   font-weight: 500;

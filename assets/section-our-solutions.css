@@ -1,0 +1,56 @@
+/* Main Section Styling */
+.solutions-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.solutions-heading {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Cards Container */
+.solutions-container {
+  display: flex;
+  justify-content: center;
+  gap: 5rem; /* Space between cards */
+  flex-wrap: wrap;
+}
+
+/* Individual Cards */
+.solution-card {
+  width: 40%;
+  background: var(--color-primary-palest-green);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.solution-card-header {
+  background:var(--color-accent-deep-teal);
+  color: white;
+  padding: 12px 15px;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.solution-card-header .icon {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.solution-card-body {
+  padding: 15px;
+}
+
+.solution-card-body p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 15px;
+}
