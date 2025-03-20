@@ -266,6 +266,8 @@
     {% comment %} you have to call your stylesheet in here, in order to make it work. {% endcomment %}
     {% comment %} homepage {% endcomment %}
     {{ 'custom-footer.css' | asset_url | stylesheet_tag }}
+    {{ 'custom-button.css' | asset_url | stylesheet_tag }}
+
 
     {{ 'section-perfect-for.css' | asset_url | stylesheet_tag }}
     {{ 'section-works-on.css' | asset_url | stylesheet_tag }}

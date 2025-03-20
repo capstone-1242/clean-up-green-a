@@ -1,5 +1,7 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 {{ 'custom-image-with-text.css' | asset_url | stylesheet_tag }}
+{{ 'custom-button.css' | asset_url | stylesheet_tag }}
+
 
 
 
@@ -10,7 +12,16 @@
       <div class="image-with-text__content">
         <h2 class="industrial-title">Oil Spills Happen</h2>
         <p>Oil spills are an inevitable part of the industrial sector. Clean-Up Green is the safe effective way of permanently cleaning all types of spills. Clean-Up Green will save you time and expensive cleanup costs.</p>
-        <a href="/contact">View Products</a>
+        <button class="button-rounded">
+          View Products
+          <span class="arrow-circle">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.22498 18H29.775" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+              <path d="M23.175 25.17L29.34 19.005C29.6194 18.724 29.7762 18.3438 29.7762 17.9475C29.7762 17.5512 29.6194 17.1711 29.34 16.89L23.34 10.89" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+              </svg>
+              
+          </span>
+        </button>
       </div>
     </div>
     <div class="image-with-text__media-item">
@@ -20,3 +31,4 @@
     </div>
   </div>
 </div>
+
