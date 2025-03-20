@@ -1,0 +1,183 @@
+
+/* Default Hero Section with Background Image */
+.hero-section {
+  background-image: url('https://cdn.shopify.com/s/files/1/0903/3492/1069/files/how-to-use-bg.webp?v=1741298602');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text-box {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  max-width: 700px;
+  padding: 40px 148px;
+  text-align: left;
+}
+
+.hero-text-box h2 {
+  font-size: clamp(2rem, 6vw, 6rem); /* responsive scaling */
+  font-weight: bold;
+  color: white;
+  margin: 0 0 20px 0;
+}
+
+.hero-text-box p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0;
+  color: white;
+
+}
+
+
+
+/* General Styles */
+.content-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; 
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Individual Card */
+.card {
+  background-color: var(--color-primary-palest-green);
+
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  width: 40%;
+  min-width: 280px;
+  max-width: 350px;
+  /* padding: 20px; */
+}
+.cleaning-text{
+  padding: 10px;
+
+}
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Card Text */
+.card h3 {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+
+.card a{
+  text-align: left;
+  gap: 34px;
+  font-size: 1.2rem;
+}
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: left;
+  padding-bottom: 20px;
+  
+}
+.cleaning-description{
+  padding: 10px 26px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  position: relative;
+}
+
+.cleaning-text {
+  position: absolute;
+  top: 297px; 
+  left: 0;  
+  right: 0; 
+  width: 100%;
+  background: rgba(0, 0, 0, 0.66); 
+  padding: 10px 30px;
+}
+
+
+.cleaning-text h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+
+}
+/* queries */
+
+
+@media (max-width: 640px) {
+  .hero-section {
+    background-image: none; 
+    background-color: #fff; 
+  padding: 10px;
+
+  }
+  .hero-text-box{
+    padding: 30px 10px;
+    background: none;
+    text-align: center;
+
+  }
+  .hero-text-box h2{
+    color: black;
+  }
+  .hero-section p{
+    color: black;
+    text-align: left;
+
+  }
+  
+}
+
+/* Responsive Design for cards */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+  .cleaning-text {
+    top: 267px; 
+
+  }
+  
+
+}
+
+
+
+
