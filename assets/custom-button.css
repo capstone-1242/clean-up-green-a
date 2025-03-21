@@ -1,0 +1,38 @@
+.button-rounded {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  background-color: #1e2422;
+  color: #d1dccb;
+  padding: 10px 15px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+
+}
+
+.button-rounded .arrow-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d1dccb;
+  color: #1e2422;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.button-rounded:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.button-rounded:hover .arrow-circle {
+  color: #fff;
+  transform: translateX(4px);
+}

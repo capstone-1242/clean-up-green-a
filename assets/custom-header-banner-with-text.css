@@ -1,0 +1,35 @@
+.image-with-text-banner__grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; 
+    background-color: var(--color-white);
+  }
+  
+  .image-with-text__media-item,
+  .image-with-text__text-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .image-with-text__media {
+    flex: 1;
+    display: flex;
+  }
+  
+  .industrial-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 650px) { 
+    .image-with-text__media-item {
+      display: none; 
+    }
+  
+    .image-with-text__text-item {
+      flex: 1;
+    }
+  }
+  

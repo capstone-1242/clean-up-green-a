@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch; 
-  /* background: #9bd866; */
+  background: var(--color-primary-palest-green);
 }
 
 .image-with-text__media-item,
@@ -22,6 +22,7 @@
   height: 100%;
   object-fit: cover;
 }
+
 @media (max-width: 650px) { 
   .image-with-text__media-item {
     display: none; 
