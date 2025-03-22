@@ -11,6 +11,8 @@
 --color-primary-palest-green: rgb(207, 220, 201); /* Mostly used for background */
 --color-secondary-medium-green: rgb(76, 125, 53); /* Mostly used for background */
 --color-accent-deep-teal: rgb(28, 35, 36); /* Used for Button Color, Header & Footer bgc */
+--bg-color-banner-with-text: rgba(28, 35, 36, 0.7) /* used for bg color of text on banners. */
+
 
 /* Neutral colors */
 --color-white: rgb(250, 250, 250);
