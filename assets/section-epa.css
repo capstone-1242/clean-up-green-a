@@ -1,7 +1,34 @@
-.epa_section{
+.epa_section {
     display: flex;
+    gap: 2rem;
+    padding: 7rem 10rem;
 }
 
-.epa_section div:nth-of-type(2){
-    text-align: center;
+.epa_section div:nth-of-type(1) {
+    flex: 0 0 60%;  
+}
+h2{
+    padding: 0px;
+    margin: 0;
+}
+.epa_section div:nth-of-type(2) {
+    flex: 0 0 40%;  
+}
+
+.epa_card {
+    background-color: #1c2324;
+    color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;     
+    height: 100%;             
+    padding: 20px;            
+}
+
+.epa_card h3 {
+    color: #fff;
+    padding: 20px;
+    text-align: center;     
 }
