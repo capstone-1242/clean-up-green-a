@@ -4,7 +4,7 @@ h2.comparison-heading {
   font-weight: bold;
   margin-bottom: 20px;
   text-align: left;
-  color: var(--color-heading-deep-green);
+  color: var(--color-accent-deep-teal);
 }
 
 .remediation-container {
