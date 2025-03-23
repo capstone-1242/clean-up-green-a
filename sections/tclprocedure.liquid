@@ -6,18 +6,31 @@
 
   <div class="tclp-container">
     <!-- Image Column -->
-    <img 
-      src="{{ section.settings.footprint-hero-image | file_url }}" 
-      alt="TCLP Image side" 
-      class="tclp-image">
+    <div class="tcl-image-container">
+      <img
+        src="{{ section.settings.footprint-hero-image | file_url }}"
+        alt="TCLP Image side"
+        class="tclp-image">
+    </div>
 
     <!-- Text Column -->
     <div class="tclp-content">
       <p>{{ section.settings.tclp_description }}</p>
-      <h4>{{ section.settings.tclp_subheading }}</h4>
-      <a href="{{ section.settings.tclp_button_link }}" class="tclp-button">
-        {{ section.settings.tclp_button_text }}
-      </a>
+      <div class="tclp-mini-container">
+        <h4>{{ section.settings.tclp_subheading }}</h4>
+        
+        <a href="{{ section.settings.tclp_button_link }}"class="button-rounded">
+          {{ section.settings.tclp_button_text }}
+        
+          <span class="arrow-circle">
+            <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.22498 18H29.775" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+              <path d="M23.175 25.17L29.34 19.005C29.6194 18.724 29.7762 18.3438 29.7762 17.9475C29.7762 17.5512 29.6194 17.1711 29.34 16.89L23.34 10.89" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+              </svg>
+        
+          </span>
+        </a>
+      </div>
     </div>
   </div>
 </section>

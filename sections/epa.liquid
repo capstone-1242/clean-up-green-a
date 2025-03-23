@@ -5,13 +5,13 @@
     <p>{{ section.settings.epa_text}}</p>
     <p>{{ section.settings.epa_text2}}</p>
 </div>
-<div>
-    <p>{{ section.settings.epa_subheading }}</p>
+<div class="epa_card">
+    <h3>{{ section.settings.epa_subheading }}</h3>
     <img src="{{ 'clean-up-green-logo_1.png' | file_url }}" alt="Hero Banner Image" class="hero-image">
 </div>
 </section>
 
-{% schema %}
+{% schema %} 
 { "name" : "EPA Section",
     "settings" : [
         {

@@ -1,21 +1,32 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
-{{ 'custom-image-with-text.css' | asset_url | stylesheet_tag }}
-
-
+{{ 'custom-header-banner-with-text.css' | asset_url | stylesheet_tag }}
+{{ 'custom-button.css' | asset_url | stylesheet_tag }}
 
 <div class="image-with-text">
-  <div class="image-with-text__grid">
-   
+  <div class="image-with-text-banner__grid">
     <div class="image-with-text__text-item">
       <div class="image-with-text__content">
         <h2 class="industrial-title">Clean a Pooling Oil Spill</h2>
-        <p>Clean-Up Green Oil Spill Powder is used for all types of pooling oil spills. It works on hard surfaces such as asphalt, concrete or compacted soil, and also on water. </p>
-        <a href="/contact">Buy OS Powder</a>
+
+        <p>
+          Clean-Up Green Oil Spill Powder is used for all types of pooling oil spills. It works on hard surfaces such as
+          asphalt, concrete or compacted soil, and also on water.
+        </p>
+
+        <a href="pages/shop" class="button-rounded">
+          Buy OS Powder
+          <span class="arrow-circle">
+            <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.22498 18H29.775" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+              <path d="M23.175 25.17L29.34 19.005C29.6194 18.724 29.7762 18.3438 29.7762 17.9475C29.7762 17.5512 29.6194 17.1711 29.34 16.89L23.34 10.89" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+            </svg>
+          </span>
+        </a>
       </div>
     </div>
     <div class="image-with-text__media-item">
       <div class="image-with-text__media">
-        <img src="{{ 'industry-bg.webp' | file_url }}" alt="industrial Banner" class="industrial-banner-img">
+        <img src="{{ 'industry-bg.webp' | file_url }}" alt="Industrial Banner" class="industrial-banner-img">
       </div>
     </div>
   </div>

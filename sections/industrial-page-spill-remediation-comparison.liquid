@@ -6,24 +6,78 @@
 
   <div class="remediation-container">
     <!-- Traditional Remediation -->
-    <div class="remediation-box traditional">
+    <div class="remediation-box traditional__remediation_comparison">
       <h3>{{ section.settings.traditional_heading }}</h3>
+      <p>{{ section.settings.traditional_paragraph }}</p>
       <ul>
-        <li><svg fill="#ffffff" height="15px" width="15px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "></polygon> </g></svg> <strong>{{ section.settings.traditional_item1_title }}</strong> {{ section.settings.traditional_item1_description }}</li>
-        <li><svg fill="#ffffff" height="15px" width="15px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "></polygon> </g></svg><strong>{{ section.settings.traditional_item2_title }}</strong> {{ section.settings.traditional_item2_description }}</li>
-        <li><svg fill="#ffffff" height="15px" width="15px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "></polygon> </g></svg><strong>{{ section.settings.traditional_item3_title }}</strong> {{ section.settings.traditional_item3_description }}</li>
-        <li><svg fill="#ffffff" height="15px" width="15px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "></polygon> </g></svg><strong>{{ section.settings.traditional_item4_title }}</strong> {{ section.settings.traditional_item4_description }}</li>
+        <li class="list-item">
+          <div>
+            &#10005;
+          </div>
+          <div>
+            <strong>{{ section.settings.traditional_item1_title }}</strong> {{ section.settings.traditional_item1_description }}
+          </div>
+        </li>
+        <li class="list-item">
+          <div>
+            &#10005;
+          </div>
+          <div>
+            <strong>{{ section.settings.traditional_item2_title }}</strong> {{ section.settings.traditional_item2_description }}
+          </div>
+        </li>
+        <li class="list-item">
+          <div>
+            &#10005;
+          </div>
+          <div>
+            <strong>{{ section.settings.traditional_item3_title }}</strong> {{ section.settings.traditional_item3_description }}
+          </div>
+        </li>
+        <li class="list-item">
+          <div>
+            &#10005;
+          </div>
+          <div>
+            <strong>{{ section.settings.traditional_item4_title }}</strong> {{ section.settings.traditional_item4_description }}
+          </div>
+        </li>
       </ul>
     </div>
 
     <!-- Clean-Up Green Remediation -->
-    <div class="remediation-box green">
+    <div class="remediation-box green__remediation_comparison">
       <h3>{{ section.settings.green_heading }}</h3>
+      <p>{{ section.settings.green_paragraph }}</p>
       <ul>
-        <li>✔ <strong>{{ section.settings.green_item1_title }}</strong> {{ section.settings.green_item1_description }}</li>
-        <li>✔ <strong>{{ section.settings.green_item2_title }}</strong> {{ section.settings.green_item2_description }}</li>
-        <li>✔ <strong>{{ section.settings.green_item3_title }}</strong> {{ section.settings.green_item3_description }}</li>
-        <li>✔ <strong>{{ section.settings.green_item4_title }}</strong> {{ section.settings.green_item4_description }}</li>
+        <li class="list-item">
+          <div>
+            &#10004;
+          </div>
+          <div>
+            <strong>{{ section.settings.green_item1_title }}</strong> {{ section.settings.green_item1_description }}
+          </div>
+        </li>
+        <li class="list-item">
+          <div>
+            &#10004;
+          </div>
+          <div>
+            <strong>{{ section.settings.green_item2_title }}</strong> {{ section.settings.green_item2_description }}
+          </div>
+        </li>
+        <li class="list-item">
+          <div>
+            &#10004;
+          </div>
+          <div><strong>{{ section.settings.green_item3_title }}</strong> {{ section.settings.green_item3_description }}</div>
+        </li>
+        <li class="list-item">
+          <div>
+            &#10004;
+          </div>
+          <div><strong>{{ section.settings.green_item4_title }}</strong> {{ section.settings.green_item4_description }}</div>
+        </li>
       </ul>
     </div>
   </div>
@@ -44,6 +98,12 @@
       "type": "text",
       "label": "Traditional Remediation Heading",
       "default": "Traditional Remediation"
+    },
+    {
+      "id": "traditional_paragraph",
+      "type": "text",
+      "label": "Traditional Remediation Paragraph",
+      "default": "Using absorbent powders, mats, acids and chemicals"
     },
     {
       "id": "traditional_item1_title",
@@ -98,6 +158,12 @@
       "type": "text",
       "label": "Clean-Up Green Remediation Heading",
       "default": "Clean-Up Green Remediation"
+    },
+    {
+      "id": "green_paragraph",
+      "type": "text",
+      "label": "Clean-Up Green Remediation Heading",
+      "default": "Complete permanent encapsulation of the hydrocarbons using oil solutions technology"
     },
     {
       "id": "green_item1_title",

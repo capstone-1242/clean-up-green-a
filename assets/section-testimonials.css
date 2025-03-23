@@ -21,7 +21,7 @@
 .testimonial-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 2rem;
 }
 
 .testimonial {
@@ -30,7 +30,7 @@
 }
 
 .dark-bg {
-  background-color: var(--color-medium-dark-grey);
+  background-color: var(--color-accent-deep-teal);
 }
 
 .green-bg {
@@ -42,7 +42,7 @@
 }
 
 .dark-text {
-  color: #1C2324;
+  color: var(--color-body-text-black);
 }
 
 .testimonial-author {
