@@ -1,16 +1,43 @@
-/* Typography */
-.traditional h3 {
+/* Typography Styles */
+
+.traditional__cost_comparison h3,
+.green__cost_comparison h3 {
     font-size: 33.18px;
     font-weight: 600;
 }
 
-.traditional p {
+.traditional__cost_comparison p {
     font-size: 27.65px;
     font-weight: 600;
 }
 
-.cost-comparison {
-    padding: 1rem 2rem;
+.traditional__cost_comparison h3,
+.traditional__cost_comparison p {
+   color: white; 
+   text-align: center;
+   margin: 0;
+   padding: 2rem 0;
+}
+
+.green__cost_comparison h3,
+.green__cost_comparison p.note {
+    margin: 0;
+    text-align: center;
+}
+
+/* Layout Styles */
+
+.text-content,
+.comparison-item {
+    padding: 0 2rem;
+}
+
+.traditional__cost_comparison {
+    background-color: var(--color-accent-deep-teal);
+}
+
+.green__cost_comparison {
+    background-color: var(--color-primary-palest-green);
 }
 
 .cost-comparison-content {
@@ -23,17 +50,12 @@
     grid-column: 1 / -1;
 }
 
+@media (min-width: 725px) {
+    .traditional__cost_comparison {
+        grid-column: ;
+    }
 
-
-.traditional h3,
-.traditional p {
-   color: white; 
-   text-align: center;
-   margin: 0;
-   padding: 2rem 0;
-}
-
-.green h3,
-.green p.note {
-    margin: 0;
+    .green__cost_comparison {
+        grid-column: ;
+    }
 }
