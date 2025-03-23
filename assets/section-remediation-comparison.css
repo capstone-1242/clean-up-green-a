@@ -1,6 +1,11 @@
+h2.comparison-heading {
+  font-size: clamp(2.4881rem, 5vw, 3.5rem);
+  text-align: left;
+  color: var(--color-heading-deep-green);
+}
+
 .remediation-comparison-section {
-  text-align: center;
-  padding: 30px 15px;
+  padding: 1rem 2rem;
 }
 
 .comparison-heading {
@@ -10,15 +15,13 @@
 }
 
 .remediation-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(1fr, 1fr);
+  gap: 2rem;
 }
 
 .remediation-box {
-  width: 45%;
-  padding: 20px;
+  padding: 2rem;
   border-radius: 10px;
   color: white;
   text-align: left;
@@ -26,14 +29,43 @@
 
 .traditional {
   background-color: #444;
+  grid-column: 1 / -1;
+}
+
+.traditional p,
+.traditional h3,
+.green p,
+.green h3 {
+  text-align: center;
+}
+
+.list-item {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.list-item svg {
+  padding-top: 0.8rem;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 2;
+  stroke: currentColor;
+  fill: currentColor;
 }
 
 .green {
-  background-color: #4CAF50;
+  background-color: var(--color-primary-palest-green);
+  color: var(--color-body-text-black);
+  grid-column: 1 / -1;
 }
 
 .remediation-box h3 {
-  font-size: 20px;
+  font-size: 2.0737rem;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
@@ -51,8 +83,24 @@
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
-  .remediation-box {
-    width: 100%;
+/* Media Queries */
+@media (min-width: 725px) {
+
+  .traditional {
+    grid-column: 1 / 2;
   }
+
+  .green {
+    grid-column: 2 / 3;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  h2.comparison-heading{
+    text-align: center;
+  }
+
+  
 }
