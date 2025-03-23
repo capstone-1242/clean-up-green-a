@@ -1,41 +1,38 @@
 h2.comparison-heading {
+  grid-column: 3 / 11;
   font-size: clamp(2.4881rem, 5vw, 3.5rem);
+  font-weight: bold;
+  margin-bottom: 20px;
   text-align: left;
   color: var(--color-heading-deep-green);
 }
 
-.remediation-comparison-section {
-  padding: 1rem 2rem;
-}
-
-.comparison-heading {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
 .remediation-container {
   display: grid;
-  grid-template-columns: repeat(1fr, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 .remediation-box {
   padding: 2rem;
-  border-radius: 10px;
   color: white;
   text-align: left;
 }
 
-.traditional {
-  background-color: #444;
+.traditional__remediation_comparison {
+  background-color: var(--color-accent-deep-teal);
   grid-column: 1 / -1;
 }
 
-.traditional p,
-.traditional h3,
-.green p,
-.green h3 {
+.green__remediation_comparison {
+  background-color: var(--color-primary-palest-green);
+  color: var(--color-body-text-black);
+  grid-column: 1 / -1;
+}
+
+.traditional__remediation_comparison p,
+.traditional__remediation_comparison h3,
+.green__remediation_comparison p,
+.green__remediation_comparison h3 {
   text-align: center;
 }
 
@@ -46,21 +43,6 @@ h2.comparison-heading {
 
 .list-item svg {
   padding-top: 0.8rem;
-}
-
-.icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke-width: 2;
-  stroke: currentColor;
-  fill: currentColor;
-}
-
-.green {
-  background-color: var(--color-primary-palest-green);
-  color: var(--color-body-text-black);
-  grid-column: 1 / -1;
 }
 
 .remediation-box h3 {
@@ -85,22 +67,29 @@ h2.comparison-heading {
 
 /* Media Queries */
 @media (min-width: 725px) {
-
-  .traditional {
-    grid-column: 1 / 2;
+  .traditional__remediation_comparison {
+    grid-column: 3 / 7;
+  }
+  
+  .green__remediation_comparison {
+    grid-column: 7 / 11;
   }
 
-  .green {
-    grid-column: 2 / 3;
+  .remediation-comparison-section {
+    padding: 1rem 2rem; 
   }
 
+  .remediation-container {
+    gap: 2rem;
+  }
+
+  .remediation-box {
+    border-radius: 10px;
+  }
 }
 
 @media (min-width: 768px) {
-
   h2.comparison-heading{
     text-align: center;
   }
-
-  
 }

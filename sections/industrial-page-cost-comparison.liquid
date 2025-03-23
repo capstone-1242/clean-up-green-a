@@ -1,19 +1,23 @@
+{{ 'section-cost-comparison.css' | asset_url | stylesheet_tag }}
+
 <section class="cost-comparison">
   <div class="cost-comparison-content">
-    <h2>{{ section.settings.title }}</h2>
-    <p>{{ section.settings.description }}</p>
+    <div>
+      <h2>{{ section.settings.title }}</h2>
+      <p>{{ section.settings.description }}</p>
+    </div>
 
-    <dl class="comparison">
-      <div class="comparison-item">
-        <dt>{{ section.settings.traditional_label }}</dt>
-        <dd>{{ section.settings.traditional_cost }}</dd>
+    <div class="comparison">
+      <div class="comparison-item traditional">
+        <h3>{{ section.settings.traditional_label }}</h3>
+        <p>{{ section.settings.traditional_cost }}</p>
       </div>
-      <div class="comparison-item">
-        <dt>{{ section.settings.green_label }}</dt>
-        <dd>{{ section.settings.green_cost }}</dd>
-        <dd class="note">{{ section.settings.green_note }}</dd>
+      <div class="comparison-item green">
+        <h3>{{ section.settings.green_label }}</h3>
+        <p>{{ section.settings.green_cost }}</p>
+        <p class="note">{{ section.settings.green_note }}</p>
       </div>
-    </dl>
+    </div>
   </div>
 </section>
 

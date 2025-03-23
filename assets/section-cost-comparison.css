@@ -1,0 +1,39 @@
+/* Typography */
+.traditional h3 {
+    font-size: 33.18px;
+    font-weight: 600;
+}
+
+.traditional p {
+    font-size: 27.65px;
+    font-weight: 600;
+}
+
+.cost-comparison {
+    padding: 1rem 2rem;
+}
+
+.cost-comparison-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+}
+
+.cost-comparison-content div {
+    grid-column: 1 / -1;
+}
+
+
+
+.traditional h3,
+.traditional p {
+   color: white; 
+   text-align: center;
+   margin: 0;
+   padding: 2rem 0;
+}
+
+.green h3,
+.green p.note {
+    margin: 0;
+}
