@@ -1,50 +1,165 @@
-<div class="oil-stain-video-section">
-    <h3>How to Use the Two Step Liquid</h3>
-    <div>
-        <div>
-            {% comment %} this is where video goes {% endcomment %}
-        </div>
-        <ul>
-            <li>{{ section.settings.list1 | newline_to_br }}</li>
-            <li>{{ section.settings.list2 | newline_to_br }}</li>
-            <li>{{ section.settings.list3 | newline_to_br }}</li>
-            <li>{{ section.settings.list4 | newline_to_br }}</li>
-        </ul>
-    </div>
-</div>
-{% schema %}
-    {
-        "name": "use description section",
-        "settings": [
-            {
-              "id": "list1",
-              "type": "textarea",
-              "label": "Step 1",
-              "default": "Simple 2 STEP Liquid solution to clean up oil stains and oil odours"
-            },
-            {
-              "id": "list2",
-              "type": "textarea",
-              "label": "Step 2",
-              "default": "Works well on old and new stains"
-            },
-            {
-              "id": "list3",
-              "type": "textarea",
-              "label": "Step 3",
-              "default": "Works on Rock, Concrete, Asphalt, Soil, Sand, Water, Wood"
-            },
-            {
-              "id": "list4",
-              "type": "textarea",
-              "label": "Step 4",
-              "default": "Important! Do not pre-mix STEP 1 & STEP 2 together in advance. Apply individually one at a time to the stain or spill."
-            }
-          ],
-          "presets": [
-            {
-              "name": "use description section"
-            }
-          ]
+<div class="oil-stain-video-section" style="text-align: left;">
+  <h2 class="heading-two" style="padding-left:15rem">How to Use the Two Step Liquid</h2>
+  <div style="display: flex; justify-content: center; width: 80%; margin: 20px auto;">
+    <div style="width: 50%; padding-right: 20px;">
+      {% comment %} this is where video goes {% endcomment %}
+      {% comment %} adding vdo-simran {% endcomment %}
+      {%- style -%}
+        .section-{{ section.id }}-padding {
+          padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+          padding-bottom: calc({{ section.settings.padding_bottom }}px * 0.75);
         }
-        {% endschema %}
+
+        @media screen and (min-width: 750px) {
+          .section-{{ section.id }}-padding {
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+          }
+
+          .video-container-flex {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 0 auto;
+          }
+
+          .video-container-flex .video-wrapper {
+            width: 100%;
+          }
+
+          .video-container-flex .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+          }
+
+          .video-container-flex .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+
+          .video-container-flex .video-wrapper h3 {
+            color: #000;
+            text-align: center;
+            margin-bottom: 10px;
+          }
+        }
+
+        .video-container {
+          position: relative;
+          width: 100%;
+          padding-bottom: 56.25%;
+          height: 0;
+        }
+
+        .video-container video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      {%- endstyle -%}
+
+      <div class="color-{{ section.settings.color_scheme }} gradient">
+        <div class="section-{{ section.id }}-padding">
+          <div class="video-container-flex">
+            <div class="video-wrapper">
+              <div class="video-container">
+                <video width="100%" controls>
+                  <source src="{{ section.settings.file_url }}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="width: 50%;">
+      <ul>
+        <li>{{ section.settings.list1 | newline_to_br }}</li>
+        <li>{{ section.settings.list2 | newline_to_br }}</li>
+        <li>{{ section.settings.list3 | newline_to_br }}</li>
+        <li>{{ section.settings.list4 | newline_to_br }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "use description section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "file_url",
+      "label": "Shopify Video URL",
+      "info": "Upload or select your Clean Diesel video file.",
+      "default": "https://cdn.shopify.com/videos/c/o/v/67e478a3651b42acaca2527ff60f8947.mp4"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 52
+    },
+    {
+      "id": "list1",
+      "type": "textarea",
+      "label": "Step 1",
+      "default": "Simple 2 STEP Liquid solution to clean up oil stains and oil odours"
+    },
+    {
+      "id": "list2",
+      "type": "textarea",
+      "label": "Step 2",
+      "default": "Works well on old and new stains"
+    },
+    {
+      "id": "list3",
+      "type": "textarea",
+      "label": "Step 3",
+      "default": "Works on Rock, Concrete, Asphalt, Soil, Sand, Water, Wood"
+    },
+    {
+      "id": "list4",
+      "type": "textarea",
+      "label": "Step 4",
+      "default": "Important! Do not pre-mix STEP 1 & STEP 2 together in advance. Apply individually one at a time to the stain or spill."
+    }
+  ],
+  "presets": [
+    {
+      "name": "use description section"
+    }
+  ]
+}
+{% endschema %}

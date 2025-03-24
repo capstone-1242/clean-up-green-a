@@ -1,10 +1,14 @@
 <link rel="stylesheet" href="{{ 'section-testimonials.css' | asset_url }}">
 
 <section class="section testimonials">
+
   <div class="testimonials-wrapper">
+
     <div class="testimonials-content">
       <h3 class="text-center">Testimonials</h3>
-      <div class="testimonial-container">
+
+      <div class="testimonial-container"> <!-- display grid container-->
+        {% comment %} Canadian Environmental Practitioner Testimonial {% endcomment %}
         <div class="testimonial dark-bg">
           <div class="testimonial-content light-text">
             <p class="testimonial-text">
@@ -17,6 +21,8 @@
             <p class="testimonial-author">G. - Canadian Environmental Practitioner for 28 years</p>
           </div>
         </div>
+
+        {% comment %} Wildlife Services Testimonial {% endcomment %}
         <div class="testimonial green-bg">
           <div class="testimonial-content dark-text">
             <p class="testimonial-text">
@@ -33,6 +39,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
