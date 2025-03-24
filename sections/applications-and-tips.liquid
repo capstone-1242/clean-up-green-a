@@ -1,24 +1,38 @@
-<div class="application-tips-section">
-  <h4>{{ section.settings.how_to_apply_heading }}</h4>
-  <ol>
-    <li>{{ section.settings.step_1 }}</li>
-    <li>{{ section.settings.step_2 }}</li>
-    <li>{{ section.settings.step_3 }}</li>
-  </ol>
+<link rel="stylesheet" href="{{ 'custom-heading-styles.css' | asset_url }}">
 
-  <div class="quick-tip-section">
-    <h6>{{ section.settings.quick_tip_heading }}</h6>
-    <p>{{ section.settings.quick_tip_text }}</p>
+<link rel="stylesheet" href="{{ 'section-application-tips.css' | asset_url }}">
+
+<section class="application-tips-section">
+  <div class="left-side">
+    <h2 class="heading-two">{{ section.settings.how_to_apply_heading }}</h2>
+    <ol>
+      <li>{{ section.settings.step_1 }}</li>
+      <li>{{ section.settings.step_2 }}</li>
+      <li>{{ section.settings.step_3 }}</li>
+    </ol>
+  </div>
+
+  <div class="right-side">
+    <div class="quick-tip-section">
+      <p>{{ section.settings.quick_tip_heading }}</p>
+      <p>{{ section.settings.quick_tip_text }}</p>
+    </div>
     <div class="quick-tip-images">
       {% if section.settings.image_1 != blank %}
-        <img src="{{ section.settings.image_1 | file_url }}" alt="Application Step 1">
+        <div class="image-wrapper">
+          <img src="{{ section.settings.image_1 | file_url }}" alt="Application Step 1">
+        </div>
       {% endif %}
       {% if section.settings.image_2 != blank %}
-        <img src="{{ section.settings.image_2 | file_url }}" alt="Application Step 2">
+        <div class="image-wrapper">
+          <img src="{{ section.settings.image_2 | file_url }}" alt="Application Step 2">
+        </div>
       {% endif %}
     </div>
   </div>
-</div>
+  
+</section>
+
 
 {% schema %}
 {
@@ -58,7 +72,7 @@
       "id": "quick_tip_text",
       "type": "textarea",
       "label": "Quick Tip Text",
-      "default": "Add your quick tip text here."
+      "default": " Any excess white powder that remains is reusable as it does not absorb any of the hydrocarbons. Simply brush it to the side and return any unused powder to bag."
     },
     {
       "id": "image_1",
