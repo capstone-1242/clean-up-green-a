@@ -2,7 +2,7 @@
 
 
 /* banner css */
-.contact-banner , .footprint-banner, .about-banner{
+.contact-banner , .footprint-banner, .about-banner .service-banner{
   position: relative;
   width: 100%;
   max-width: 2600px;
@@ -11,13 +11,13 @@
   height="600"  */
 }
 
-.contact-banner-img, .footprint-banner-img, .about-banner-img {
+.contact-banner-img, .footprint-banner-img, .about-banner-img, .services-banner-img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.contact-title, .footprint-title , .about-title{
+.contact-title, .footprint-title , .about-title, .service-title {
   position: absolute;
   top: 35%;
   left: 50%;
