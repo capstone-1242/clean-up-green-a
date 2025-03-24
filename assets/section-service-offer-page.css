@@ -1,8 +1,18 @@
-.service-page-content {
-    padding: 0 1rem;
+/* Offer Service Styling */
+
+.offer-service {
+    padding: 1.875rem 1rem;
+    background-color: #CFDCC9;
 }
 
-/* Offer Service Styling */
+.offer-service h2,
+.comparison-section h2 {
+    padding: 1.875rem 0;
+    margin: 0 auto;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1B3B09;
+}
 
 .service-list {
     padding: 0px;
@@ -49,17 +59,23 @@
 
 .text-overlay {
     position: absolute;
-    top: 80%;
-    left: 43%;
+    top: 77%;
+    left: 36%;
     color: #FFF;
     text-align: center;
     font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    background-color: rgba(28, 35, 36, 0.7) ;
+    padding: 10px 20px;
+    border-radius: 16px;
 }
 
 /* Styles for tablets */
-@media screen and (min-width: 750px) and (max-width: 989px) { 
+/* @media screen and (min-width: 750px) and (max-width: 989px) { 
 
-}
+} */
 
 
 /* Styles for desktops and larger screens */
