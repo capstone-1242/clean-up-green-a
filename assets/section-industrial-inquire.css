@@ -73,9 +73,11 @@
 
     .inquire-text__links {
         grid-column: 1 / 7;
+        padding: 4rem 6rem;
     }
 
     .inquire-text__contact {
         grid-column: 7 / 13;
+        padding: 4rem 6rem;
     }
 }
