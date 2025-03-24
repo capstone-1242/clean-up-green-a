@@ -1,0 +1,15 @@
+.removal-section{
+  padding: 10rem 0rem 20rem 0rem;
+}
+.removal-section .left-side{
+  background-color: var(--color-secondary-medium-green);
+  color:#fff;
+  
+}
+.removal-section h2{
+  color: #fff;
+  padding-left: 2rem;
+}
+.removal-text{
+  padding: 5rem 1rem;
+}

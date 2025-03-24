@@ -1,0 +1,50 @@
+.product-description-section {
+  background-color: var(--color-accent-deep-teal);
+  display: flex;
+  gap: 3rem;
+  padding: 5rem 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Ensures they wrap on smaller screens */
+}
+
+.product-description-section, .product-description-section h2 {
+  color: #fff;
+}
+
+.product-description-section h2 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  flex: 1 1 40%; /* Allow it to grow and shrink, but take up 30% of the space */
+  min-width: 200px; /* Prevents it from shrinking too small */
+}
+
+.product-description-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  padding-right: 1rem;
+  flex: 1 1 50%; /* Allow it to grow and shrink, taking up 60% of the space */
+}
+
+.product-description-section > * {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* queries */
+@media (max-width: 800px) {
+  .product-description-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .product-description-section h2,
+  .product-description-section ul {
+    flex: none; 
+    width: 100%; 
+    padding-left: 1rem;
+  }
+}
