@@ -2,7 +2,7 @@
 .industrial-title {
   color: var(--color-heading-deep-green);
   font-weight: 700;
-  font-size: 6rem;
+  font-size: 96px;
 }
 
 /* Layout */
@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch; 
-    background-color: var(--color-white);
+    background-color: #fafafa;
   }
   
   .image-with-text__media-item,
