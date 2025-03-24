@@ -56,11 +56,6 @@
     font-size: 1.5rem;
 }
 
-/* Styles for mobile screens */
-@media screen and (max-width: 749px) { 
-
-}
-
 /* Styles for tablets */
 @media screen and (min-width: 750px) and (max-width: 989px) { 
 
@@ -69,5 +64,27 @@
 
 /* Styles for desktops and larger screens */
 @media screen and (min-width: 990px) { 
-    
+    .service-page-content {
+        display: flex;
+        justify-content: space-around;
+        gap: 2rem;
+    }
+
+    .images-section {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .text-overlay {
+        top: 70%;
+        left: 35%;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        background-color: rgba(28, 35, 36, 0.7) ;
+        padding: 10px 20px;
+        border-radius: 16px;
+    }
 }
