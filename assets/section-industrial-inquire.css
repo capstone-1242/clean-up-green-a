@@ -29,6 +29,7 @@
 .inquire-content {
     display: grid;
     margin-top: 6rem;
+    margin-bottom: 8rem;
 }
 
 .inquire-text__links {
