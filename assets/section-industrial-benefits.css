@@ -17,6 +17,7 @@
 
 .benefits-section {
     background-color: var(--color-secondary-medium-green);
+    margin-top: 8rem;
 }
 
 .benefits-content {
@@ -29,6 +30,16 @@
 .benefits-lists {
     grid-column: 1 / -1;
 }
+
+div.overlay-color {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* .benefits-list {
+    align-self: center;
+} */
 
 .benefits-lists {
   background-image: url('https://cdn.shopify.com/s/files/1/0903/3492/1069/files/industrial-benefits-bg.webp?v=1742769211'); 
@@ -49,18 +60,19 @@
 }
 
 /* Media Queries */
-
-@media (min-width: 861px) {
+@media (min-width: 735px) {
     .benefits-text{
-        grid-column: 1 / 6;
+        grid-column: 1 / 7;
+        padding: 4rem 6rem;
     }
 
     .benefits-lists {
-        grid-column: 6 / 13;
+        grid-column: 7 / 13;
     }
 
     div.overlay-color {
         display: flex;
-        align-self: center;
+        flex-direction: row;
+        justify-content: center;
     }
 }
