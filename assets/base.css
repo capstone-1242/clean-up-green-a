@@ -1,3 +1,5 @@
+
+
 :root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;
@@ -262,15 +264,15 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   background-color: rgba(var(--color-foreground), 0.2);
 }
 
-.text-body {
+/* .text-body {
   font-size: 1.5rem;
   letter-spacing: 0.06rem;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
-}
-
+} */
+/* 
 h1,
 h2,
 h3,
@@ -289,8 +291,8 @@ h5,
   color: rgb(var(--color-heading-deep-green));
   line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
   word-break: break-word;
-}
-
+} */
+/* 
 .hxxl {
   font-size: clamp(calc(var(--font-heading-scale) * 5.6rem), 14vw, calc(var(--font-heading-scale) * 7.2rem));
   line-height: 1.1;
@@ -377,7 +379,7 @@ h6,
   color: rgba(var(--color-foreground), 0.75);
   margin-block-start: 1.67em;
   margin-block-end: 1.67em;
-}
+} */
 
 blockquote {
   font-style: italic;
@@ -3674,4 +3676,20 @@ details-disclosure > details {
 .menu-item .main-link:focus {
     text-decoration: underline;
   text-decoration-color: green;
+}
+
+
+/* overriding some stuff */
+body {
+  background: linear-gradient(#0ff 2px, transparent 1px) !important;
+  background-size: auto 24px !important;
+  line-height: 1.6rem !important;
+  letter-spacing: 0rem !important;
+}
+h2{
+  line-height: 4.8rem !important;
+
+}
+p{
+  margin-top: 4rem;
 }
