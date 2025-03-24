@@ -1,0 +1,80 @@
+/* Typography Styles */
+.inquire-text__links h3,
+.inquire-text__contact p {
+    font-size: 2.0737rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.inquire-text__links h3 {
+    color: var(--color-accent-deep-teal);
+    margin-bottom: 3rem;
+}
+
+.inquire-text__links p,
+.inquire-text__contact p {
+   margin: 0;
+}
+
+.inquire-text__contact p {
+    margin-bottom: 3rem;
+}
+
+.inquire-text__contact p {
+    color: white;
+    line-height: 42px;
+}
+
+/* Layout Styels */
+.inquire-content {
+    display: grid;
+    margin-top: 6rem;
+}
+
+.inquire-text__links {
+    background-color: var(--color-primary-palest-green);
+    padding: 4rem 2rem;
+}
+
+.inquire-text__contact {
+    background-color: var(--color-secondary-medium-green);
+    padding: 4rem 2rem;
+}
+
+.flex {
+    display: flex;
+    gap: 1rem;
+}
+ 
+.dealers {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    text-align: center;
+}
+
+.dealers:first-of-type img {
+    margin-top: 4rem;
+}
+
+.dealers img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Media Queries */
+@media (min-width: 800px) {
+    .inquire-content {
+        grid-template-columns: repeat(12, 1fr);
+        /* gap: 2rem; */
+    }
+
+    .inquire-text__links {
+        grid-column: 1 / 7;
+    }
+
+    .inquire-text__contact {
+        grid-column: 7 / 13;
+    }
+}
