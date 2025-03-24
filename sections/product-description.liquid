@@ -1,12 +1,15 @@
-<div class="product-description-section">
-  <h3>What is it? What can it do?</h3>
+<link rel="stylesheet" href="{{ 'section-product-description.css' | asset_url }}">
+
+
+<section class="product-description-section">
+  <h2 class="heading-two">What is it? What can it do?</h2>
+  
   <ul>
     <li>{{ section.settings.list1 | newline_to_br }}</li>
     <li>{{ section.settings.list2 | newline_to_br }}</li>
     <li>{{ section.settings.list3 | newline_to_br }}</li>
-    <li>{{ section.settings.list4 | newline_to_br }}</li>
   </ul>
-</div>
+</section>
 
 {% schema %}
 {
@@ -22,18 +25,12 @@
       "id": "list2",
       "type": "textarea",
       "label": "List Items 2",
-      "default": "Environmentally safe - Permanent, non toxic encapsulation."
+      "default": "Environmentally safe - Permanent, non toxic encapsulation will absorb 10X its weight."
     },
     {
       "id": "list3",
       "type": "textarea",
       "label": "List Items 3",
-      "default": "Will absorb 10X its weight."
-    },
-    {
-      "id": "list4",
-      "type": "textarea",
-      "label": "List Items 4",
       "default": "Powder will only use what it needs to absorb and encapsulate hydrocarbons."
     }
   ],
