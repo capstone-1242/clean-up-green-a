@@ -21,6 +21,14 @@
   flex: 1;
   display: flex;
 }
+.image-with-text__media{
+  object-fit: none;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
 
 .industrial-banner-img {
   width: 100%;
