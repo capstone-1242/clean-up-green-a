@@ -1,6 +1,6 @@
 /* Typography Styles */
 .image-with-text__content h2 {
-  font-size: ;
+  font-size: clamp(39.81px, 5vw, 64px);
 }
 
 .image-with-text__grid {

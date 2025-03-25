@@ -1,18 +1,30 @@
-.main-heading{
+
+.h1{
     color: var(--color-heading-deep-green);
     font-weight: 700;
     font-size: 6rem;
 }
 
-.heading-two{
-  color: var(--color-heading-deep-green);
-  font-weight: 700;
+.h2{
   font-size: clamp(2rem, 3vw, 4rem);
 }
 
-.h3{
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-heading-deep-green);
+  margin: 0;
 }
-.h4{
 
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
 }
+
+
