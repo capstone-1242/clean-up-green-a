@@ -1,9 +1,4 @@
 /* Typography */
-.industrial-title {
-  color: var(--color-heading-deep-green);
-  font-weight: 700;
-  font-size: 96px;
-}
 
 /* Layout */
 .image-with-text-banner__grid {
