@@ -1,8 +1,9 @@
-{{ 'section-service-offer-page.css' | asset_url | stylesheet_tag }}
 
 {% section 'services-page-banner' %}
 
-<div>
+<div class="desktop-container">
     {% section 'service-offer-section' %}
     {% section 'comparison-section' %}
 </div>
+
+{{ 'section-service-offer-page.css' | asset_url | stylesheet_tag }}
