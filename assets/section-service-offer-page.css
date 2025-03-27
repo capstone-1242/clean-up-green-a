@@ -6,12 +6,12 @@
 }
 
 .offer-service h2,
-.comparison-section h2 {
+.comparison-section h3 {
     padding: 1.875rem 0;
     margin: 0 auto;
     font-size: 2.5rem;
     font-weight: bold;
-    color: #1B3B09;
+    color: #1C2324;
 }
 
 .service-list {
@@ -35,12 +35,13 @@
   /* Comparison Section */
 
 .comparison-section h2 {
-      text-align: center;
+    padding: 1rem 0;
+    text-align: center;
   }
 
 .images-section {
-    align-items: center;
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
 }
@@ -48,13 +49,12 @@
 
 .image-container {
     position: relative;
-    display: inline-block;
+    display: block;
 }
 
 .image-container img {
     border-radius: 1rem;
     min-width: 17.5rem;
-
 }
 
 .text-overlay {
@@ -80,20 +80,38 @@
 
 /* Styles for desktops and larger screens */
 @media screen and (min-width: 990px) { 
-    .service-page-content {
+    .desktop-container {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        margin: 6.25rem;
         gap: 2rem;
     }
 
+    .desktop-container > div {
+        width: 50%;
+    }
+
+    .offer-service {
+        border-radius: 20px;
+        padding: 2rem;
+    }
+
+    .offer-service > {
+        justify-content: center;
+    }
+
+    .service-list li {
+        margin-bottom: 1.25rem;
+    }
+
     .images-section {
-        display: flex;
-        flex-wrap: nowrap;
+        flex-direction: unset;
+        gap: 2rem;
     }
 
     .text-overlay {
         top: 70%;
-        left: 35%;
+        left: 40%;
         color: white;
         font-size: 2rem;
         font-weight: bold;
@@ -102,5 +120,25 @@
         background-color: rgba(28, 35, 36, 0.7) ;
         padding: 10px 20px;
         border-radius: 16px;
+    }
+
+    .image-container {
+        min-width: 25.25rem;
+    }
+    
+    .image-container img {
+        border-radius: 1rem;
+        width: 100%;
+        height: 22.5rem;
+    }
+
+    .comparison-section h2 {
+        text-align: unset;
+    }
+
+    .text-overlay {
+        top: 80%;
+        left: 36%;
+        font-size: 2.25rem;
     }
 }
