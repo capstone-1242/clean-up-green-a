@@ -2,12 +2,29 @@
   
   
   <section class="footprint-banner">
-    <img src="{{ 'footprint-bg.webp' | file_url }}" 
-      alt="footprint Banner" 
-      width="1600" 
-      height="600" 
-      class="footprint-banner-img">
-    <h2 class="footprint-title">Our Footprint</h2>
+    <img src="{{ section.settings.banner_image | file_url }}" alt="A green landscape background" class="footprint-banner-img" width="1600" 
+      height="600">
+    <h1 class="footprint-title">{{ section.settings.banner_heading }}</h1>
   </section>
 
   {% comment %} the css file is same as section-custom-form.css {% endcomment %}
+
+  {% schema %}
+{
+  "name": "Page Banner",
+  "settings": [
+    {
+      "id": "banner_heading",
+      "type": "text",
+      "label": "Banner Heading",
+      "default": "Our Footprint"
+    },
+    {
+      "type": "text",
+      "id": "banner_image",
+      "label": "Image Filename",
+      "default": "footprint-bg.webp"
+    },
+  ]
+}
+{% endschema %}
