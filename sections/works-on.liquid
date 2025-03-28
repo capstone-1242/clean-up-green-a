@@ -2,46 +2,205 @@
 
 <div class="works-on-section">
   <div class="works-on-container">
-    <!-- Heading -->
-    <h2 class="works-on-heading">Works on</h2>
+    <h2 class="works-on-heading">{{ section.settings.works_on_heading }}</h2>
 
-    <!-- Images and Text Section -->
     <div class="image-grid">
-      <!-- Image 1 -->
       <div class="image-item">
-        <img src="{{ 'rock.webp' | file_url }}" alt="Rock" width="300" height="200">
-        <h3>Rock</h3>
+        <img
+          src="{{ section.settings.image_1 | file_url }}"
+          alt="{{ section.settings.image_1_alt }}"
+          width="300"
+          height="200"
+        >
+        <p>{{ section.settings.image_1_title }}</p>
       </div>
 
-      <!-- Image 2 -->
       <div class="image-item">
-        <img src="{{ 'concrete.webp' | file_url }}" alt="Concrete" width="300" height="200">
-        <h3>Concrete</h3>
+        <img
+          src="{{ section.settings.image_2 | file_url }}"
+          alt="{{ section.settings.image_2_alt }}"
+          width="300"
+          height="200"
+        >
+        <p>{{ section.settings.image_2_title }}</p>
       </div>
 
-      <!-- Image 3 -->
       <div class="image-item">
-        <img src="{{ 'soil.webp' | file_url }}" alt="Soil" width="300" height="200">
-        <h3>Soil</h3>
+        <img
+          src="{{ section.settings.image_3 | file_url }}"
+          alt="{{ section.settings.image_3_alt }}"
+          width="300"
+          height="200"
+        >
+        <p>{{ section.settings.image_3_title }}</p>
       </div>
 
-      <!-- Image 4 -->
       <div class="image-item">
-        <img src="{{ 'sand.webp' | file_url }}" alt="Sand" width="300" height="200">
-        <h3>Sand</h3>
+        <img
+          src="{{ section.settings.image_4 | file_url }}"
+          alt="{{ section.settings.image_4_alt }}"
+          width="300"
+          height="200"
+        >
+        <p>{{ section.settings.image_4_title }}</p>
       </div>
 
-      <!-- Image 5 -->
       <div class="image-item">
-        <img src="{{ 'wood.webp' | file_url }}" alt="Wood" width="300" height="200">
-        <h3>Wood</h3>
+        <img
+          src="{{ section.settings.image_5 | file_url }}"
+          alt="{{ section.settings.image_5_alt }}"
+          width="300"
+          height="200"
+        >
+        <p>{{ section.settings.image_5_title }}</p>
       </div>
 
-      <!-- Image 6 -->
       <div class="image-item">
-        <img src="{{ 'water.webp' | file_url }}" alt="Water" width="300" height="200">
-        <h3>Water</h3>
+        <img
+          src="{{ section.settings.image_6 | file_url }}"
+          alt="{{ section.settings.image_6_alt }}"
+          width="300"
+          height="200"
+        >
+        <p>{{ section.settings.image_6_title }}</p>
       </div>
     </div>
   </div>
 </div>
+
+{% schema %}
+{
+  "name": "Works On Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "works_on_heading",
+      "label": "Section Heading",
+      "default": "Works on"
+    },
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "text",
+      "id": "image_1",
+      "label": "Image 1",
+      "default": "rock.webp"
+    },
+    {
+      "type": "text",
+      "id": "image_1_title",
+      "label": "Image 1 Title",
+      "default": "Rock"
+    },
+    {
+      "type": "text",
+      "id": "image_1_alt",
+      "label": "Image 1 Alt Text",
+      "default": "Rock"
+    },
+
+    {
+      "type": "text",
+      "id": "image_2",
+      "label": "Image 2",
+      "default": "concrete.webp"
+    },
+    {
+      "type": "text",
+      "id": "image_2_title",
+      "label": "Image 2 Title",
+      "default": "Concrete"
+    },
+    {
+      "type": "text",
+      "id": "image_2_alt",
+      "label": "Image 2 Alt Text",
+      "default": "Concrete"
+    },
+
+    {
+      "type": "text",
+      "id": "image_3",
+      "label": "Image 3",
+      "default": "soil.webp"
+    },
+    {
+      "type": "text",
+      "id": "image_3_title",
+      "label": "Image 3 Title",
+      "default": "Soil"
+    },
+    {
+      "type": "text",
+      "id": "image_3_alt",
+      "label": "Image 3 Alt Text",
+      "default": "Soil"
+    },
+
+    {
+      "type": "text",
+      "id": "image_4",
+      "label": "Image 4",
+      "default": "sand.webp"
+    },
+    {
+      "type": "text",
+      "id": "image_4_title",
+      "label": "Image 4 Title",
+      "default": "Sand"
+    },
+    {
+      "type": "text",
+      "id": "image_4_alt",
+      "label": "Image 4 Alt Text",
+      "default": "Sand"
+    },
+
+    {
+      "type": "text",
+      "id": "image_5",
+      "label": "Image 5",
+      "default": "wood.webp"
+    },
+    {
+      "type": "text",
+      "id": "image_5_title",
+      "label": "Image 5 Title",
+      "default": "Wood"
+    },
+    {
+      "type": "text",
+      "id": "image_5_alt",
+      "label": "Image 5 Alt Text",
+      "default": "Wood"
+    },
+
+    {
+      "type": "text",
+      "id": "image_6",
+      "label": "Image 6",
+      "default": "water.webp"
+    },
+    {
+      "type": "text",
+      "id": "image_6_title",
+      "label": "Image 6 Title",
+      "default": "Water"
+    },
+    {
+      "type": "text",
+      "id": "image_6_alt",
+      "label": "Image 6 Alt Text",
+      "default": "Water"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Works On Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
