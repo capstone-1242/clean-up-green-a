@@ -3748,3 +3748,63 @@ details-disclosure > details {
 }
 
 
+
+<<<<<<< Updated upstream
+
+
+/* madi's styling for shop */
+
+.card {
+  box-shadow: 8px 12px 14.6px 0px #C2C2C2 !important;
+=======
+body {
+  background: linear-gradient(#0ff 2px, transparent 1px) !important;
+  background-size: auto 24px !important;
+  line-height: 1.6rem !important;
+  letter-spacing: 0rem !important;
+<<<<<<< Updated upstream
+  z-index: 9999 !important;
+=======
+  z-index: 9999 ;
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+}
+
+.card--media {
+  border-radius: 20px !important;
+}
+
+.card__inner {
+  border-radius: 20px 20px 0px 0px !important;
+}
+
+.card__information {
+  padding: 20px !important;
+}
+
+.card__media .media img {
+  padding: 1rem;
+  object-fit: contain !important;
+}
+
+.product-grid {
+  gap: 50px !important;
+}
+
+.product-card-description {
+  padding-top: 12px;
+}
+
+
+.price span {
+  font-size: 18px;
+  font-weight: bolder;
+  color: var(--color-heading-deep-green);
+}
+
+.card__heading {
+  color: var(--color-heading-deep-green) !important;
+  font-weight: 600 !important;
+  font-size: 20px !important;
+  line-height: 24px;
+}
