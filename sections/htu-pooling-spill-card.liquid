@@ -1,0 +1,182 @@
+<section class="content-section">
+  <div class="card-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <div class="card-content">
+        <img src="{{ section.settings.card1_image | file_url }}" alt="Clean a pooling oil spill">
+        <div class="cleaning-text">
+          <h3>{{ section.settings.card1_title }}</h3>
+        </div>
+        <div class="cleaning-description">
+          <p>{{ section.settings.card1_description }}</p>
+          <a href="{{ section.settings.card1_link }}" class="button-rounded">
+            {{ section.settings.card1_button }}
+            <span class="arrow-circle">
+              <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.22498 18H29.775" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+                <path d="M23.175 25.17L29.34 19.005C29.6194 18.724 29.7762 18.3438 29.7762 17.9475C29.7762 17.5512 29.6194 17.1711 29.34 16.89L23.34 10.89" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="card-content">
+        <img src="{{ section.settings.card2_image | file_url }}" alt="Clean an oil stain">
+        <div class="cleaning-text">
+          <h3>{{ section.settings.card2_title }}</h3>
+        </div>
+        <div class="cleaning-description">
+          <p>{{ section.settings.card2_description }}</p>
+          <a href="{{ section.settings.card2_link }}" class="button-rounded">
+            {{ section.settings.card2_button }}
+            <span class="arrow-circle">
+              <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.22498 18H29.775" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+                <path d="M23.175 25.17L29.34 19.005C29.6194 18.724 29.7762 18.3438 29.7762 17.9475C29.7762 17.5512 29.6194 17.1711 29.34 16.89L23.34 10.89" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="card-content">
+        <img src="{{ section.settings.card3_image | file_url }}" alt="Clean an oil soil spill">
+        <div class="cleaning-text">
+          <h3>{{ section.settings.card3_title }}</h3>
+        </div>
+        <div class="cleaning-description">
+          <p>{{ section.settings.card3_description }}</p>
+          <a href="{{ section.settings.card3_link }}" class="button-rounded">
+            {{ section.settings.card3_button }}
+            <span class="arrow-circle">
+              <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.22498 18H29.775" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+                <path d="M23.175 25.17L29.34 19.005C29.6194 18.724 29.7762 18.3438 29.7762 17.9475C29.7762 17.5512 29.6194 17.1711 29.34 16.89L23.34 10.89" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "How to use",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Card 1 Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "card1_image",
+      "label": "Clean a pooling spill",
+    },
+    {
+      "type": "text",
+      "id": "card1_title",
+      "label": "Card 1 Title",
+      "default": "Clean a Pooling Oil Spill"
+
+    },
+    {
+      "type": "textarea",
+      "id": "card1_description",
+      "label": "Card 1 Description",
+      "default": " Clean-Up Green Oil Spill Powder is used for all types of pooling oil spills. It works on hard surfaces such as asphalt, concrete or compacted soil, and also on water."
+
+    },
+    {
+      "type": "url",
+      "id": "card1_link",
+      "label": "Card 1 Button Link",
+      "default": "/pages/how-to-clean-a-pooling-spill"
+
+    },
+    {
+      "type": "text",
+      "id": "card1_button",
+      "label": "Card 1 Button Text",
+      "default": "How to Clean a Pooling Oil Spill"
+      
+    },
+    {
+      "type": "header",
+      "content": "Card 2 Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "card2_image",
+      "label": "Card 2 Image",
+      "default": "cleaning-spills-in-oil-bg.webp"
+    },
+    {
+      "type": "text",
+      "id": "card2_title",
+      "label": "Card 2 Title",
+      "default":"Clean an Oil Stain"
+    },
+    {
+      "type": "textarea",
+      "id": "card2_description",
+      "label": "Card 2 Description",
+      "default":"Clean an Oil Stain"
+
+    },
+    {
+      "type": "url",
+      "id": "card2_link",
+      "label": "Card 2 Button Link"
+    },
+    {
+      "type": "text",
+      "id": "card2_button",
+      "label": "Card 2 Button Text"
+    },
+    {
+      "type": "header",
+      "content": "Card 3 Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "card3_image",
+      "label": "Card 3 Image"
+    },
+    {
+      "type": "text",
+      "id": "card3_title",
+      "label": "Card 3 Title"
+    },
+    {
+      "type": "textarea",
+      "id": "card3_description",
+      "label": "Card 3 Description"
+    },
+    {
+      "type": "url",
+      "id": "card3_link",
+      "label": "Card 3 Button Link"
+    },
+    {
+      "type": "text",
+      "id": "card3_button",
+      "label": "Card 3 Button Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dynamic 3 Cards",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
