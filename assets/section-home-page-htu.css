@@ -4,13 +4,15 @@
     justify-content: center;
     background: white;
     padding: 0;
+    margin-top: 24px;
+    padding-bottom: 24px;
   }
   
   .home-htu-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
-    max-width: 1400px;
+    /* max-width: 1400px; */
     min-height: 500px;
   }
   
@@ -80,7 +82,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: var(--color-accent-deep-teal);
-    border-radius: 999px;
+    border-radius: 100px;
     font-weight: bold;
     font-size: 0.95rem;
     text-decoration: none;

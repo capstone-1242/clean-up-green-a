@@ -1,5 +1,5 @@
 .testimonials {
-  margin-top: 6rem;
+  margin-top: 24px;
   padding-bottom: 6rem;
 }
 
@@ -31,7 +31,7 @@
 .testimonial {
   padding: 2rem;
   border-radius: 8px;
-  
+  max-width: 500px;
 }
 
 .dark-bg {
