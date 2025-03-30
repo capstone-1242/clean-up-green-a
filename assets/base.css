@@ -35,13 +35,13 @@
 
 /******************************** Baseline Grid *******************************/
 
-body {
+/* body {
   background: linear-gradient(#0ff 2px, transparent 1px) !important;
   background-size: auto 24px !important;
   line-height: 1.6rem !important;
   letter-spacing: 0rem !important;
   z-index: 9999 !important;
-}
+} */
 
 /* VERTICAL RHYTHM = 24, 48, 72, 96, 120, 144, 168, 192 .... */
 
@@ -3747,30 +3747,6 @@ details-disclosure > details {
   text-decoration-color: green;
 }
 
-
-/* body---baseline- */
-body {
-  background: linear-gradient(#0ff 2px, transparent 1px) !important;
-  background-size: auto 24px !important;
-  line-height: 1.6rem !important;
-  letter-spacing: 0rem !important;
-  position: relative;  /* Ensure the body has a reference for absolute positioning */
-  z-index: 1; /* Content layer */
-}
-
-body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background: linear-gradient(rgba(0, 255, 255, 0.582) 2px, transparent 1px) !important; */
-  background-size: auto 24px !important;
-  z-index: 9999; /* Gradient is on top */
-}
-
-
 /* madi's styling for shop */
 
 .card {
@@ -3801,7 +3777,6 @@ body::before {
 .product-card-description {
   padding-top: 12px;
 }
-
 
 .price span {
   font-size: 18px;

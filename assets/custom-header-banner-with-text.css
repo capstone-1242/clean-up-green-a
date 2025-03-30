@@ -20,18 +20,13 @@
     display: flex;
   }
   
-  .industrial-banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
+  .industrial-banner-img,
   .home-banner-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  
+
   @media (max-width: 650px) { 
     .image-with-text__media-item {
       display: none; 
