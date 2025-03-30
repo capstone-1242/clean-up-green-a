@@ -10,17 +10,16 @@
 
 .hero-text-box {
   background: rgba(0, 0, 0, 0.6);
-  border-radius: 12px;
+  /* border-radius: 12px; */
   max-width: 700px;
   padding: 40px 148px;
   text-align: left;
 }
 
-.hero-text-box h2 {
-  font-size: clamp(2rem, 6vw, 6rem); 
-  font-weight: bold;
+.hero-text-box h1 {
   color: white;
-  margin: 0 0 20px 0;
+  padding: 0;
+  padding-bottom: 24px;
 }
 
 .hero-text-box p {
@@ -59,10 +58,6 @@
   /* padding: 20px; */
 }
 
-.cleaning-text {
-  padding: 10px;
-}
-
 .card img {
   width: 100%;
   height: auto;
@@ -70,19 +65,14 @@
 }
 
 /* Card Text */
-.card h4 {
-  font-size: 18px;
-  margin: 15px 0;
-}
-
-.card p {
-  font-size: 14px;
+.cleaning-text {
+  padding: 10px;
+  color: white !important;
 }
 
 .card a {
   text-align: left;
   gap: 34px;
-  font-size: 1.2rem;
 }
 
 .card {
@@ -122,9 +112,9 @@
   padding: 10px 30px;
 }
 
-.cleaning-text h4 {
+.cleaning-text h2 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 16px !important;
   color: white !important;
 }
 
@@ -139,9 +129,12 @@
     background: none;
     text-align: center;
   }
-  .hero-text-box h2 {
-    color: black;
+
+  .hero-text-box h1 {
+    color: var(--color-heading-deep-green) !important;
+    padding-bottom: 24px;
   }
+
   .hero-section p {
     color: black;
     text-align: left;
