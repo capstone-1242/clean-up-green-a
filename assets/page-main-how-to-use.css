@@ -23,7 +23,6 @@
 }
 
 .hero-text-box p {
-  font-size: 1.2rem;
   line-height: 1.6;
   margin: 0;
   color: white;
@@ -80,7 +79,7 @@
   width: 100%;
   max-width: 350px;
   border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--drop-shadow);
   overflow: hidden;
   text-align: left;
   display: flex;
@@ -88,7 +87,11 @@
 }
 
 .cleaning-description {
-  padding: 10px 26px;
+  padding: 24px;
+}
+
+.cleaning-description p {
+  padding-bottom: 24px;
 }
 
 .card img {
@@ -112,9 +115,9 @@
   padding: 10px 30px;
 }
 
-.cleaning-text h2 {
+.card-content h2 {
   margin: 0;
-  font-size: 16px !important;
+  font-size: clamp(16px, 5vw, 18px) !important;
   color: white !important;
 }
 
