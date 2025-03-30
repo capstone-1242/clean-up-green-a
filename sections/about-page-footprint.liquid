@@ -3,7 +3,7 @@
     <img src="{{ section.settings.footprint-hero-image | file_url }}" alt="TCLP Image side">
   </div>
   <div class="footprint-content">
-    <h2>Learn more about Clean-Up Green’s environmental footprint</h2>
+    <h2>{{ section.settings.section_heading }}</h2>
     <a href="{{ section.settings.footprint_button_link }}">
       <button class="button-rounded">
         {{ section.settings.footprint_button_text }}
@@ -19,12 +19,16 @@
 </section>
 
 
-
-
 {% schema %}
 {
   "name": "About Footprint Section",
   "settings": [
+    {
+      "id": "section_heading",
+      "type": "text",
+      "label": "section heading",
+      "default": "Learn more about Clean-Up Green’s environmental footprint"
+    },
     {
       "id": "footprint-hero-image",
       "type": "text",

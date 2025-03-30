@@ -1,4 +1,9 @@
 /* Typography */
+h1 {
+  color: var(--color-heading-deep-green) !important;
+  text-align: left !important;
+  padding: 0;
+}
 
 /* Layout */
 .image-with-text-banner__grid {
