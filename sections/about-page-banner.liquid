@@ -1,11 +1,33 @@
 <link rel="stylesheet" href="{{ 'section-custom-banner-with-title.css' | asset_url }}">
 
-  
   <section class="about-banner">
-    <img src="{{ 'about-page-banner.webp' | file_url }}" 
-      alt="About Banner" 
-      width="1600" 
-      height="600" 
-      class="about-banner-img">
-    <h2 class="about-title">About Us</h2>
+    <img 
+        src="{{ section.settings.aboutus_image | file_url }}" 
+        alt="About Banner"
+        width="1600" 
+        height="600" 
+        class="about-banner-img">
+    <div class="banner-overlay">
+        <h1>{{ section.settings.banner_heading }}</h1>
+    </div>
   </section>
+
+  {% schema %}
+{
+  "name": "About us banner",
+  "settings": [
+    {
+      "id": "banner_heading",
+      "type": "text",
+      "label": "Banner Heading",
+      "default": "About Us"
+    },
+    {
+      "type": "text",
+      "id": "aboutus_image",
+      "label": "Image Filename",
+      "default": "about-page-banner.webp"
+    },
+  ]
+}
+{% endschema %}
