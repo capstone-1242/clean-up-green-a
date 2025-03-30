@@ -25,13 +25,21 @@
 .testimonial-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 2rem;
+  gap: 5rem;
 }
-
+/* main class for individual cards */
 .testimonial {
+<<<<<<< Updated upstream
   padding: 2rem;
   border-radius: 8px;
   max-width: 500px;
+=======
+  padding: 2rem 4rem;
+  border-radius: 10px;
+  max-width: 500px;
+  box-shadow: var(--drop-shadow);
+
+>>>>>>> Stashed changes
 }
 
 .dark-bg {
