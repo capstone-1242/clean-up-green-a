@@ -121,7 +121,7 @@
 
 
 @media (max-width: 768px) {
-  .application-tips-section {
+  .application-tips-section, .removal-section {
     flex-direction: column;
   }
 

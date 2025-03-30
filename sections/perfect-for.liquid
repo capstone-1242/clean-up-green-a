@@ -41,7 +41,7 @@
       
       
       <div class="image-section">
-        <img src="{{ 'perfect-for.webp' | file_url }}" alt="Perfect For Image">
+        <img src="{{ section.settings.image_side | file_url}}" alt="Perfect For Image">
       </div>
     </div>
   </div>
@@ -62,7 +62,13 @@
       "id": "perfect_for_items",
       "label": "List Items(3cols)",
       "default": "Diesel, Gasoline, Motor Oil, Heating Oil, Kerosene, Hydraulic Fluids, Power Steering, Condensate, Fluids, Crude Oil, Jet Fuel, Cutting Fluid"
-    }
+    },
+    {
+      "id": "image_side",
+      "type": "text",
+      "label": "Image",
+      "default": "perfect-for.webp"
+    },
     
   ]
 }

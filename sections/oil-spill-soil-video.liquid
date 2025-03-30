@@ -1,4 +1,87 @@
-<div class="oil-spill-soil-video-section">
-    <h3>Two Step Liquid For Cleaning Contaminated Soil</h3>
-    
-</div>
+{{ 'oil-stain-video.css' | asset_url | stylesheet_tag }}
+
+
+<section class="oil-spill-soil-video-section">
+  <h3 class="heading-two">{{section.settings.heading}}</h3>
+    <div class="video-content">
+        <div class="video-section">
+           
+                  <div class="video-container">
+                    <video width="100%" controls>
+                      <source src="{{ section.settings.file_url }}" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+           
+        </div>
+        <div class="side-image">
+            <img
+                src="{{ section.settings.image_side | file_url }}"
+                width="300"
+                height="200"
+              >
+        </div>
+      </div>
+</section>
+
+{% schema %}
+{
+  "name": "Spill in soil video",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section heading",
+      "default": "Two Step Liquid For Cleaning Contaminated Soil"
+    },
+    {
+      "type": "text",
+      "id": "file_url",
+      "label": "Shopify Video URL",
+      "info": "Upload or select your video file.",
+      "default": "https://cdn.shopify.com/videos/c/o/v/67e478a3651b42acaca2527ff60f8947.mp4"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 0
+    },
+    {
+      "id": "image_side",
+      "type": "text",
+      "label": "Image",
+      "default": "perfect-for.webp"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Spill in soil video"
+    }
+  ]
+}
+{% endschema %}

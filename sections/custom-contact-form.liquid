@@ -1,11 +1,13 @@
 {{ 'custom-button.css' | asset_url | stylesheet_tag }}
 {{ 'section-custom-form.css' | asset_url | stylesheet_tag }}
-
+{% comment %} do not change any classes, all the classes that form is using are from within-shopify.
+ the only classes that I added are for styling.
+ button is customized - Simran {% endcomment %}
 
 
 <section class="contact-container">
 <section class="custom-contact-form">
-  <h2>Got Questions? Send us a message</h2>
+  <h2 class="form-heading">Got Questions? Send us a message</h2>
   {% form 'contact' %}
     {%- if form.posted_successfully? -%}
       <p style="color: green;">{{ 'templates.contact.form.post_success' | t }}</p>
@@ -15,10 +17,18 @@
       <div class="form-group">
         <label for="contact[first_name]">First Name</label>
         <input type="text" id="contact[first_name]" name="contact[first_name]" required>
+        
         {%- if form.errors contains 'first_name' -%}
-          <p class="form-error">{{ form.errors.translated_fields.first_name | capitalize }} {{ form.errors.messages.first_name }}</p>
+          <p class="form-error">
+            {% if form.errors.messages.first_name == 'This field is required.' %}
+              Puh-lease provide your first name.
+            {% else %}
+              {{ form.errors.messages.first_name }}
+            {% endif %}
+          </p>
         {%- endif -%}
       </div>
+      
 
       <div class="form-group">
         <label for="contact[last_name]">Last Name</label>
@@ -67,17 +77,58 @@
   {% endform %}
 </section>
 
-<section class="contact-info">
-  {% comment %} <h3 class="contact-heading">Contact Information</h3> {% endcomment %}
+
+<div class="contact-info">
   <p class="contact-address">
-    <i class="fas fa-map-marker-alt"></i> Clean-Up Green Inc.<br>
-    36, 52502 RR 25, Parkland County, AB T7Y 2M2
+    {% render 'location-pin-icon-svg' %}
+    {{ section.settings.company_name }}<br>
+    <span class="address">{{ section.settings.address | newline_to_br }}</span>
   </p>
   <p class="contact-phone">
-    <i class="fas fa-phone-alt"></i> <a href="tel:+17805420486">(780) 542-0486</a>
+    {% render 'phone-icon-svg' %}
+    <a href="tel:{{ section.settings.phone_number }}">{{ section.settings.phone }}</a>
   </p>
   <p class="contact-email">
-    <i class="fas fa-envelope"></i> <a href="mailto:inquire@cleanupgreen.ca">inquire@cleanupgreen.ca</a>
+    {% render 'email-icon-svg' %}
+    <a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a>
   </p>
+</div>
 </section>
-</section>
+
+{% schema %}
+{
+  "name": "Contact Info",
+  "settings": [
+    {
+      "type": "text",
+      "id": "company_name",
+      "label": "Company Name",
+      "default": "Clean-Up Green Inc."
+    },
+    {
+      "type": "text",
+      "id": "address",
+      "label": "Address",
+      "default": "36, 52502 RR 25\nParkland County, AB\nT7Y 2M2"
+    },    
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone Number",
+      "default": "(780) 542-0486"
+    },
+    {
+      "type": "text",
+      "id": "phone_number",
+      "label": "Phone Link",
+      "default": "tel:+17805420486"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email",
+      "default": "inquire@cleanupgreen.ca"
+    }
+  ]
+}
+{% endschema %}
