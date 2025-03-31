@@ -4,8 +4,34 @@
     --inputs-radius: 20px !important;
 }
 
+/* NOTE: 
+The 1px black line belongs to a root styling declared in index.liquid
+and it is applied in <header>  class="color-scheme-4 { --gradient-background }" */
+
 .mobile-search {
   display: block;
+  background-color: #EDEDED;
+  padding: 1rem;
+  border: unset;
+}
+
+.field__mobile__search__style {
+  border-radius: unset;
+  border: unset;
+  background-color: #FFF;
+}
+
+.label__mobile__search__style {
+  color: #716E6E;
+}
+
+.search__icon__color svg path {
+  color: #020202;
+}
+
+.field-flex {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .desktop-search {
