@@ -7,7 +7,7 @@
   <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
     <div class="field">
       <input
-        class="search__input field__input"
+        class="search__input field__input field__desktop__search__style"
         id="{{ input_id }}"
         type="search"
         name="q"
@@ -26,7 +26,7 @@
           spellcheck="false"
         {%- endif -%}
       >
-      <label class="field__label" for="{{ input_id }}">{{ 'general.search.search' | t }}</label>
+      <label class="field__label label__search__style " for="{{ input_id }}">{{ 'general.search.search' | t }}</label>
       <input type="hidden" name="options[prefix]" value="last">
       <button
         type="reset"
@@ -37,9 +37,9 @@
           <use xlink:href="#icon-reset">
         </svg>
       </button>
-      <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+      <button class="search__button field__button search__icon__color" aria-label="{{ 'general.search.search' | t }}">
         <svg class="icon icon-search" aria-hidden="true" focusable="false">
-          <use href="#icon-search">
+          <path fill="currentColor" fill-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 1 1 2.85 3.5a5.784 5.784 0 0 1 8.18 8.18m.26 1.12a6.78 6.78 0 1 1 .72-.7l5.4 5.4a.5.5 0 1 1-.71.7z" clip-rule="evenodd"/>
         </svg>
       </button>
     </div>

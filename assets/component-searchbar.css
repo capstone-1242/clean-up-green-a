@@ -1,12 +1,30 @@
-/* Styling is for both mobile and desktop */
+/* 
+Styling is for both mobile and desktop 
+General overrides
+*/
 
 :root {
     --inputs-radius: 20px !important;
 }
 
+.field-flex {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.label__search__style {
+  color: #716E6E;
+}
+
+.search__icon__color svg path {
+  color: #020202;
+}
+
 /* NOTE: 
 The 1px black line belongs to a root styling declared in index.liquid
 and it is applied in <header>  class="color-scheme-4 { --gradient-background }" */
+
+/* mobile overrides */
 
 .mobile-search {
   display: block;
@@ -19,24 +37,25 @@ and it is applied in <header>  class="color-scheme-4 { --gradient-background }" 
   border-radius: unset;
   border: unset;
   background-color: #FFF;
-}
-
-.label__mobile__search__style {
-  color: #716E6E;
-}
-
-.search__icon__color svg path {
   color: #020202;
 }
 
-.field-flex {
-  display: flex;
-  flex-direction: row-reverse;
+.field__mobile__search__style:focus {
+  border-radius: unset;
+  border: unset;
 }
+
+/* desktop overrides */
 
 .desktop-search {
   display: none;
 }
+
+.field__desktop__search__style {
+  background-color: #FFF;
+  color: #020202;
+}
+
 
 @media only screen and (max-width: 769px) {
   predictive-search[open] .predictive-search {
