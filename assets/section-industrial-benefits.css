@@ -1,8 +1,7 @@
 /* Typography Styles */
 .benefits-text h2 {
-    font-size: clamp(39.81px, 5vw, 50px);
-    font-weight: 700;
-    color: white;
+    color: white !important;
+    padding-bottom: 24px;
 }
 
 .benefits-list ul li,
@@ -15,9 +14,14 @@
     padding: 0 2rem;
 }
 
+.benefits-list ul li {
+    padding-bottom: 1rem;
+}
+
 .benefits-section {
     background-color: var(--color-secondary-medium-green);
     margin-top: 8rem;
+    /* padding: 24px; */
 }
 
 .benefits-content {
@@ -31,11 +35,6 @@
     grid-column: 1 / -1;
 }
 
-div.overlay-color {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 .benefits-lists {
   background-image: url('https://cdn.shopify.com/s/files/1/0903/3492/1069/files/industrial-benefits-bg.webp?v=1742769211'); 
@@ -46,8 +45,11 @@ div.overlay-color {
 }
 
 .overlay-color {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: rgba(57, 97, 41, 0.8);
-    padding: 2rem;
+    padding: 24px;
 }
 
 .benefits-list ul {

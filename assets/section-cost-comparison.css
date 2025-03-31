@@ -1,24 +1,23 @@
 /* Typography Styles */
 .cost-comparison-content h2 {
-    font-size: clamp(2.4881rem, 5vw, 4rem);
-    font-weight: 600;
-    color: var(--color-accent-deep-teal);
-  }
+    padding-bottom: 1.5rem;
+}
 
 .traditional__cost_comparison h3,
 .green__cost_comparison h3 {
-    font-size: 33.18px;
+    font-size: 33.18px !important;
     font-weight: 600;
 }
 
 .traditional__cost_comparison p {
-    font-size: 27.65px;
+    font-size: 27.65px !important;
+    line-height: 28px !important;
     font-weight: 600;
 }
 
 .traditional__cost_comparison h3,
 .traditional__cost_comparison p {
-   color: white; 
+   color: white !important; 
    text-align: center;
    margin: 0;
    padding: 1rem 0;
@@ -26,7 +25,7 @@
 
 .green__cost_comparison h3,
 .green__cost_comparison p {
-    padding-bottom: 1rem;
+    padding: 24px !important;
 }
 
 .green__cost_comparison h3,
@@ -37,8 +36,8 @@
 }
 
 .green__cost_comparison .percentage {
-    font-size: 64px;
-    font-weight: 700;
+    font-size: 64px !important;
+    font-weight: 700 !important;
 }
 
 .green__cost_comparison p:first-of-type {
@@ -53,12 +52,12 @@
 
 .comparison-item {
     align-items: baseline;
+    box-shadow: var(--drop-shadow);
 }
 
 .text-content,
 .comparison-item {
-    
-    padding: 0 2rem;
+    padding: 24px;
 }
 
 .traditional__cost_comparison {

@@ -1,10 +1,9 @@
 h2.comparison-heading {
   grid-column: 3 / 11;
-  font-size: clamp(2.4881rem, 5vw, 3.5rem);
-  font-weight: bold;
   margin-bottom: 20px;
   text-align: left;
   color: var(--color-accent-deep-teal);
+  padding: 0 2rem;
 }
 
 .remediation-container {
@@ -16,6 +15,11 @@ h2.comparison-heading {
   padding: 2rem;
   color: white;
   text-align: left;
+  box-shadow: var(--drop-shadow);
+}
+
+.remediation-comparison-section {
+  margin-bottom: 72px;
 }
 
 .traditional__remediation_comparison {
@@ -36,21 +40,30 @@ h2.comparison-heading {
   text-align: center;
 }
 
+.traditional__remediation_comparison h3 {
+  color: white !important;
+}
+
 .list-item {
   display: flex;
   gap: 1.5rem;
+  padding-bottom: 24px;
+  line-height: 24px;
 }
 
 .list-item svg {
   padding-top: 0.8rem;
 }
 
+
+
 .remediation-box h3 {
-  font-size: 2.0737rem;
-  font-weight: 600;
   margin-bottom: 10px;
 }
 
+.remediation-box p {
+  font-weight: 500;
+}
 .remediation-box ul {
   list-style: none;
   padding: 0;
