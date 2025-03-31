@@ -8,11 +8,11 @@
       <h3>{{ section.settings.heading }}</h3>
       <div class="flex">
         <p class="flex dealers">
-          <img src="{{ 'advantage-logo.png' | file_url }}" alt="Advantage Recovery Systems logo">
+          <img src="{{ section.settings.dealer1_image | file_url }}" alt="Advantage Recovery Systems logo">
           {{ section.settings.phone1 }}
         </p>
         <p class="flex dealers">
-          <img src="{{ 'cornerstone-logo.png' | file_url }}" alt="Cornerstone logo">{{ section.settings.phone2 }}
+          <img src="{{ section.settings.dealer2_image | file_url }}" alt="Cornerstone logo">{{ section.settings.phone2 }}
         </p>
       </div>
     </div>
@@ -65,7 +65,19 @@
       "id": "product_inquire_text",
       "label": "Product Inquiry Text",
       "default": "Product Inquiry"
-    }
+    },
+    {
+      "type": "text",
+      "id": "dealer1_image",
+      "label": "Image Filename",
+      "default": "advantage-logo.png"
+    },
+    {
+      "type": "text",
+      "id": "dealer2_image",
+      "label": "Image Filename",
+      "default": "cornerstone-logo.png"
+    },
   ],
   "presets": [
     {

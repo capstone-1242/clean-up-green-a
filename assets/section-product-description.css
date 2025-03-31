@@ -9,12 +9,10 @@
 }
 
 .product-description-section, .product-description-section h2 {
-  color: #fff;
+  color: white !important;
 }
 
 .product-description-section h2 {
-  text-align: center;
-  font-size: clamp(2rem, 4vw, 3rem);
   flex: 1 1 40%; /* Allow it to grow and shrink, but take up 30% of the space */
   min-width: 200px; /* Prevents it from shrinking too small */
 }
@@ -25,7 +23,6 @@
   gap: 2rem;
   padding: 0;
   margin: 0;
-  padding-right: 1rem;
   flex: 1 1 50%; /* Allow it to grow and shrink, taking up 60% of the space */
 }
 
@@ -48,3 +45,5 @@
     padding-left: 1rem;
   }
 }
+
+

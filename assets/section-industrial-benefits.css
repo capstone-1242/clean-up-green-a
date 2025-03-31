@@ -1,6 +1,11 @@
 /* Typography Styles */
 .benefits-text h2 {
     color: white !important;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.benefits-text p {
     padding-bottom: 24px;
 }
 

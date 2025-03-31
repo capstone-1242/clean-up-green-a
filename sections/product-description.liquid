@@ -2,7 +2,7 @@
 
 
 <section class="product-description-section">
-  <h2 class="heading-two">What is it? What can it do?</h2>
+  <h2>{{  section.settings.section_heading }}</h2>
   
   <ul>
     <li>{{ section.settings.list1 | newline_to_br }}</li>
@@ -15,6 +15,12 @@
 {
   "name": "use description section",
   "settings": [
+    {
+      "id": "section_heading",
+      "type": "text",
+      "label": "Section Heading",
+      "default": "Quickly Turns oil into a non-hazardous silica for safe disposal."
+    },
     {
       "id": "list1",
       "type": "textarea",
