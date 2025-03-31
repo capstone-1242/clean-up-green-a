@@ -88,7 +88,9 @@ h6 {
   margin: 0;
 }
 
-p{
+p,
+ul li,
+ol li {
   font-size: clamp(16px, 5vw, 18px) !important;
   line-height: clamp(24px, 5vw, 24px) !important;
   margin: 0;

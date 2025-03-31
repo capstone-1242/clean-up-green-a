@@ -1,15 +1,29 @@
 .removal-section{
-  padding: 10rem 0rem 20rem 0rem;
+  padding: 24px;
+
 }
+
 .removal-section .left-side{
   background-color: var(--color-secondary-medium-green);
   color:#fff;
   
 }
+
 .removal-section h2{
-  color: #fff;
+  color: white !important;
   padding-left: 2rem;
 }
+
 .removal-text{
-  padding: 5rem 1rem;
+  padding: 24px;
+}
+
+.removal-text ul li {
+  padding-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .removal-section {
+    padding: 0;
+  }
 }

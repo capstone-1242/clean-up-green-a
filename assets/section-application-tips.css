@@ -1,16 +1,20 @@
-.application-tips-section , .removal-section{
+.application-tips-section, 
+.removal-section {
   display: flex;
   gap: 2rem;
   max-width: 1200px;
-  margin: 1rem auto;
-  padding: 1rem;
+  margin: 48px auto;
   align-items: stretch;
 }
 
 .left-side {
-  flex: 6;
+  flex: 5;
   display: flex;
   flex-direction: column;
+}
+
+.left-side h2 {
+  color: var(--color-heading-deep-green) !important;
 }
 
 .left-side ol {
@@ -30,7 +34,7 @@
   flex: 1;
   display: flex;
   align-items: center;
-  font-size: clamp(1rem, 2vw + 1rem, 2rem);
+  line-height: 24px;
 }
 
 .left-side ol li::before {
@@ -49,31 +53,30 @@
   align-items: center;
 }
 
-
 .right-side {
-  flex: 4;
+  flex: 3;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
 }
-.quick-tip-section{
+.quick-tip-section {
   background-color: var(--color-primary-palest-green);
-  padding:0.5rem 4rem;
+  padding: 24px;
 }
 .quick-tip-section p:first-of-type {
-  color:var(--color-heading-deep-green); 
-  font-size: clamp(1.5rem, 2vw + 1rem, 2rem); 
-  font-weight: bold; 
+  color:var(--color-heading-deep-green) !important;
+  font-size: clamp(24px, 5vw, 25px) !important;
+  line-height: clamp(24px, 5vw, 48px) !important;
+  font-weight: 700 !important;
   padding: 0;
   margin: 0;
-  margin-top: .5rem;
 }
 
 .quick-tip-images {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   width: 100%;
 }
 
@@ -82,7 +85,6 @@
   width: 100%;
   max-width: 100%;
   overflow: hidden;
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
 }
@@ -92,7 +94,6 @@
   height: auto;
   object-fit: contain;
   display: block;
-  border-radius: 8px;
 }
 
 .image-wrapper::after {
@@ -123,6 +124,7 @@
 @media (max-width: 768px) {
   .application-tips-section, .removal-section {
     flex-direction: column;
+    padding: 0 2rem;
   }
 
   .quick-tip-images {
@@ -133,4 +135,13 @@
     width: 100%;
     max-width: 100%;
   }
+
+  .left-side ol li {
+    margin-bottom: 24px;
+  }
+
+  .quick-tip-section p:first-of-type { 
+    margin-bottom: 24px;
+  }
+
 }
