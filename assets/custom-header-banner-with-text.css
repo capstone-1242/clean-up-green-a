@@ -41,5 +41,15 @@ h1 {
       flex: 1;
     }
   }
+
+  @media (min-width: 1060px) { 
+    .image-with-text__text-item {
+      padding: 24px;
+    }
+
+    /* .image-with-text__content {
+      padding: 0;
+    } */
+  }
   
   

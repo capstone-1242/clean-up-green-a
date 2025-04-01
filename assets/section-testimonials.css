@@ -5,7 +5,7 @@
 
 .testimonials-wrapper {
   background-color: #fafafa;
-  padding: 48px 0 72px 0;
+  padding: 3rem 2rem 4.5rem 2rem;
   display: flex;
   justify-content: center;
 }
@@ -71,6 +71,10 @@
 }
 
 @media (min-width: 768px) {
+  .testimonials-wrapper {
+    padding: 48px 0;
+  }
+
   .dark-bg {
     grid-column: 2 / 7;
   }
