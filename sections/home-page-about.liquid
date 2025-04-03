@@ -6,14 +6,19 @@
   <div class="image-and-text-container__home-about">
     {% comment %} image {% endcomment %}
     <div class="image-container__home-about">
-        <div> <!-- background color container -->
-          <img src="{{ section.settings.aboutus_image | file_url }}" alt="Home Banner" class="img">
+        <div>
+           {% comment %} background color container {% endcomment %}
+        <img src="{{ section.settings.aboutus_image | file_url }}" 
+          alt="{{ section.settings.section_heading }}" 
+          class="img">
+     
         </div>
     </div>
     {% comment %} description {% endcomment %}
     <div class="text-container__home-about">
         <div>
-          <h2>{{ section.settings.section_heading }}</h2>
+          <h2 id="about-us-heading">{{ section.settings.section_heading }}</h2>
+
           <p>{{ section.settings.section_description }}</p>
           <a href="{{ section.settings.button_url }}"class="button-rounded">
             {{ section.settings.button_text }}
@@ -63,7 +68,7 @@
       "id": "aboutus_image",
       "label": "Image Filename",
       "default": "all-products.webp"
-    },
+    }
   ]
 }
 {% endschema %}
