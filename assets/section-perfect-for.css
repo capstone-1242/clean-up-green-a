@@ -20,7 +20,7 @@
   text-align: center;
 }
 
-.grid {
+.perfect-for-section .grid {
   display: flex;
   justify-content: center;
   align-items: center;
