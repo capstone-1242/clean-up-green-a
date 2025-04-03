@@ -20,6 +20,10 @@
           "type": "description",
           "settings": {}
         },
+        "size_description": {
+          "type": "text",
+          "settings": {}
+        },
         "price": {
           "type": "price",
           "settings": {}
@@ -46,6 +50,7 @@
       "block_order": [
         "title",
         "description",
+        "size_description",
         "price",
         "variant_picker",
         "quantity_selector",

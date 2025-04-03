@@ -94,8 +94,14 @@
                   class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                   {{ block.shopify_attributes }}
                 >
-                  {{- block.settings.text -}}
                 </p>
+                {% if block.id == 'size_description' %}
+                  {% if product.metafields.custom.size_description %}
+                    <p>{{ product.metafields.custom.size_description.value }}</p>
+                  {% endif %}
+                {% else %}
+                {% endif %}
+
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
                   <h1>{{ product.title | escape }}</h1>
@@ -105,6 +111,7 @@
                     </h2>
                   </a>
                 </div>
+                
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
