@@ -3731,7 +3731,7 @@ details-disclosure > details {
 .menu-item {
   display: inline-flex;
   align-items: center;
-  padding: 0 5px;
+  padding: 0 1px;
 }
 
 /* Optional: Style for active or hovered menu items */
