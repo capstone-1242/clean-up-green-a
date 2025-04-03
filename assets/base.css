@@ -3784,3 +3784,9 @@ details-disclosure > details {
   font-size: 20px !important;
   line-height: 24px;
 }
+
+/* Max-width for the <main> tag for all the pages. */
+main {
+  max-width: 1720px !important;
+  margin: 0 auto !important;
+}
