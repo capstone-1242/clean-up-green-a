@@ -72,6 +72,39 @@
         "padding_bottom": 12
       }
     },
+    "multicolumn_796qJK": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_CdRccb": {
+          "type": "column",
+          "settings": {
+            "title": "Features",
+            "text": "<ul><li>Perfect for marine use anywhere around water</li><li>Safe to clean gas and oil from fiberglass and aluminum hulls</li><li>Environmentally safe complete encapsulation. </li><li>Naturally bio-degrades the hydrocarbons leaving water clean!</li></ul>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_CdRccb"
+      ],
+      "settings": {
+        "title": "Product Details",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -93,6 +126,7 @@
   },
   "order": [
     "main",
+    "multicolumn_796qJK",
     "related-products"
   ]
 }

@@ -1,10 +1,34 @@
-{% section 'home-page-hero-banner' %}
-{% section 'home-page-about' %}
-{% section 'home-page-our-solutions' %}
+{% comment %} Hero Banner {% endcomment %}
+<section id="hero-banner" aria-labelledby="hero-heading">
+  {% section 'home-page-hero-banner' %}
+</section>
 
+{% comment %} About Section {% endcomment %}
+<section id="about-us" aria-labelledby="about-us-heading">
+  {% section 'home-page-about' %}
+</section>
 
-{% section 'perfect-for' %}
-{% section 'works-on' %}
-{% section 'home-page-htu' %}
+{% comment %} Our Solutions Section {% endcomment %}
+<section id="our-solutions" aria-labelledby="solutions-heading">
+  {% section 'home-page-our-solutions' %}
+</section>
 
-{% section 'testimonials' %}
+{% comment %} Perfect For Section {% endcomment %}
+<section id="perfect-for" aria-labelledby="perfect-heading">
+  {% section 'perfect-for' %}
+</section>
+
+{% comment %} Works On Section {% endcomment %}
+<section id="works-on" aria-labelledby="works-heading">
+  {% section 'works-on' %}
+</section>
+
+{% comment %} How to Use Section {% endcomment %}
+<section id="how-to-use" aria-labelledby="how-to-use-heading">
+  {% section 'home-page-htu' %}
+</section>
+
+{% comment %} Testimonials Section {% endcomment %}
+<section id="testimonials" aria-labelledby="testimonials-heading">
+  {% section 'testimonials' %}
+</section>

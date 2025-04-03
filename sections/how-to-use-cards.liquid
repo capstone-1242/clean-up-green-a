@@ -1,13 +1,13 @@
 <section class="hero-section">
-  <header class="hero-text-box">
-    <h1>{{ section.settings.hero_title }}</h1>
+  <header class="hero-text-box" >
+    <h1 id="how-to-use-heading">{{ section.settings.hero_title }}</h1>
     <p>{{ section.settings.hero_description }}</p>
   </header>
 </section>
 
 <section class="content-section">
   <div class="card-container">
-    <!-- Card 1 -->
+    {% comment %} <!-- Card 1 --> {% endcomment %}
     <article class="card">
       <header class="card-content">
         <img src="{{ section.settings.card1_image | file_url }}" alt="{{ section.settings.card1_title }}">
@@ -27,7 +27,7 @@
       </section>
     </article>
 
-    <!-- Card 2 -->
+    {% comment %} <!-- Card 2 --> {% endcomment %}
     <article class="card">
       <header class="card-content">
         <img src="{{ section.settings.card2_image | file_url }}" alt="{{ section.settings.card2_title }}">
@@ -47,7 +47,7 @@
       </section>
     </article>
 
-    <!-- Card 3 -->
+    {% comment %} <!-- Card 3 --> {% endcomment %}
     <article class="card">
       <header class="card-content">
         <img src="{{ section.settings.card3_image | file_url }}" alt="{{ section.settings.card3_title }}">
@@ -98,7 +98,7 @@
       "type": "text",
       "id": "card1_image",
       "label": "Card 1 Image",
-      "default": "cleaning-spills-in-oil-bg.webp"
+    "default": "oil-spill-on-water.webp"
     },
     {
       "type": "text",
@@ -133,7 +133,7 @@
       "type": "text",
       "id": "card2_image",
       "label": "Card 2 Image",
-      "default": "cleaning-spills-in-oil-bg.webp"
+       "default": "clean-oil-stain-img.png"
     },
     {
       "type": "text",
@@ -168,7 +168,7 @@
       "type": "text",
       "id": "card3_image",
       "label": "Card 3 Image",
-      "default": "cleaning-spills-in-oil-bg.webp"
+           "default": "clean-oil-spill-in-soil.png"
     },
     {
       "type": "text",

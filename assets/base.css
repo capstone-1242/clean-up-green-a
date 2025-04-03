@@ -35,13 +35,13 @@
 
 /******************************** Baseline Grid *******************************/
 
-body {
+/* body {
   background: linear-gradient(#0ff 2px, transparent 1px) !important;
   background-size: auto 24px !important;
   line-height: 1.6rem !important;
   letter-spacing: 0rem !important;
   z-index: 9999 !important;
-}
+} */
 
 /* VERTICAL RHYTHM = 24, 48, 72, 96, 120, 144, 168, 192 .... */
 
@@ -3731,7 +3731,7 @@ details-disclosure > details {
 .menu-item {
   display: inline-flex;
   align-items: center;
-  padding: 0 5px;
+  padding: 0 1px;
 }
 
 /* Optional: Style for active or hovered menu items */

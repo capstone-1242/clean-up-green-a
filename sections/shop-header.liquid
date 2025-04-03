@@ -1,10 +1,30 @@
 {{ 'section-shop-header.css' | asset_url | stylesheet_tag }}
 
 <section class="hero-section">
-    <div class="hero-container">
-        <h1 class="shop-heading">Shop</h1>
+    <div class="shop-hero-container">
+        <h1>{{ section.settings.banner_heading }}</h1>
         <div class="shop-description">
-            <p>We know oil spills and stains can be an annoying problem around the house. We offer a complete line of household solutions for stains and spills of all sizes. Great for residential homes, acreages, ranches and farms.</p>
+            <p>{{ section.settings.banner_description }}</p>
         </div>
     </div>
 </section>
+
+{% schema %}
+{
+  "name": "Shop Page Banner",
+  "settings": [
+    {
+      "id": "banner_heading",
+      "type": "text",
+      "label": "Banner Heading",
+      "default": "Shop"
+    },
+    {
+      "id": "banner_description",
+      "type": "text",
+      "label": "Banner Description",
+      "default": "We know oil spills and stains can be an annoying problem around the house. We offer a complete line of household solutions for stains and spills of all sizes. Great for residential homes, acreages, ranches and farms."
+    }
+  ]
+}
+{% endschema %}
