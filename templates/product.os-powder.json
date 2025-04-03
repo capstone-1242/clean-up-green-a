@@ -47,8 +47,8 @@
         "title",
         "description",
         "price",
-        "variant_picker",
         "quantity_selector",
+        "variant_picker",
         "buy_buttons"
       ],
       "settings": {
@@ -105,14 +105,14 @@
       ],
       "settings": {
         "title": "Product Details",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
         "button_label": "How To Use",
-        "button_link": "shopify://pages/how-to-use",
+        "button_link": "shopify://collections/all",
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
