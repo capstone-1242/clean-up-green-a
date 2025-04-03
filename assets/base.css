@@ -3808,3 +3808,9 @@ details-disclosure > details {
   background-color: var(--color-accent-deep-teal) !important;
   color: var(--color-primary-palest-green) !important;
 }
+
+/* Max-width for the <main> tag for all the pages. */
+main {
+  max-width: 1720px !important;
+  margin: 0 auto !important;
+}
