@@ -1284,7 +1284,7 @@ button.shopify-payment-button__button--unbranded {
   --shadow-opacity: var(--buttons-shadow-opacity);
   --shadow-visible: var(--buttons-shadow-visible);
   --border-offset: var(--buttons-border-offset); /* reduce radius edge artifacts */
-  --border-opacity: calc(1 - var(--buttons-border-opacity));
+  /* --border-opacity: calc(1 - var(--buttons-border-opacity)); */
   border-radius: var(--buttons-radius-outset);
   position: relative;
 }
@@ -1360,9 +1360,9 @@ button.shopify-payment-button__button--unbranded {
     0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
 }
 
-.button--secondary:after {
+/* .button--secondary:after {
   --border-opacity: var(--buttons-border-opacity);
-}
+} */
 
 .button:focus-visible,
 .button:focus,
@@ -3768,6 +3768,10 @@ details-disclosure > details {
   gap: 50px !important;
 }
 
+.collection .grid {
+  justify-content: center;
+}
+
 .product-card-description {
   padding-top: 12px;
 }
@@ -3804,9 +3808,38 @@ details-disclosure > details {
   background-color: var(--color-heading-deep-green) !important;
 }
 
-.shopify-payment-button__button {
+.shopify-payment-button__button,
+.multicolumn .button {
   background-color: var(--color-accent-deep-teal) !important;
   color: var(--color-primary-palest-green) !important;
+  border-radius: 15px !important;
+}
+
+.product-form__buttons .button {
+  color: var(--color-accent-deep-teal) !important;
+  background-color: var(--color-primary-palest-green) !important;
+  border-radius: 15px !important;
+}
+
+.multicolumn-card {
+  background-color: var(--color-primary-palest-green) !important;
+}
+
+.quick-add .button {
+  background-color: var(--color-heading-deep-green);
+  color: white;
+  border-radius: 15px !important;
+  padding: 0 30px;
+}
+
+.quick-add .button::after {
+  box-shadow: none;
+}
+
+.quick-add {
+  display: flex;
+  justify-content: center;
+
 }
 
 /* Max-width for the <main> tag for all the pages. */
