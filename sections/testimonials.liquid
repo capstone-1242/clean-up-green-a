@@ -1,58 +1,91 @@
+<link rel="stylesheet" href="{{ 'section-testimonials.css' | asset_url }}">
+
 <section class="section testimonials">
-<div style="background-color: #fafafa; padding: 40px 0; display: flex; justify-content: center;">
-  <div style="max-width: 1200px; width: 100%; text-align: center;">
-     <h3 class="text-center" style="color: black; font-size: 2.5rem; font-weight: bold; margin-bottom: 40px;">Testimonials</h3>
-    <div class="testimonial-container">
-      <div class="testimonial" style="background-color: #323232;">
-        <div class="testimonial-content" style="color:#ffffff">
-          <p class="testimonial-text">
-            "I am very impressed by the product and would definitely recommend that it be used for hydrocarbon spills...there are time and huge cost savings by having this product in your tool box."
-          </p>
-          <p class="testimonial-author">G. - Canadian Environmental Practitioner for 28 years</p>
+
+  <div class="testimonials-wrapper">
+
+    <div class="testimonials-content">
+      <h2 class="text-center">{{ section.settings.testimonial_heading }}</h2>
+
+      <div class="testimonial-container"> 
+        <!-- display grid container-->
+        {% comment %} Canadian Environmental Practitioner Testimonial {% endcomment %}
+        <div class="testimonial dark-bg">
+          <div class="testimonial-content light-text">
+            <p class="testimonial-text">
+           {% render 'white-quote-svg' %}
+                {{ section.settings.test_1 }}
+            </p>
+            <p class="testimonial-author">
+             {{ section.settings.test1_author }}
+            </p>
+          </div>
+        </div>
+
+        {% comment %} Wildlife Services Testimonial {% endcomment %}
+        <div class="testimonial green-bg">
+          <div class="testimonial-content dark-text">
+            <p class="testimonial-text">
+              {% render 'black-quote-svg' %}
+                {{ section.settings.test_2 }}
+            </p>
+            <p class="testimonial-author">
+              {{section.settings.test2_author}}
+            </p>
+          </div>
         </div>
       </div>
-      <div class="testimonial" style="background-color:#668A55;">
-       <div class="testimonial-content" style="color:#1C2324">
-  <p class="testimonial-text">
-    "We at Wildlife Control Services have found this product instrumental with our services as we work with the environment. We strongly recommend this product when dealing with any petroleum concerns."
-  </p>
-  <p class="testimonial-author">
-    Robert MacDonald-  Wildlife Control Services
-  </p>
-</div>
-
-      </div>
     </div>
-  </div>
-  </div>
 
+  </div>
 </section>
 
-<style>
-  .testimonials {
-    padding: 20px 0;
-  }
-  .testimonial-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 20px;
-  }
-  .testimonial {
-    padding: 20px;
-    border-radius: 8px;
-  }
-  .testimonial a {
-    color: white;
-    text-decoration: underline;
-  }
-  .testimonial-author {
-    font-weight: bold;
-    margin-top: 10px;
-  }
 
-  @media (max-width: 768px) {
-    .testimonial-container {
-      grid-template-columns: 1fr; 
+{% schema %}
+{
+  "name": "Testimonials Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "testimonial_heading",
+      "label": "Section Heading",
+      "default": "Testimonials"
+    },
+  
+    {
+      "type": "text",
+      "id": "test_1",
+      "label": "Test 1",
+     "default":"I am very impressed by the product and would definitely recommend that it be used for hydrocarbon spills...there are time and huge cost savings by having this product in your tool box."
+   
+    },
+    {
+      "type": "text",
+      "id": "test1_author",
+      "label": "Author's name",
+      "default": "- Canadian Environmental Practitioner"
+    },
+  
+    {
+      "type": "text",
+      "id": "test_2",
+      "label": "Test 2",
+      "default": " We at Wildlife Control Services have found this product instrumental with our services as we work with the environment. We strongly recommend this product when dealing with any petroleum concerns."
+    },
+    {
+      "type": "text",
+      "id": "test2_author",
+      "label": "Author's name",
+      "default": "- Wildlife Control Services"
+    },
+
+  ],
+  "presets": [
+    {
+      "name": "Testimonials",
+      "category": "Custom"
     }
-  }
-</style>
+  ]
+}
+{% endschema %}
+

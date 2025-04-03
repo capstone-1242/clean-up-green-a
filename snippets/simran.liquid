@@ -1,11 +1,15 @@
 <p>
-use command = shopify theme dev -e development and make a shopify.theme.toml file at the root of the directory. 
+use command = shopify theme dev -e development 
+and make a shopify.theme.toml file at the root of the directory. 
+// or use Shopify theme dev (if the first one is not working)
 <br>
 and add this  [environments.development]
 store="https://cleanup-green.myshopify.com/" </p>
 {% comment %} 
-In Shopify, you cannot create folders within the assets directory to organize your images. You will need to upload each image separately to the assets folder. However, you can upload multiple files at once by selecting them all when you click Choose File during the upload process. This will allow you to upload up to 20 images simultaneously, but they will all be stored directly in the assets directory without any subfolders. 
-
-
-
+In Shopify, you cannot create folders within the assets directory to organize your images. You will need to upload each image separately to the assets folder. However, you can upload multiple files at once by selecting them all when you click Choose File during the upload process. This will allow you to upload up to 20 images simultaneously, but they will all be stored directly in the assets directory without any subfolders. New shopify pushhhhh
 {% endcomment %}
+ // to update the main website(theme)
+ use
+ shopify theme push --store cleanup-green
+ once u press enter, the terminal will show you the local devices connected to this theme ( currently, i see 4 devices),
+You wanna select LIVE > DAWN theme to push changes.

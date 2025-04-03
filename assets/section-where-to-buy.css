@@ -1,0 +1,30 @@
+.where-to-buy-section {
+    margin: 0 auto;
+    background-color: var(--color-primary-palest-green);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.where-to-buy-container {
+    text-align: center;
+    max-width: 920px;
+    margin: 40px;
+}
+
+.logo-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.where-to-buy-heading {
+    font-weight: bold;
+}
+
+.shop-product-inquiry-section a {
+    margin: 16px;
+}

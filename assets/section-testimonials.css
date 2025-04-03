@@ -1,0 +1,82 @@
+.testimonials {
+  margin-top: 24px;
+  padding-bottom: 6rem;
+}
+
+.testimonials-wrapper {
+  background-color: #fafafa;
+  padding: 48px 0 72px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonials-content {
+  max-width: 1720px;
+  text-align: center;
+}
+
+.text-center {
+  color: black;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 5rem;
+}
+/* main class for individual cards */
+.testimonial {
+  padding: 2rem 4rem;
+  border-radius: 10px;
+  max-width: 500px;
+  box-shadow: var(--drop-shadow);
+
+}
+
+.dark-bg {
+  grid-column: 1 / -1; 
+}
+
+.green-bg {
+  grid-column: 1 / -1; 
+}
+
+.dark-bg {
+  background-color: var(--color-accent-deep-teal);
+}
+
+.green-bg {
+  background-color: var(--color-primary-palest-green);
+}
+
+.light-text {
+  color: #ffffff;
+}
+
+.dark-text {
+  color: var(--color-body-text-black);
+}
+
+.testimonial-author {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.testimonial a {
+  color: white;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .dark-bg {
+    grid-column: 2 / 7;
+  }
+
+  .green-bg {
+    grid-column: 7 / 12;
+  }
+
+}

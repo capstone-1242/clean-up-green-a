@@ -1,0 +1,97 @@
+<link rel="stylesheet" href="{{ 'custom-heading-styles.css' | asset_url }}">
+
+<link rel="stylesheet" href="{{ 'section-application-tips.css' | asset_url }}">
+
+<section class="application-tips-section">
+  <div class="left-side">
+    <h2>{{ section.settings.how_to_apply_heading }}</h2>
+    <ol>
+      <li>{{ section.settings.step_1 }}</li>
+      <li>{{ section.settings.step_2 }}</li>
+      <li>{{ section.settings.step_3 }}</li>
+    </ol>
+  </div>
+
+  <div class="right-side">
+    <div class="quick-tip-section">
+      <p>{{ section.settings.quick_tip_heading }}</p>
+      <p>{{ section.settings.quick_tip_text }}</p>
+    </div>
+    <div class="quick-tip-images">
+      {% if section.settings.image_1 != blank %}
+        <div class="image-wrapper">
+          <img src="{{ section.settings.image_1 | file_url }}" alt="Application Step 1">
+        </div>
+      {% endif %}
+      {% if section.settings.image_2 != blank %}
+        <div class="image-wrapper">
+          <img src="{{ section.settings.image_2 | file_url }}" alt="Application Step 2">
+        </div>
+      {% endif %} 
+    </div>
+  </div>
+  
+</section>
+
+
+{% schema %}
+{
+  "name": "Application & Tips",
+  "settings": [
+    {
+      "id": "how_to_apply_heading",
+      "type": "text",
+      "label": "How to Apply Heading",
+      "default": "How to Apply"
+    },
+    {
+      "id": "step_1",
+      "type": "text",
+      "label": "Step 1",
+      "default": "Spread powder over a spill on water or a hard surface until excess white polymer remains on the surface."
+    },
+    {
+      "id": "step_2",
+      "type": "text",
+      "label": "Step 2",
+      "default": "Apply by hand or use a hand spreader, blower or other conventional methods for spreading out the powder."
+    },
+    {
+      "id": "step_3",
+      "type": "text",
+      "label": "Step 3",
+      "default": "You will notice the powder start to work upon contact."
+    },
+    {
+      "id": "quick_tip_heading",
+      "type": "text",
+      "label": "Quick Tip Heading",
+      "default": "Quick Tip"
+    },
+    {
+      "id": "quick_tip_text",
+      "type": "textarea",
+      "label": "Quick Tip Text",
+      "default": " Any excess white powder that remains is reusable as it does not absorb any of the hydrocarbons. Simply brush it to the side and return any unused powder to bag."
+    },
+    {
+      "id": "image_1",
+      "type": "text",
+      "label": "Image 1 Filename",
+      "default": "application-step-1.webp"
+    },
+    {
+      "id": "image_2",
+      "type": "text",
+      "label": "Image 2 Filename",
+      "default": "application-step-2.webp"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Application & Tips"
+    }
+  ]
+}
+{% endschema %}
+

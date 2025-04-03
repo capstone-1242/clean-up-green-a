@@ -1,0 +1,156 @@
+/* Offer Service Styling */
+
+.offer-service {
+    padding: 1.875rem 1rem;
+    background-color: #CFDCC9;
+}
+
+.offer-service h2,
+.comparison-section h3 {
+    padding: 1.875rem 0;
+    margin: 0 auto;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1C2324;
+}
+
+.service-list {
+    padding: 0px;
+    list-style-type: none;
+}
+
+.service-list li {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.service-list svg {
+    flex-shrink: 0;
+    height: 24px;
+    max-height: 24px;
+    width: 24px;
+  }
+  
+  /* Comparison Section */
+
+.comparison-section h2 {
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+.images-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.image-container {
+    position: relative;
+    display: block;
+}
+
+.image-container img {
+    border-radius: 1rem;
+    min-width: 17.5rem;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 77%;
+    left: 36%;
+    color: #FFF;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    background-color: rgba(28, 35, 36, 0.7) ;
+    padding: 10px 20px;
+    border-radius: 16px;
+}
+
+/* Styles for tablets */
+/* @media screen and (min-width: 750px) and (max-width: 989px) { 
+
+} */
+
+
+/* Styles for desktops and larger screens */
+@media screen and (min-width: 990px) { 
+    .desktop-container {
+        display: flex;
+        justify-content: center;
+        margin: 6.25rem;
+        gap: 2rem;
+    }
+
+    .desktop-container > div {
+        width: 50%;
+    }
+
+    .offer-service {
+        border-radius: 20px;
+        padding: 2rem;
+    }
+
+    .offer-service > {
+        justify-content: center;
+    }
+
+    .offer-service .desktop-container-card {
+        margin: 0 auto;
+        max-width: 550px;
+    }
+
+    .service-list li {
+        margin-bottom: 1.25rem;
+    }
+
+    .images-section {
+        height: 100%; 
+        justify-content: start;
+        flex-direction: unset;
+        gap: 2rem;
+    }
+
+    .text-overlay {
+        position: absolute;
+        top: 70%;
+        left: 38%;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        background-color: rgba(28, 35, 36, 0.7) ;
+        padding: 10px 20px;
+        border-radius: 16px;
+    }
+
+    .image-container {
+        min-width: 25.25rem;
+        height: 28rem;
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+    
+    .image-container img {
+        margin-top: -5.5rem;
+        height: 100%;
+        width: 100%;
+    }
+
+    .comparison-section h2 {
+        text-align: unset;
+    }
+
+    .text-overlay {
+        top: 80%;
+        left: 36%;
+        font-size: 2.25rem;
+    }
+}

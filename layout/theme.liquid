@@ -7,6 +7,12 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
 
+    {% comment %} Google Fonts {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
@@ -257,6 +263,30 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+    {% comment %} you have to call your stylesheet in here, in order to make it work. {% endcomment %}
+    {% comment %} homepage {% endcomment %}
+    {{ 'custom-footer.css' | asset_url | stylesheet_tag }}
+    {{ 'custom-button.css' | asset_url | stylesheet_tag }}
+
+
+    {{ 'section-perfect-for.css' | asset_url | stylesheet_tag }}
+    {{ 'section-custom-banner-with-title.css' | asset_url | stylesheet_tag }}
+
+    {{ 'section-works-on.css' | asset_url | stylesheet_tag }}
+    {{ 'section-cost-comparison.css' | asset_url | stylesheet_tag }}
+    {{ 'section-custom-form.css' | asset_url | stylesheet_tag }}
+
+    {% comment %} {{ 'section-testimonials.css' | asset_url | stylesheet_tag }} {% endcomment %}
+
+    {% comment %} About us {% endcomment %}
+
+    {% comment %} Industrial Solutions {% endcomment %}
+{{ 'section-remediation.css' | asset_url | stylesheet_tag }}
+{{ 'section-remediation-comparison.css' | asset_url | stylesheet_tag }}
+{{ 'section-industrial-benefits.css' | asset_url | stylesheet_tag }}
+{% comment %} our footprint page {% endcomment %}
+{{ 'section-tclprocedure.css' | asset_url | stylesheet_tag }}
+
 
     {%- if settings.cart_type == 'drawer' -%}
       {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}

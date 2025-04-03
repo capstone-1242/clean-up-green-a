@@ -166,6 +166,8 @@
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
             {%- endif -%}
 
+            <div class="product-card-description">{{ card_product.description | strip_html | truncate: 80 }}</div>
+
             <span class="caption-large light">{{ block.settings.description | escape }}</span>
 
             {%- if show_rating and card_product.metafields.reviews.rating.value != blank -%}

@@ -1,0 +1,91 @@
+{{ 'section-cost-comparison.css' | asset_url | stylesheet_tag }}
+
+<section class="cost-comparison">
+  <div class="cost-comparison-content">
+    <div class="text-content">
+      <h2>{{ section.settings.title }}</h2>
+      <p>{{ section.settings.description }}</p>
+    </div>
+
+    <div class="comparison">
+      <div class="comparison-item traditional__cost_comparison">
+        <h3>{{ section.settings.traditional_label }}</h3>
+        <p>{{ section.settings.traditional_cost }}</p>
+      </div>
+      <div class="comparison-item green__cost_comparison">
+        <h3>{{ section.settings.green_label }}</h3>
+        <p class="cost">{{ section.settings.green_cost }}</p>
+        <p class="note">{{ section.settings.green_note }}</p>
+        <p class="percentage">{{ section.settings.green_percentage }}</p>
+        <p class="note">{{ section.settings.green_savings }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Cost Comparison Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Save Time & Liquid"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Here is a cost comparison of an actual 900L diesel spill in gravel and the clean-up costs associated with it. This spill happened in the summer of 2020 in Alberta."
+    },
+    {
+      "type": "text",
+      "id": "traditional_label",
+      "label": "Traditional Remediation Label",
+      "default": "Traditional Remediation"
+    },
+    {
+      "type": "text",
+      "id": "traditional_cost",
+      "label": "Traditional Remediation Cost",
+      "default": "TOTAL Cost: $21,097.00"
+    },
+    {
+      "type": "text",
+      "id": "green_label",
+      "label": "Clean-Up Green Remediation Label",
+      "default": "Clean-Up Green Remediation"
+    },
+    {
+      "type": "text",
+      "id": "green_cost",
+      "label": "Clean-Up Green Remediation Cost",
+      "default": "TOTAL Cost with Clean-Up Green: $9,800"
+    },
+    {
+      "type": "textarea",
+      "id": "green_note",
+      "label": "Clean-Up Green Remediation Note",
+      "default": "*Estimated Total cost to clean this spill with Clean Up Green"
+    },
+    {
+      "type": "text",
+      "id": "green_percentage",
+      "label": "Clean-Up Green Remediation Cost",
+      "default": "52%*"
+    },
+    {
+      "type": "text",
+      "id": "green_savings",
+      "label": "Clean-Up Green Remediation Cost",
+      "default": "*Estimated cost savings using Clean-Up Green liquid solution and powder for a comparable spill."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cost Comparison Section"
+    }
+  ]
+}
+{% endschema %}

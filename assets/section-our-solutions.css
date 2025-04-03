@@ -1,0 +1,59 @@
+/* Main Section Styling */
+.solutions-section {
+  text-align: center;
+  padding: 48px 20px;
+  margin-top: 24px;
+}
+
+h2 {
+  margin-bottom: 24px;
+}
+
+/* Cards Container */
+.solutions-container {
+  display: flex;
+  justify-content: center;
+  gap: 5rem; /* Space between cards */
+  flex-wrap: wrap;
+}
+
+/* Individual Cards */
+.solution-card {
+  max-width: 500px;
+  background: var(--color-primary-palest-green);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--drop-shadow);
+  text-align: center;
+}
+
+.solution-card-header {
+  background:var(--color-accent-deep-teal);
+  color: white;
+  padding: 12px 15px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.solution-card-header h3 {
+  background:var(--color-accent-deep-teal);
+  color: white !important;
+}
+
+.solution-card-header .icon {
+  margin-right: 8px;
+}
+
+.solution-card-body {
+  padding: 12px 15px;
+}
+
+.solution-card-body p {
+  padding: 24px;
+}
+
+.button-rounded {
+  margin-bottom: 24px;
+}

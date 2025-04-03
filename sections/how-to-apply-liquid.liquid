@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="{{ 'section-how-to-apply-liquid.css' | asset_url }}">
+
+<div class="how-to-apply-liquid-section">
+    <h3>How to Apply</h3>
+    <ol>
+        <li>{{ section.settings.list1 | newline_to_br }}</li>
+        <li>{{ section.settings.list2 | newline_to_br }}</li>
+        <li>{{ section.settings.list3 | newline_to_br }}</li>
+        <li>{{ section.settings.list4 | newline_to_br }}</li>
+    </ol>
+</div>
+{% schema %}
+    {
+        "name": "use description section",
+        "settings": [
+            {
+              "id": "list1",
+              "type": "textarea",
+              "label": "Step 1",
+              "default": "Have the entire stain come into contact with STEP 1. To apply, pour or spray on a solid surface and rub in with a hard bristle brush or broom. For spills in soil or sand, use a rake or shovel to aggregate the entire area to make contact with STEP 1."
+            },
+            {
+              "id": "list2",
+              "type": "textarea",
+              "label": "Step 2",
+              "default": "Apply STEP 2 in the same manner and rub in using the hard bristle brush or broom. Use a 1 to 1 ratio of both steps. You will notice the liquids harden up and form a grey paste-like mixture once they have been brought into contact with each other on the stain. Odours are eliminated on contact."
+            },
+            {
+              "id": "list3",
+              "type": "textarea",
+              "label": "Step 3",
+              "default": "For best results let the mixture dry into a powder before cleaning up. Stains are lifted once dry. 24 hrs drying time is ideal for most applications."
+            },
+            {
+              "id": "list4",
+              "type": "textarea",
+              "label": "Step 4",
+              "default": "The dry silica powder (sand) is non-hazardous and non-toxic. It can be left on the spill site or swept away and discarded. Repeat process steps if both odour or stain remains - particularly with older more embedded stains. "
+            }
+          ],
+          "presets": [
+            {
+              "name": "use description section"
+            }
+          ]
+        }
+        {% endschema %}

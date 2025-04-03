@@ -1,0 +1,164 @@
+.hero-section {
+  background-image: url('https://cdn.shopify.com/s/files/1/0903/3492/1069/files/how-to-use-bg.webp?v=1741298602');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text-box {
+  background: rgba(0, 0, 0, 0.6);
+  /* border-radius: 12px; */
+  max-width: 700px;
+  padding: 40px 148px;
+  text-align: left;
+}
+
+.hero-text-box h1 {
+  color: white;
+  padding: 0;
+  padding-bottom: 24px;
+}
+
+.hero-text-box p {
+  line-height: 1.6;
+  margin: 0;
+  color: white;
+}
+
+.content-section {
+  display: flex;
+  justify-content: center;
+  margin: 48px;
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Individual Card */
+.card {
+  background-color: var(--color-primary-palest-green);
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  width: 40%;
+  min-width: 280px;
+  max-width: 350px;
+  /* padding: 20px; */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Card Text */
+.cleaning-text {
+  padding: 10px;
+  color: white !important;
+}
+
+.card a {
+  text-align: left;
+  gap: 34px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  box-shadow: var(--drop-shadow);
+  overflow: hidden;
+  text-align: left;
+  display: flex;
+  flex-direction: column; 
+}
+
+.cleaning-description {
+  padding: 24px;
+}
+
+.cleaning-description p {
+  padding-bottom: 24px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  position: relative;
+  flex-grow: 1; 
+}
+
+.cleaning-text {
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.66);
+  padding: 10px 30px;
+}
+
+.card-content h2 {
+  margin: 0;
+  font-size: clamp(16px, 5vw, 18px) !important;
+  color: white !important;
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    background-image: none;
+    background-color: #fff;
+    padding: 10px;
+  }
+  .hero-text-box {
+    padding: 30px 10px;
+    background: none;
+    text-align: center;
+  }
+
+  .hero-text-box h1 {
+    color: var(--color-heading-deep-green) !important;
+    padding-bottom: 24px;
+  }
+
+  .hero-section p {
+    color: black;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .cleaning-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}

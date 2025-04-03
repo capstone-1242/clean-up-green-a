@@ -1,0 +1,73 @@
+.tclp {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tclp-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.tclp-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+}
+.tcl-image-container {
+  background-color: var(--color-primary-palest-green);
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centers the image vertically and horizontally */
+  height: 100%; /* Makes the container fill the full height of its parent */
+}
+
+.tclp-image {
+  max-width: 80%; /* Limits the width of the image */
+  max-height: 80%; /* Limits the height of the image */
+  object-fit: contain; /* Ensures the image maintains its aspect ratio */
+  margin: 0 auto;
+}
+
+
+
+.tclp-content {
+  text-align: left;
+}
+.tclp-mini-container {
+  background-color:var(--color-primary-palest-green) ;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+
+
+/* .tclp-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+} */
+
+/* .tclp-button:hover {
+  background-color: ;
+} */
+
+/* Responsive: Stack on small screens */
+@media (max-width: 768px) {
+  .tclp-container {
+    grid-template-columns: 1fr;
+  }
+
+  .tclp-content {
+    text-align: center;
+  }
+}

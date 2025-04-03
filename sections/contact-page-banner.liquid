@@ -1,0 +1,43 @@
+{{ 'section-custom-form.css' | asset_url | stylesheet_tag }}
+
+
+{% comment %} <section class="contact-banner">
+  <img src="{{ 'contact-bg.webp' | file_url }}" 
+    alt="Contact Banner" 
+    width="1600" 
+    height="600" 
+    class="contact-banner-img">
+  <h1>Contact</h1>
+</section> {% endcomment %}
+
+<section class="about-banner">
+  <img 
+      src="{{ section.settings.aboutus_image | file_url }}" 
+      alt="About Banner"
+      width="1600" 
+      height="600" 
+      class="about-banner-img">
+  <div class="banner-overlay">
+      <h1>{{ section.settings.banner_heading }}</h1>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About us banner",
+  "settings": [
+    {
+      "id": "banner_heading",
+      "type": "text",
+      "label": "Banner Heading",
+      "default": "Contact"
+    },
+    {
+      "type": "text",
+      "id": "aboutus_image",
+      "label": "Image Filename",
+      "default": "contact-bg.webp"
+    },
+  ]
+}
+{% endschema %}

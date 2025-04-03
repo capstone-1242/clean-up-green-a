@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="{{ 'section-how-to-apply-liquid.css' | asset_url }}">
+
+<div class="how-to-apply-powder-section">
+    <h3>How to Apply</h3>
+    <ol>
+        <li>{{ section.settings.list1 | newline_to_br }}</li>
+        <li>{{ section.settings.list2 | newline_to_br }}</li>
+        <li>{{ section.settings.list3 | newline_to_br }}</li>
+        <li>{{ section.settings.list4 | newline_to_br }}</li>
+        <li>{{ section.settings.list5 | newline_to_br }}</li>
+        <li>{{ section.settings.list6 | newline_to_br }}</li>
+    </ol>
+</div>
+{% schema %}
+    {
+        "name": "use description section",
+        "settings": [
+            {
+              "id": "list1",
+              "type": "textarea",
+              "label": "Step 1",
+              "default": "First try to identify and control the source of the spill so no more contaminants enter the soil."
+            },
+            {
+              "id": "list2",
+              "type": "textarea",
+              "label": "Step 2",
+              "default": "Identify the depth to which the spill has reached. You may need to remove the contaminated soil first so that you can ensure that ALL spill affected soil will make contact with the liquid solutions."
+            },
+            {
+              "id": "list3",
+              "type": "textarea",
+              "label": "Step 3",
+              "default": "Generously pour STEP 1 solution over the entire contaminated area, Work the STEP 1 liquid into the soil to ensure it touches all the contaminated soil."
+            },
+            {
+              "id": "list4",
+              "type": "textarea",
+              "label": "Step 4",
+              "default": "In the same way pour STEP 2 over the contaminated area. Do this before STEP 1 has had a chance to dry."
+            },
+            {
+              "id": "list5",
+              "type": "textarea",
+              "label": "Step 5",
+              "default": "Using a rototiller, a shovel, a pitchfork or other gardening tool, ensure that ALL contaminated soil comes into contact with both STEP 1 and STEP 2. This will ensure that all oil contaminants will be micro-encapsulated by the liquids. "
+            },
+            {
+              "id": "list6",
+              "type": "textarea",
+              "label": "Step 6",
+              "default": "You may leave the soil in place as the hydrocarbons will have been neutralized and the adverse environmental impact reduced or eliminated."
+            }
+          ],
+          "presets": [
+            {
+              "name": "use description section"
+            }
+          ]
+        }
+        {% endschema %}

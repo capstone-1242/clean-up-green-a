@@ -1,0 +1,57 @@
+<section class="footprint-section">
+  <div class="footprint-image">
+    <img src="{{ section.settings.footprint-hero-image | file_url }}" alt="TCLP Image side">
+  </div>
+  <div class="footprint-content">
+    <h2>{{ section.settings.section_heading }}</h2>
+    <a href="{{ section.settings.footprint_button_link }}">
+      <button class="button-rounded">
+        {{ section.settings.footprint_button_text }}
+        <span class="arrow-circle">
+          <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.22498 18H29.775" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+            <path d="M23.175 25.17L29.34 19.005C29.6194 18.724 29.7762 18.3438 29.7762 17.9475C29.7762 17.5512 29.6194 17.1711 29.34 16.89L23.34 10.89" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+          </svg>
+        </span>
+      </button>
+    </a>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "About Footprint Section",
+  "settings": [
+    {
+      "id": "section_heading",
+      "type": "text",
+      "label": "section heading",
+      "default": "Learn more about Clean-Up Green’s environmental footprint"
+    },
+    {
+      "id": "footprint-hero-image",
+      "type": "text",
+      "label": "TCLP Image Filename",
+      "default": "footprint-bg.webp"
+    },
+    {
+      "id": "footprint_button_text",
+      "type": "text",
+      "label": "Button Text",
+      "default": "Read about Our Footprint"
+    },
+    {
+      "id": "footprint_button_link",
+      "type": "text",
+      "label": "Button Link",
+      "default": "/pages/our-footprint"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TCLP Section"
+    }
+  ]
+}
+{% endschema %}

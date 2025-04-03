@@ -1,7 +1,6 @@
 {
   "article": [],
   "blog": [],
-  "brand": [],
   "collection": [],
   "company": [],
   "company_location": [],
@@ -9,7 +8,68 @@
   "market": [],
   "order": [],
   "page": [],
-  "product": [],
+  "product": [
+    {
+      "key": "color-pattern",
+      "namespace": "shopify",
+      "name": "Color",
+      "description": "Defines the primary color or pattern, such as blue or striped",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "dispenser-type",
+      "namespace": "shopify",
+      "name": "Dispenser type",
+      "description": "Specifies the format for dispensing the product, typically in health and beauty; e.g. stick, jar",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "size_description",
+      "namespace": "custom",
+      "name": "Size description",
+      "description": "Custom size description (when only one size available)",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "long_description",
+      "namespace": "custom",
+      "name": "Long description",
+      "description": "Product's long description",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "product_features",
+      "namespace": "custom",
+      "name": "Features",
+      "description": "Product features list",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "cleans_up_list",
+      "namespace": "custom",
+      "name": "Cleans up list",
+      "description": "List of what the product cleans up",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
   "variant": [],
   "shop": []
 }

@@ -1,0 +1,112 @@
+/* Layout for split section */
+.htu-section {
+    display: flex;
+    justify-content: center;
+    background: white;
+    padding: 0;
+    margin-top: 24px;
+    padding-bottom: 24px;
+  }
+  
+  .home-htu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    /* max-width: 1400px; */
+    min-height: 500px;
+  }
+  
+  /* Left: Text Area */
+  .text-container {
+    background-color: var(--color-primary-palest-green);
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 1 / -1;
+  }
+  
+  .text-container h2 {
+    font-size: clamp(39.81px, 2vw, 64px);
+    font-weight: 600;
+    color: var(--color-accent-deep-teal);
+    margin-bottom: 2rem;
+  }
+  
+  .text-container p {
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--color-body-text-black);
+    line-height: 1.6;
+  }
+  
+  /* Right: Background image + buttons */
+  .buttons-container {
+    position: relative;
+    display: flex;
+    grid-column: 1 / -1;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-palest-green); /* fallback */
+    overflow: hidden;
+    padding-bottom: 2rem;
+  }
+  
+  .bg-image-overlay {
+    transition: opacity 0.9s ease-in-out;
+    opacity: 0;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://cdn.shopify.com/s/files/1/0903/3492/1069/files/how-to-use-bg.webp?v=1741298602');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+    z-index: 1;
+  }
+  
+  /* Button List */
+  .home-htu-ul {
+    list-style: none;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+  }
+  
+  .button-rounded {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-accent-deep-teal);
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-decoration: none;
+    min-width: 280px;
+    transition: background 0.3s ease;
+  }
+  
+  .button-rounded:hover {
+    box-shadow: var(--drop-shadow);
+  }
+  
+@media (min-width: 800px) {
+    .bg-image-overlay {
+      transition: opacity 0.9s ease-in-out;
+      display: block;
+      opacity: 1;
+    }
+
+    .text-container {
+      grid-column: 1 / 2;
+    }
+
+    .buttons-container {
+      grid-column: 2 / 3;
+      padding: 0;
+    }
+  }

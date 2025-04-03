@@ -1,0 +1,88 @@
+{{ 'section-industrial-inquire.css' | asset_url | stylesheet_tag }}
+{{ 'custom-button.css' | asset_url | stylesheet_tag }}
+
+<section class="inquire-section">
+  <div class="inquire-content">
+    <!-- Dealer Links -->
+    <div class="inquire-text__links"> 
+      <h3>{{ section.settings.heading }}</h3>
+      <div class="flex">
+        <p class="flex dealers">
+          <img src="{{ section.settings.dealer1_image | file_url }}" alt="Advantage Recovery Systems logo">
+          {{ section.settings.phone1 }}
+        </p>
+        <p class="flex dealers">
+          <img src="{{ section.settings.dealer2_image | file_url }}" alt="Cornerstone logo">{{ section.settings.phone2 }}
+        </p>
+      </div>
+    </div>
+    <!-- Product Inquiry -->
+    <div class="inquire-text__contact">
+      <p>{{ section.settings.inquiry_text }}</p>
+      <a href="/pages/contact-us" class="button-rounded">
+        {{ section.settings.product_inquire_text }}
+        <span class="arrow-circle">
+          <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.22498 18H29.775" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+            <path d="M23.175 25.17L29.34 19.005C29.6194 18.724 29.7762 18.3438 29.7762 17.9475C29.7762 17.5512 29.6194 17.1711 29.34 16.89L23.34 10.89" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Inquire Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Inquire with our authorized dealers:"
+    },
+    {
+      "type": "text",
+      "id": "phone1",
+      "label": "Phone Number 1",
+      "default": "(780) 849-1201"
+    },
+    {
+      "type": "text",
+      "id": "phone2",
+      "label": "Phone Number 2",
+      "default": "(780) 968-0722"
+    },
+    {
+      "type": "textarea",
+      "id": "inquiry_text",
+      "label": "Inquiry Text",
+      "default": "For additional product inquiries and questions, please get in touch with us below."
+    },
+    {
+      "type": "text",
+      "id": "product_inquire_text",
+      "label": "Product Inquiry Text",
+      "default": "Product Inquiry"
+    },
+    {
+      "type": "text",
+      "id": "dealer1_image",
+      "label": "Image Filename",
+      "default": "advantage-logo.png"
+    },
+    {
+      "type": "text",
+      "id": "dealer2_image",
+      "label": "Image Filename",
+      "default": "cornerstone-logo.png"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Inquire Section"
+    }
+  ]
+}
+{% endschema %}
