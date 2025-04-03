@@ -1,98 +1,152 @@
 {{ 'custom-button.css' | asset_url | stylesheet_tag }}
 {{ 'section-custom-form.css' | asset_url | stylesheet_tag }}
-{% comment %} do not change any classes, all the classes that form is using are from within-shopify.
- the only classes that I added are for styling.
- button is customized - Simran {% endcomment %}
 
+{% comment %}
+Do not change any classes, all the classes that form is using are from within Shopify.
+The only classes added are for styling.
+Button is customized - Simran
+{% endcomment %}
 
 <section class="contact-container">
-<section class="custom-contact-form">
-  <h2 class="form-heading">Got Questions? Send us a message</h2>
-  {% form 'contact' %}
-    {%- if form.posted_successfully? -%}
-      <p style="color: green;">{{ 'templates.contact.form.post_success' | t }}</p>
-    {%- endif -%}
+  <section class="custom-contact-form">
+    <h2 class="form-heading">Got Questions? Send us a message</h2>
 
-    <div class="name-fields">
-      <div class="form-group">
-        <label for="contact[first_name]">First Name</label>
-        <input type="text" id="contact[first_name]" name="contact[first_name]" required>
-        
-        {%- if form.errors contains 'first_name' -%}
-          <p class="form-error">
-            {% if form.errors.messages.first_name == 'This field is required.' %}
-              Puh-lease provide your first name.
-            {% else %}
-              {{ form.errors.messages.first_name }}
-            {% endif %}
-          </p>
-        {%- endif -%}
-      </div>
+    {%- form 'contact', id: 'ContactForm' -%}
       
+        {%- if form.posted_successfully? -%}
+          <div class="success-message">
+            <p class="message-text">
+              Thanks for your submission! We’ll get back to you shortly.
+            </p>
+            <a href="{{ '/'}}"class="button-rounded">
+             Homepage
+              <span class="arrow-circle">
+                <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.22498 18H29.775" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+                  <path d="M23.175 25.17L29.34 19.005C29.6194 18.724 29.7762 18.3438 29.7762 17.9475C29.7762 17.5512 29.6194 17.1711 29.34 16.89L23.34 10.89" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+                  </svg>
+              </span>
+            </a>
+          </div>
+        
+      {%- elsif form.errors -%}
+        <h2 class="form-status form-status-error" tabindex="-1" autofocus>
+          {{ 'icon-error.svg' | inline_asset_content }}
+          {{ 'templates.contact.form.error_heading' | t }}
+        </h2>
+      {%- endif -%}
 
+      <div class="name-fields">
+        <!-- First Name Field -->
+        <div class="form-group">
+          <label for="contact[first_name]">First Name</label>
+          <input 
+            type="text" 
+            id="contact[first_name]" 
+            name="contact[first_name]" 
+            value="{{ form.fields.first_name.value | escape }}" 
+            required
+          >
+          {%- if form.errors contains 'first_name' -%}
+            <p class="form-error">
+           whats up
+            </p>
+          {%- endif -%}
+        </div>
+
+        <!-- Last Name Field -->
+        <div class="form-group">
+          <label for="contact[last_name]">Last Name</label>
+          <input 
+            type="text" 
+            id="contact[last_name]" 
+            name="contact[last_name]" 
+            value="{{ form.fields.last_name.value | escape }}" 
+            required
+          >
+          {%- if form.errors contains 'last_name' -%}
+            <p class="form-error">
+              {{ form.errors.messages.last_name | default: 'Please provide your last name.' }}
+            </p>
+          {%- endif -%}
+        </div>
+      </div>
+
+      <!-- Email Field -->
       <div class="form-group">
-        <label for="contact[last_name]">Last Name</label>
-        <input type="text" id="contact[last_name]" name="contact[last_name]" required>
-        {%- if form.errors contains 'last_name' -%}
-          <p class="form-error">{{ form.errors.translated_fields.last_name | capitalize }} {{ form.errors.messages.last_name }}</p>
+        <label for="contact[email]">Email</label>
+        <input 
+          type="email" 
+          id="contact[email]" 
+          name="contact[email]" 
+          value="{{ form.fields.email.value | escape }}" 
+          required
+        >
+        {%- if form.errors contains 'email' -%}
+          <p class="form-error">{{ form.errors.messages.email }}</p>
         {%- endif -%}
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="contact[email]">Email</label>
-      <input type="email" id="contact[email]" name="contact[email]" required>
-      {%- if form.errors contains 'email' -%}
-        <p class="form-error">{{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}</p>
-      {%- endif -%}
-    </div>
+      <!-- Phone Number Field -->
+      <div class="form-group">
+        <label for="contact[phone]">Phone Number</label>
+        <input 
+          type="tel" 
+          id="contact[phone]" 
+          name="contact[phone]" 
+          value="{{ form.fields.phone.value | escape }}"
+        >
+        {%- if form.errors contains 'phone' -%}
+          <p class="form-error">{{ form.errors.messages.phone }}</p>
+        {%- endif -%}
+      </div>
 
-    <div class="form-group">
-      <label for="contact[phone]">Phone Number</label>
-      <input type="tel" id="contact[phone]" name="contact[phone]">
-      {%- if form.errors contains 'phone' -%}
-        <p class="form-error">{{ form.errors.translated_fields.phone | capitalize }} {{ form.errors.messages.phone }}</p>
-      {%- endif -%}
-    </div>
+      <!-- Message Field -->
+      <div class="form-group">
+        <label for="contact[body]">Message</label>
+        <textarea 
+          id="contact[body]" 
+          name="contact[body]" 
+          rows="5" 
+          required
+        >{{ form.fields.body.value | escape }}</textarea>
+        {%- if form.errors contains 'body' -%}
+          <p class="form-error">{{ form.errors.messages.body }}</p>
+        {%- endif -%}
+      </div>
 
-    <div class="form-group">
-      <label for="contact[body]">Message</label>
-      <textarea id="contact[body]" name="contact[body]" rows="5" required></textarea>
-      {%- if form.errors contains 'body' -%}
-        <p class="form-error">{{ form.errors.translated_fields.body | capitalize }} {{ form.errors.messages.body }}</p>
-      {%- endif -%}
-    </div>
+      <!-- Submit Button -->
+      <div class="contact__button">
+        <button type="submit" class="button-rounded">
+          Submit
+          <span class="arrow-circle">
+            <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.22498 18H29.775" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+              <path d="M23.175 25.17L29.34 19.005C29.6194 18.724 29.7762 18.3438 29.7762 17.9475C29.7762 17.5512 29.6194 17.1711 29.34 16.89L23.34 10.89" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+            </svg>
+          </span>
+        </button>
+      </div>
 
-    <div class="contact__button">
-      <button type="submit" class="button-rounded">
-        Submit
-        <span class="arrow-circle">
-          <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.22498 18H29.775" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
-            <path d="M23.175 25.17L29.34 19.005C29.6194 18.724 29.7762 18.3438 29.7762 17.9475C29.7762 17.5512 29.6194 17.1711 29.34 16.89L23.34 10.89" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
-          </svg>
-        </span>
-      </button>
-    </div>
-  {% endform %}
-</section>
+    {%- endform -%}
+  </section>
 
-
-<div class="contact-info">
-  <p class="contact-address">
-    {% render 'location-pin-icon-svg' %}
-    {{ section.settings.company_name }}<br>
-    <span class="address">{{ section.settings.address | newline_to_br }}</span>
-  </p>
-  <p class="contact-phone">
-    {% render 'phone-icon-svg' %}
-    <a href="tel:{{ section.settings.phone_number }}">{{ section.settings.phone }}</a>
-  </p>
-  <p class="contact-email">
-    {% render 'email-icon-svg' %}
-    <a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a>
-  </p>
-</div>
+  <!-- Contact Info Section -->
+  <div class="contact-info">
+    <p class="contact-address">
+      {% render 'location-pin-icon-svg' %}
+      {{ section.settings.company_name }}<br>
+      <span class="address">{{ section.settings.address | newline_to_br }}</span>
+    </p>
+    <p class="contact-phone">
+      {% render 'phone-icon-svg' %}
+      <a href="{{ section.settings.phone_number }}">{{ section.settings.phone }}</a>
+    </p>
+    <p class="contact-email">
+      {% render 'email-icon-svg' %}
+      <a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a>
+    </p>
+  </div>
 </section>
 
 {% schema %}
