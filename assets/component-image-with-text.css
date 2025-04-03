@@ -204,7 +204,6 @@
 
   .image-with-text--overlap .image-with-text__text-item {
     display: flex;
-    padding: 3rem 0;
   }
 
   .image-with-text--overlap .image-with-text__content {
