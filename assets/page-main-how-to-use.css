@@ -40,8 +40,8 @@
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1200px;
-  margin: auto;
+  /* max-width: 1200px; */
+  /* margin: auto; */
 }
 
 /* Individual Card */
@@ -63,21 +63,12 @@
   border-radius: 10px 10px 0 0;
 }
 
-/* Card Text */
-.cleaning-text {
-  padding: 10px;
-  color: white !important;
-}
 
-.card a {
-  text-align: left;
-  gap: 34px;
-}
 
 .card {
   position: relative;
   width: 100%;
-  max-width: 350px;
+  max-width: 370px;
   border-radius: 10px;
   box-shadow: var(--drop-shadow);
   overflow: hidden;
@@ -85,13 +76,22 @@
   display: flex;
   flex-direction: column; 
 }
-
 .cleaning-description {
-  padding: 24px;
+  padding-bottom: 24px;
+}
+
+
+.cleaning-description a {
+  margin-left: 24px;
 }
 
 .cleaning-description p {
-  padding-bottom: 24px;
+  padding: 24px;
+}
+
+.card a {
+  text-align: left;
+  gap: 2rem;
 }
 
 .card img {
@@ -102,7 +102,7 @@
 
 .card-content {
   position: relative;
-  flex-grow: 1; 
+  /* flex-grow: 1;  */
 }
 
 .cleaning-text {
@@ -120,6 +120,7 @@
   font-size: clamp(16px, 5vw, 18px) !important;
   color: white !important;
 }
+/* new */
 
 @media (max-width: 640px) {
   .hero-section {
@@ -162,3 +163,5 @@
     width: 100%;
   }
 }
+
+
