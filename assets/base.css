@@ -3740,7 +3740,10 @@ details-disclosure > details {
     text-decoration: underline;
   text-decoration-color: green;
 }
-
+main{ 
+  max-width: 1720px; 
+  margin: 0 auto; 
+}
 /* madi's styling for shop */
 
 .card {
@@ -3812,38 +3815,5 @@ details-disclosure > details {
 .multicolumn .button {
   background-color: var(--color-accent-deep-teal) !important;
   color: var(--color-primary-palest-green) !important;
-  border-radius: 15px !important;
 }
 
-.product-form__buttons .button {
-  color: var(--color-accent-deep-teal) !important;
-  background-color: var(--color-primary-palest-green) !important;
-  border-radius: 15px !important;
-}
-
-.multicolumn-card {
-  background-color: var(--color-primary-palest-green) !important;
-}
-
-.quick-add .button {
-  background-color: var(--color-heading-deep-green);
-  color: white;
-  border-radius: 15px !important;
-  padding: 0 30px;
-}
-
-.quick-add .button::after {
-  box-shadow: none;
-}
-
-.quick-add {
-  display: flex;
-  justify-content: center;
-
-}
-
-/* Max-width for the <main> tag for all the pages. */
-main {
-  max-width: 1720px !important;
-  margin: 0 auto !important;
-}
