@@ -1,18 +1,18 @@
 <section class="hero-section">
-  <header class="hero-text-box" >
+  <div class="hero-text-box" >
     <h1 id="how-to-use-heading">{{ section.settings.hero_title }}</h1>
     <p>{{ section.settings.hero_description }}</p>
-  </header>
+  </div>
 </section>
 
 <section class="content-section">
   <div class="card-container">
     {% comment %} <!-- Card 1 --> {% endcomment %}
     <article class="card">
-      <header class="card-content">
+      <div class="card-content">
         <img src="{{ section.settings.card1_image | file_url }}" alt="{{ section.settings.card1_title }}">
         <h2 class="cleaning-text">{{ section.settings.card1_title }}</h2>
-      </header>
+      </div>
       <section class="cleaning-description">
         <p>{{ section.settings.card1_description }}</p>
         <a href="{{ section.settings.card1_link }}" class="button-rounded">
@@ -27,12 +27,13 @@
       </section>
     </article>
 
+
     {% comment %} <!-- Card 2 --> {% endcomment %}
     <article class="card">
-      <header class="card-content">
+      <div class="card-content">
         <img src="{{ section.settings.card2_image | file_url }}" alt="{{ section.settings.card2_title }}">
         <h2 class="cleaning-text">{{ section.settings.card2_title }}</h2>
-      </header>
+      </div>
       <section class="cleaning-description">
         <p>{{ section.settings.card2_description }}</p>
         <a href="{{ section.settings.card2_link }}" class="button-rounded">
@@ -49,10 +50,10 @@
 
     {% comment %} <!-- Card 3 --> {% endcomment %}
     <article class="card">
-      <header class="card-content">
+      <div class="card-content">
         <img src="{{ section.settings.card3_image | file_url }}" alt="{{ section.settings.card3_title }}">
         <h2 class="cleaning-text">{{ section.settings.card3_title }}</h2>
-      </header>
+      </div>
       <section class="cleaning-description">
         <p>{{ section.settings.card3_description }}</p>
         <a href="{{ section.settings.card3_link }}" class="button-rounded">
@@ -66,6 +67,8 @@
         </a>
       </section>
     </article>
+
+    
   </div>
 </section>
 
@@ -98,7 +101,7 @@
       "type": "text",
       "id": "card1_image",
       "label": "Card 1 Image",
-    "default": "oil-spill-on-water.webp"
+    "default": "clean-a-pooling-oil-spill.webp"
     },
     {
       "type": "text",
@@ -133,7 +136,7 @@
       "type": "text",
       "id": "card2_image",
       "label": "Card 2 Image",
-       "default": "clean-oil-stain-img.png"
+       "default": "clean-an-oil-stain.webp"
     },
     {
       "type": "text",
@@ -168,7 +171,7 @@
       "type": "text",
       "id": "card3_image",
       "label": "Card 3 Image",
-           "default": "clean-oil-spill-in-soil.png"
+           "default": "clean-an-oil-spill-in-soil.webp"
     },
     {
       "type": "text",
