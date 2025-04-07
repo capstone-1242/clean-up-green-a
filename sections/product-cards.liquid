@@ -1,6 +1,4 @@
-{{ 'section-product-cards.css' | asset_url | stylesheet_tag }}
-
-<section class="content-section product-container">
+{% comment %} <section class="content-section">
       <h2>Our Products</h2>
       <div class="card-container">
           <!-- Card 1 -->
@@ -30,4 +28,8 @@
 
           </div>
       </div>
-  </section>
+  </section> {% endcomment %}
+
+  {% section 'shop-header' %}
+  {% render 'card-product' %}
+  {% section 'where-to-buy' %}
