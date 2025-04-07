@@ -1,9 +1,11 @@
 <link rel="stylesheet" href="{{ 'section-about-page.css' | asset_url }}">
 
 <section class="about-section">
-  <p>{{ section.settings.about_description1 }}</p>
-
-  <p>{{ section.settings.about_description2 }}</p>
+  <div class="about-section-content">
+    <p>{{ section.settings.about_description1 }}</p>
+  
+    <p>{{ section.settings.about_description2 }}</p>
+  </div>
 </section>
 
 {% schema %}

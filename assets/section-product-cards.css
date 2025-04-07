@@ -1,0 +1,4 @@
+.product-container {
+    display: grid !important;
+    grid-template-columns: repeat(12, 1fr) !important;
+}
