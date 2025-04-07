@@ -3816,13 +3816,6 @@ details-disclosure > details {
   color: var(--color-primary-palest-green) !important;
 }
 
-/* main {
-  max-width: 1720px;
-  margin: 0 auto;
-} */
-
-
-
 .shopify-payment-button__button,
 .multicolumn .button {
   background-color: var(--color-accent-deep-teal) !important;
