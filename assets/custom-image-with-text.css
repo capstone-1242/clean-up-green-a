@@ -4,6 +4,8 @@
 }
 
 .image-and-text-container__home-about {
+  max-width: 1720px;
+  margin: 0 auto;
   display: grid;
   gap: 2rem;
 }

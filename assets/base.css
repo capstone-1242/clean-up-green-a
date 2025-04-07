@@ -3816,9 +3816,9 @@ details-disclosure > details {
   color: var(--color-primary-palest-green) !important;
 }
 
-main {
+/* main {
   max-width: 1720px;
   margin: 0 auto;
-}
+} */
 
 

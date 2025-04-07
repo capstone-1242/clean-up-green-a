@@ -1,14 +1,18 @@
-  
+  .htu-section {
+    background-color: var(--color-primary-palest-green);
+  }
+
   .home-htu-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     width: 100%;
     min-height: 500px;
+    max-width: 1720px;
+    margin: 0 auto;
   }
   
   /* Left: Text Area */
   .text-container {
-    background-color: var(--color-primary-palest-green);
     padding: 60px;
     display: flex;
     flex-direction: column;
@@ -23,7 +27,7 @@
     grid-column: 1 / -1;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-primary-palest-green);
+    /* background-color: var(--color-primary-palest-green); */
     overflow: hidden;
     padding-bottom: 2rem;
   }
