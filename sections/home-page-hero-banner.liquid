@@ -7,7 +7,7 @@
    
     <div class="image-with-text__text-item">
       <div class="image-with-text__content">
-        <h1>{{ section.settings.banner_heading }}</h1>
+        <h1 id="hero-heading">{{ section.settings.banner_heading }}</h1>
         <p>{{ section.settings.banner_description }}</p>
         <a href="{{ section.settings.button_url }}"class="button-rounded">
           {{ section.settings.button_text }}
@@ -24,7 +24,10 @@
     
     <div class="image-with-text__media-item">
       <div class="image-with-text__media">
-        <img src="{{ section.settings.banner_image | file_url }}" alt="Home Banner" class="home-banner-img">
+        <img src="{{ section.settings.banner_image | file_url }}" 
+          alt="{{ section.settings.banner_heading }}" 
+          class="home-banner-img">
+     
       </div>
     </div>
   </div>
@@ -63,7 +66,7 @@
       "id": "banner_image",
       "label": "Image Filename",
       "default": "home-banner.webp"
-    },
+    }
   ]
 }
 {% endschema %}

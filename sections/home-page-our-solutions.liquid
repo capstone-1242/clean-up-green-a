@@ -1,22 +1,16 @@
-{% comment %} we are missing a section on homepage..........i will do it - simran
-
-industry = <svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M30.9565 4.84799V2.93479C30.9565 1.31648 29.5522 0 27.8261 0H18.4348C17.0741 0 15.9137 0.817735 15.483 1.9565H12.1739C10.4478 1.9565 9.0435 3.27299 9.0435 4.89129C9.0435 6.53021 10.4627 7.82607 12.1739 7.82607H18.4348C19.7956 7.82607 20.9559 7.00834 21.3866 5.86957H24.6049L23.7354 15.6522H20.8696V10.7609C20.8696 9.98227 19.9428 9.51463 19.2474 9.94699L11.4783 14.8026V10.7609C11.4783 9.98438 10.5544 9.51363 9.85606 9.94693L0.464687 15.8166C0.174625 15.998 0 16.3031 0 16.6304V28.3696C0 28.9096 0.467437 29.3479 1.0435 29.3479H30.9566C31.5326 29.3479 32.0001 28.9096 32.0001 28.3696V16.6304C32 16.5656 30.9623 4.91256 30.9565 4.84799ZM29.127 7.82607H26.5251L26.6991 5.86957H28.9531L29.127 7.82607ZM19.9124 3.91307L19.4199 5.21555C19.2962 5.54098 18.9443 5.86963 18.4348 5.86963H12.1739C11.6276 5.86963 11.1304 5.46381 11.1304 4.89135C11.1304 4.35193 11.5986 3.91307 12.1739 3.91307H16.9573L17.4498 2.61059C17.5734 2.28516 17.9253 1.9565 18.4348 1.9565H27.8261C28.4015 1.9565 28.8696 2.39537 28.8696 2.93479V3.91307H19.9124ZM14.6087 24.4566C14.6087 24.9966 14.1412 25.4348 13.5652 25.4348H5.21737C4.64131 25.4348 4.17387 24.9966 4.17387 24.4566V20.5435C4.17387 20.0034 4.64131 19.5652 5.21737 19.5652H13.5652C14.1412 19.5652 14.6087 20.0034 14.6087 20.5435V24.4566ZM27.1304 24.4566C27.1304 24.9966 26.663 25.4348 26.0869 25.4348H17.7391C17.1631 25.4348 16.6956 24.9966 16.6956 24.4566V20.5435C16.6956 20.0034 17.1631 19.5652 17.7391 19.5652H26.0869C26.663 19.5652 27.1304 20.0034 27.1304 20.5435V24.4566ZM25.8295 15.6522L26.0034 13.6957H29.6488L29.8228 15.6522H25.8295Z" fill="white"/>
-  </svg>
-shop = <svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M16 0L0 12V16H2V30H8V20H14V30H30V16H32V12L28 9V2H22V4.5L16 0ZM18 20H24V26H18V20Z" fill="white"/>
-  </svg> {% endcomment %}
     
   <link rel="stylesheet" href="{{ 'section-our-solutions.css' | asset_url }}">
 
   <section class="solutions-section">
-      <h2>{{ section.settings.main_heading }}</h2>
+      <h2 id="solutions-heading">{{ section.settings.main_heading }}</h2>
   
       <div class="solutions-container">
-          <!-- First Card: Shop Solutions -->
+          {% comment %} First Card: Shop Solutions {% endcomment %}
           <div class="solution-card">
               <div class="solution-card-header">
                   <span class="icon"><svg width="22" height="20" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <title>Shop Solutions Icon</title>
+                                <desc>An icon representing shop solutions.</desc>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M16 0L0 12V16H2V30H8V20H14V30H30V16H32V12L28 9V2H22V4.5L16 0ZM18 20H24V26H18V20Z" fill="white"/>
                     </svg></span>
                     <h3>{{ section.settings.shop_title }}</h3>
@@ -24,10 +18,11 @@ shop = <svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http:/
               <div class="solution-card-body">
                   <p>{{ section.settings.shop_description }}</p>
                   <a href="{{ section.settings.shop_button_link }}">
-                      <button class="button-rounded">
+                      <button class="button-rounded our-solutions-home-buttons">
                           {{ section.settings.shop_button_text }}
                           <span class="arrow-circle">
                               <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                               
                                   <path d="M6.22498 18H29.775" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
                                   <path d="M23.175 25.17L29.34 19.005C29.6194 18.724 29.7762 18.3438 29.7762 17.9475C29.7762 17.5512 29.6194 17.1711 29.34 16.89L23.34 10.89" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
                               </svg>
@@ -37,17 +32,20 @@ shop = <svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http:/
               </div>
           </div>
   
-          <!-- Second Card: Industrial Solutions -->
+           {% comment %} Second Card: Industrial Solutions  {% endcomment %}
           <div class="solution-card">
               <div class="solution-card-header">
                   <span class="icon"><svg width="22" height="20" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                    <title>Industrial Solutions Icon</title>
+                    <desc>An icon representing industrial solutions.</desc>
                     <path d="M30.9565 4.84799V2.93479C30.9565 1.31648 29.5522 0 27.8261 0H18.4348C17.0741 0 15.9137 0.817735 15.483 1.9565H12.1739C10.4478 1.9565 9.0435 3.27299 9.0435 4.89129C9.0435 6.53021 10.4627 7.82607 12.1739 7.82607H18.4348C19.7956 7.82607 20.9559 7.00834 21.3866 5.86957H24.6049L23.7354 15.6522H20.8696V10.7609C20.8696 9.98227 19.9428 9.51463 19.2474 9.94699L11.4783 14.8026V10.7609C11.4783 9.98438 10.5544 9.51363 9.85606 9.94693L0.464687 15.8166C0.174625 15.998 0 16.3031 0 16.6304V28.3696C0 28.9096 0.467437 29.3479 1.0435 29.3479H30.9566C31.5326 29.3479 32.0001 28.9096 32.0001 28.3696V16.6304C32 16.5656 30.9623 4.91256 30.9565 4.84799ZM29.127 7.82607H26.5251L26.6991 5.86957H28.9531L29.127 7.82607ZM19.9124 3.91307L19.4199 5.21555C19.2962 5.54098 18.9443 5.86963 18.4348 5.86963H12.1739C11.6276 5.86963 11.1304 5.46381 11.1304 4.89135C11.1304 4.35193 11.5986 3.91307 12.1739 3.91307H16.9573L17.4498 2.61059C17.5734 2.28516 17.9253 1.9565 18.4348 1.9565H27.8261C28.4015 1.9565 28.8696 2.39537 28.8696 2.93479V3.91307H19.9124ZM14.6087 24.4566C14.6087 24.9966 14.1412 25.4348 13.5652 25.4348H5.21737C4.64131 25.4348 4.17387 24.9966 4.17387 24.4566V20.5435C4.17387 20.0034 4.64131 19.5652 5.21737 19.5652H13.5652C14.1412 19.5652 14.6087 20.0034 14.6087 20.5435V24.4566ZM27.1304 24.4566C27.1304 24.9966 26.663 25.4348 26.0869 25.4348H17.7391C17.1631 25.4348 16.6956 24.9966 16.6956 24.4566V20.5435C16.6956 20.0034 17.1631 19.5652 17.7391 19.5652H26.0869C26.663 19.5652 27.1304 20.0034 27.1304 20.5435V24.4566ZM25.8295 15.6522L26.0034 13.6957H29.6488L29.8228 15.6522H25.8295Z" fill="white"/>
                     </svg></span> <h3>{{ section.settings.industrial_title }}</h3>
               </div>
               <div class="solution-card-body">
                   <p>{{ section.settings.industrial_description }}</p>
                   <a href="{{ section.settings.industrial_button_link }}">
-                      <button class="button-rounded">
+                      <button class="button-rounded our-solutions-home-buttons">
                           {{ section.settings.industrial_button_text }}
                           <span class="arrow-circle">
                               <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">

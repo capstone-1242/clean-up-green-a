@@ -242,8 +242,8 @@
 
       body {
         display: grid;
-        grid-template-rows: auto auto 1fr auto;
-        grid-template-columns: 100%;
+        /* grid-template-rows: auto auto 1fr auto;
+        grid-template-columns: 100%; */
         min-height: 100%;
         margin: 0;
         font-size: 1.5rem;
@@ -265,6 +265,7 @@
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
     {% comment %} you have to call your stylesheet in here, in order to make it work. {% endcomment %}
     {% comment %} homepage {% endcomment %}
+    {{ 'custom-header.css' | asset_url | stylesheet_tag }}
     {{ 'custom-footer.css' | asset_url | stylesheet_tag }}
     {{ 'custom-button.css' | asset_url | stylesheet_tag }}
 
@@ -338,12 +339,19 @@
     {%- endif -%}
 
     {% sections 'header-group' %}
+    {% comment %} <header id="shopify-section-header" class="header">
+      {% sections 'header-group' %}
+    </header> {% endcomment %}
+    
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
-
-    {% sections 'footer-group' %}
+    <footer id="shopify-section-footer" class="footer">
+      {% sections 'footer-group' %}
+    </footer>
+    
+    {% comment %} {% sections 'footer-group' %} {% endcomment %}
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>

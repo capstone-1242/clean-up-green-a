@@ -1,27 +1,35 @@
-{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }} {% endcomment %}
 {{ 'custom-image-with-text.css' | asset_url | stylesheet_tag }}
 
-<section class="image-with-text">
-  <div class="image-with-text__grid">
-    <div class="image-with-text__media-item">
-      <div class="image-with-text__media image-about">
-        <img src="{{ section.settings.aboutus_image | file_url }}" alt="Home Banner" class="img">
-      </div>
+<section class="homepage-about-section">
+  {% comment %} item container {% endcomment %}
+  <div class="image-and-text-container__home-about">
+    {% comment %} image {% endcomment %}
+    <div class="image-container__home-about">
+        <div>
+           {% comment %} background color container {% endcomment %}
+        <img src="{{ section.settings.aboutus_image | file_url }}" 
+          alt="{{ section.settings.section_heading }}" 
+          class="img">
+     
+        </div>
     </div>
-    <div class="image-with-text__text-item">
-      <div class="image-with-text__content">
-        <h2>{{ section.settings.section_heading }}</h2>
-        <p>{{ section.settings.section_description }}</p>
-        <a href="{{ section.settings.button_url }}"class="button-rounded">
-          {{ section.settings.button_text }}
-          <span class="arrow-circle">
-            <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.22498 18H29.775" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
-              <path d="M23.175 25.17L29.34 19.005C29.6194 18.724 29.7762 18.3438 29.7762 17.9475C29.7762 17.5512 29.6194 17.1711 29.34 16.89L23.34 10.89" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
-              </svg>
-          </span>
-        </a>
-      </div>
+    {% comment %} description {% endcomment %}
+    <div class="text-container__home-about">
+        <div>
+          <h2 id="about-us-heading">{{ section.settings.section_heading }}</h2>
+
+          <p>{{ section.settings.section_description }}</p>
+          <a href="{{ section.settings.button_url }}"class="button-rounded">
+            {{ section.settings.button_text }}
+            <span class="arrow-circle">
+              <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.22498 18H29.775" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+                <path d="M23.175 25.17L29.34 19.005C29.6194 18.724 29.7762 18.3438 29.7762 17.9475C29.7762 17.5512 29.6194 17.1711 29.34 16.89L23.34 10.89" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+                </svg>
+            </span>
+          </a>
+        </div>
     </div>
    
   </div>
@@ -60,7 +68,7 @@
       "id": "aboutus_image",
       "label": "Image Filename",
       "default": "all-products.webp"
-    },
+    }
   ]
 }
 {% endschema %}
