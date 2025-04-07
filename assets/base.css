@@ -3740,10 +3740,9 @@ details-disclosure > details {
     text-decoration: underline;
   text-decoration-color: green;
 }
-main{ 
-  max-width: 1720px; 
-  margin: 0 auto; 
-}
+
+
+
 /* madi's styling for shop */
 
 .card {
@@ -3816,4 +3815,10 @@ main{
   background-color: var(--color-accent-deep-teal) !important;
   color: var(--color-primary-palest-green) !important;
 }
+
+main {
+  max-width: 1720px;
+  margin: 0 auto;
+}
+
 
