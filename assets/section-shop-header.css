@@ -3,19 +3,28 @@
 }
 
 .shop-hero-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
 }
 
 .shop-hero-container h1 {
+    grid-column: 1 / -1;
     color: var(--color-heading-deep-green) !important;
     padding: 0;
 }
 
 .shop-description {
-    width: 33%;
+    grid-column: 1 / -1;
+}
+
+@media screen and (min-width: 900px) { 
+    .shop-hero-container h1 {
+        grid-column: 2 / 6;
+        color: var(--color-heading-deep-green) !important;
+    }
+    
+    .shop-description {
+        grid-column: 6 / 12;
+    }
 }
