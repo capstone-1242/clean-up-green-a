@@ -44,16 +44,14 @@
   align-items: center;
   justify-content: center;
   padding: 3rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .footprint-image {
-  grid-column: 1 / 7;
+  grid-column: 2 / 7;
 }
 
 .footprint-content {
-  grid-column: 7 / 14;
+  grid-column: 7 / 12;
 }
 
 @media (max-width: 968px) {
