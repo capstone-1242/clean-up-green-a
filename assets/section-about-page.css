@@ -22,8 +22,12 @@
   }
 }
 
+/* Styling for footprint section */
+.footprint-section h2 {
+  padding-bottom: 24px;
+}
+
 .footprint-image {
-  max-width: 50%; 
   flex-shrink: 0;
 }
 
@@ -34,41 +38,28 @@
 }
 
 .footprint-section {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  padding: 60px 0;
+  padding: 3rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.footprint-image {
+  grid-column: 1 / 7;
+}
+
 .footprint-content {
-  max-width: 500px;
-}
-
-.footprint-content h2{
-  font-weight: bold;
-  margin-bottom: 24px;
-}
-
-@media (max-width: 1100px) {
-  .footprint-section {
-    padding: 50px 20px;
-  }
+  grid-column: 7 / 14;
 }
 
 @media (max-width: 968px) {
-  .footprint-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footprint-image {
-    max-width: 90%;
-  }
-
+  .footprint-image,
   .footprint-content {
-    max-width: 90%;
+    grid-column: 1 / -1;
   }
+
 }
