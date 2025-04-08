@@ -6,14 +6,12 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
 }
 
 .shop-hero-container h1 {
     grid-column: 1 / -1;
     color: var(--color-heading-deep-green) !important;
+    padding: 0;
 }
 
 .shop-description {
