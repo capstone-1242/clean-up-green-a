@@ -3,8 +3,7 @@
   grid-template-columns: repeat(12, 1fr);
   gap: 2rem;
   padding: 3rem 2rem ;
-  max-width: 1720px;
-  margin: 0 auto;
+
 }
 
 .about-section-content p:first-of-type {
