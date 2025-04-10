@@ -1,11 +1,11 @@
-.oil-stain-video-section {
+.oil-stain-video-section,
+.oil-spill-soil-video-section {
   text-align: left;
-  padding: 3.5rem 0rem;
+  padding: 3rem 0rem;
 }
-.oil-stain-video-section h3 , .oil-spill-soil-video-section h3{
+.oil-stain-video-section h2 , .oil-spill-soil-video-section h2{
   text-align: center;
 }
-
 
 .video-list ul {
   display: grid; 
