@@ -75,10 +75,6 @@
 </style>
 
 {%- style -%}
-  .header {
-    padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
-  }
-
   .section-header {
     position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
@@ -152,7 +148,7 @@
           </h1>
         {%- endif -%}
       {%- endif -%}
-      <div class="mobile-flex">
+      <div class="header__inner">
         {%- liquid
           if section.settings.menu != blank
             render 'header-drawer'
@@ -222,12 +218,9 @@
               </localization-form>
             {%- endif -%}
           </div>
-          {% comment %}
-          // This disables Dawn Search Modal Feature for both mobile and desktop
-          {% render 'header-search', input_id: 'Search-In-Modal' %}
-          {% endcomment %}
+          {% render 'header-search', input_id: 'Search-In-Modal'%}
           {% comment %} Searchbar Desktop View {% endcomment %}
-          {% render 'header-searchbar-desktop' %}
+          {% render 'header-searchbar-desktop', class:'desktop__searchbar' %}
           {%- if shop.customer_accounts_enabled and section.settings.enable_customer_icon -%}
             <a
               href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
@@ -408,53 +401,6 @@
   }
 
   customElements.define('sticky-header', StickyHeader);
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const header = document.querySelector('.header');
-    let wrapper = document.querySelector('.mobile-flex');
-    let children = [];
-
-    if (wrapper) {
-      // Save the child nodes
-      children = Array.from(wrapper.childNodes);
-    }
-
-    function moveChildrenOut() {
-      if (!wrapper || children.length === 0) return;
-
-      // Move all children out of wrapper
-      children.forEach(child => {
-        header.insertBefore(child, wrapper);
-      });
-
-      wrapper.remove();
-      wrapper = null; // mark as removed
-    }
-
-    function rewrapChildren() {
-      if (wrapper || children.length === 0) return;
-
-      wrapper = document.createElement('div');
-      wrapper.className = 'mobile-flex';
-
-      children.forEach(child => {
-        wrapper.appendChild(child);
-      });
-
-      header.appendChild(wrapper);
-    }
-
-    function handleResize() {
-      if (window.innerWidth >= 990) {
-        moveChildrenOut();
-      } else {
-        rewrapChildren();
-      }
-    }
-
-    handleResize(); // run on load
-    window.addEventListener('resize', handleResize);
-  });
 {% endjavascript %}
 
 <script type="application/ld+json">
