@@ -71,7 +71,16 @@ and it is applied in <header>  class="color-scheme-4 { --gradient-background }" 
     display: none;
   }
 
-  .desktop-search {
+  .tablet__search {
     display: block;
   }
+}
+
+@media only screen and (min-width: 1320px) {
+  .tablet__search {
+    display: none !important;
+  }
+  .desktop-search {
+    display: unset;
+  } 
 }

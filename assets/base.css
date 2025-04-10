@@ -214,10 +214,6 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 }
 
 @media screen and (min-width: 990px) {
-  .header:not(.drawer-menu).page-width {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
 
   .page-width--narrow {
     max-width: 72.6rem;
@@ -727,13 +723,13 @@ h3 .icon-arrow,
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
 
 .svg-wrapper > svg {
-  height: 100%;
-  width: 100%;
+  height: 80%;
+  width: 80%;
 }
 
 /* base-details-summary */
