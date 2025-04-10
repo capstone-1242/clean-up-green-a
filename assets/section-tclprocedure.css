@@ -1,73 +1,72 @@
 .tclp {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  padding: 3rem 2rem;
 }
 
 .tclp-title {
-  font-size: 2rem;
-  font-weight: bold;
   margin-bottom: 20px;
 }
 
 .tclp-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: repeat(12, 1fr);
+  max-width: 1720px;
+  margin: 0 auto;
+  gap: 2rem;
   align-items: center;
 }
+
+.tclp h2 {
+  grid-column: 2 / 10;
+}
+
+.tcl-image-container {
+  grid-column: 2 / 7;
+}
+
+.tclp-content {
+  grid-column: 7 / 12;
+}
+
 .tcl-image-container {
   background-color: var(--color-primary-palest-green);
-  border-radius: 8px;
-
+  border-radius: 20px;
   display: flex;
   justify-content: center;
-  align-items: center; /* Centers the image vertically and horizontally */
-  height: 100%; /* Makes the container fill the full height of its parent */
+  align-items: center; 
+  height: 100%; 
 }
 
 .tclp-image {
-  max-width: 80%; /* Limits the width of the image */
-  max-height: 80%; /* Limits the height of the image */
-  object-fit: contain; /* Ensures the image maintains its aspect ratio */
+  max-width: 80%; 
+  max-height: 80%; 
+  object-fit: contain; 
   margin: 0 auto;
 }
 
-
-
 .tclp-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   text-align: left;
 }
+
 .tclp-mini-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   background-color:var(--color-primary-palest-green) ;
-  padding: 30px;
-  border-radius: 12px;
+  padding: 24px;
+  border-radius: 20px;
 }
 
-
-
-/* .tclp-button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s;
-} */
-
-/* .tclp-button:hover {
-  background-color: ;
-} */
-
 /* Responsive: Stack on small screens */
-@media (max-width: 768px) {
-  .tclp-container {
-    grid-template-columns: 1fr;
+@media (max-width: 769px) {
+  .tcl-image-container,
+  .tclp-content {
+    grid-column: 1 / -1;
   }
 
   .tclp-content {
-    text-align: center;
+    text-align: left;
   }
 }

@@ -2,9 +2,8 @@
 
 
 <section class="tclp">
-  <h2 class="tclp-title">The Toxicity Characteristic Leaching Procedure (TCLP)</h2>
-
   <div class="tclp-container">
+    <h2>The Toxicity Characteristic Leaching Procedure (TCLP)</h2>
     <!-- Image Column -->
     <div class="tcl-image-container">
       <img
@@ -16,10 +15,11 @@
     <!-- Text Column -->
     <div class="tclp-content">
       <p>{{ section.settings.tclp_description }}</p>
+
       <div class="tclp-mini-container">
         <h4>{{ section.settings.tclp_subheading }}</h4>
         
-        <a href="{{ section.settings.tclp_button_link }}"class="button-rounded">
+        <a href="{{ section.settings.tclp_button_link }}"class="button-rounded tclp-button">
           {{ section.settings.tclp_button_text }}
         
           <span class="arrow-circle">
@@ -64,7 +64,7 @@
       "id": "tclp_button_text",
       "type": "text",
       "label": "Button Text",
-      "default": "Learn More about TCLP"
+      "default": "Learn more TCLP"
     },
     {
       "id": "tclp_button_link",

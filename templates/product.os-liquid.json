@@ -112,7 +112,7 @@
         "column_alignment": "left",
         "background_style": "primary",
         "button_label": "Back to Shop",
-        "button_link": "shopify://collections/all",
+        "button_link": "shopify://collections/shop",
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,

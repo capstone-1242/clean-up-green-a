@@ -166,7 +166,7 @@ ol li {
 /* base */
 
 .page-width {
-  max-width: var(--page-width);
+  max-width: 1720px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -221,7 +221,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   }
 
   .page-width-desktop {
-    max-width: var(--page-width);
+    max-width: 1720px;
     padding: 0 5rem;
   }
 }
