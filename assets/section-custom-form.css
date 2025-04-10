@@ -33,19 +33,6 @@
   resize: vertical;
 }
 
-/* .custom-contact-form .form-error {
-  color: red;
-  margin-top: 5px;
-} */
-.form-error {
-  color: red; /* Text color */
-  background-color: #fff3f3; /* Light red background */
-  padding: 10px; /* Space around the text */
-  border: 1px solid red; /* Border around the error */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 14px; /* Font size */
-  margin-top: 5px; /* Space above the error */
-}
 
 .custom-contact-form .name-fields {
   display: flex;
@@ -70,7 +57,7 @@
 
 }
 .button-rounded{
-  gap: 10rem;
+  gap: 5rem;
 }
 .custom-contact-form,
 .contact-info {
@@ -78,7 +65,6 @@
   max-width: 500px;
 }
 
-/* styling contact info */
 .contact-info {
   background-color: var(--color-secondary-medium-green);
   color: white;
@@ -118,29 +104,10 @@
   vertical-align: bottom; 
 }
 
-.success-message {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 100px;
-  border: 2px solid #28a745;
-  border-radius: 5px;
-  text-align: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  z-index: 9999;
-}
 
-.message-text {
-  font-size: 18px;
-  color: #28a745;
-  font-weight: bold;
-}
 
 .input-wrapper {
     position: relative;
-    /* display: inline-block; */
     margin-bottom: 3rem;
 
 }
@@ -150,38 +117,95 @@
     position: absolute;
     top: 100%;
     left: 0;
-    /* background: #f8d7da;  */
     color: #918c8d;
     padding: 5px;
     border-radius: 4px;
     font-size: 12px;
     width: 220px;
-    /* border: 1px solid #f5c6cb; */
 } 
 
 input:invalid + .tooltip {
     display: block;
 }
+.post-message {
+  position: fixed;
+  inset: 0; 
+  background-color: #ffffff;
+  z-index: 9998;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body.no-scroll {
+  overflow: hidden;
+}
 
-/* Mobile styling */
-@media (max-width: 767px) {
-  .contact-container, .form-group {
+/* Success message box */
+.success-message {
+  position: relative; 
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #1C2324;
+  color: #fff;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto 30px;
+  padding: 40px 30px;
+  z-index: 1;
+}
+
+.success-icon {
+  margin-bottom: 20px;
+}
+.success-icon svg {
+  width: 48px;
+  height: 48px;
+ 
+
+}
+
+.success-message .thank-you {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.success-message p:last-of-type {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .post-message {
+    z-index: 9998;
+    display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
   }
 
-  .custom-contact-form,
-  .contact-info {
-    width: 100%;
-    max-width: 400px;
+  .success-message {
+    width: 100%;        
+    max-width: 750px;  
+    text-align: center; 
+    margin-bottom: 20px; 
   }
 
-  .contact-info {
-    padding: 30px;
-    
+
+  .success-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+    width: 100%; 
   }
 
-  .contact-info p {
-    text-align: left;
+}
+
+@media (max-width: 480px) {
+  .post-message {
+    padding: 15px; 
   }
 }
