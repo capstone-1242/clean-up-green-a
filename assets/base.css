@@ -3086,7 +3086,7 @@ details-disclosure > details {
   position: relative;
   border: var(--media-border-width) solid rgba(var(--color-foreground), var(--media-border-opacity));
   border-radius: var(--media-radius);
-  overflow: visible !important;
+  overflow: visible !important; 
   background-color: rgb(var(--color-background));
 }
 
@@ -3747,6 +3747,10 @@ details-disclosure > details {
 
 .card--media {
   border-radius: 20px !important;
+  -webkit-border-radius: 20px !important;
+  -moz-border-radius: 20px !important;
+  -ms-border-radius: 20px !important;
+  -o-border-radius: 20px !important;
 }
 
 .card__inner {
