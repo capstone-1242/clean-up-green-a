@@ -1,33 +1,34 @@
-{{ 'custom-button.css' | asset_url | stylesheet_tag }}
+ {{ 'custom-button.css' | asset_url | stylesheet_tag }}
 {{ 'section-custom-form.css' | asset_url | stylesheet_tag }}
 
-{% comment %}
-Do not change any classes, all the classes that form is using are from within Shopify.
-The only classes added are for styling.
-Button is customized - Simran
-{% endcomment %}
 
 <section class="contact-container">
   <section class="custom-contact-form">
     <h2 class="form-heading">Got Questions? Send us a message</h2>
 
     {%- form 'contact', id: 'ContactForm' -%}
-      
+
         {%- if form.posted_successfully? -%}
-          <div class="success-message">
-            <p class="message-text">
-              Thanks for your submission! We’ll get back to you shortly.
-            </p>
-            <a href="{{ '/'}}"class="button-rounded">
-             Homepage
-              <span class="arrow-circle">
-                <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.22498 18H29.775" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
-                  <path d="M23.175 25.17L29.34 19.005C29.6194 18.724 29.7762 18.3438 29.7762 17.9475C29.7762 17.5512 29.6194 17.1711 29.34 16.89L23.34 10.89" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
-                  </svg>
-              </span>
-            </a>
+          <div class="post-message">
+            <div class="success-message">
+              <div class="success-icon">
+                {% render 'logo' %}
+              </div>
+              <p class="thank-you">Thank you for contacting us!</p>
+              <p>We have received your email and we will be in touch with you shortly!</p>
+            </div>
+            
+            <div class="success-buttons">
+              <a href="/" class="button-rounded">Go back to Home<span class="arrow-circle">
+                {% render 'button-arrow-svg' %}
+                </span></a>
+              <a href="/pages/industrial-solutions" class="button-rounded">Industrial Solutions <span class="arrow-circle">
+                {% render 'button-arrow-svg' %}</span></a>
+              <a href="/pages/how-to-use" class="button-rounded">How to use our products<span class="arrow-circle">
+                {% render 'button-arrow-svg' %}</span></a>
+            </div>
           </div>
+          
         
       {%- elsif form.errors -%}
         <h2 class="form-status form-status-error" tabindex="-1" autofocus>
