@@ -1,9 +1,5 @@
 <div class="mobile-search">
-    {%- if settings.predictive_search_enabled -%}
-      <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
-    {%- else -%}
-      <search-form class="search-modal__form">
-    {%- endif -%}
+  <search-form class="search-modal__form">
     <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
       <div class="field field-flex">
         <input
@@ -13,49 +9,26 @@
           name="q"
           value="{{ search.terms | escape }}"
           placeholder="{{ 'general.search.search' | t }}"
-          {%- if settings.predictive_search_enabled -%}
-            role="combobox"
-            aria-expanded="false"
-            aria-owns="predictive-search-results"
-            aria-controls="predictive-search-results"
-            aria-haspopup="listbox"
-            aria-autocomplete="list"
-            autocorrect="off"
-            autocomplete="off"
-            autocapitalize="off"
-            spellcheck="false"
-          {%- endif -%}
         >
         <label class="field__label label__search__style" for="{{ input_id }}">{{ 'general.search.search' | t }}</label>
         <input type="hidden" name="options[prefix]" value="last">
+
         <button
           type="reset"
           class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
           aria-label="{{ 'general.search.reset' | t }}"
         >
           <svg class="icon icon-close" aria-hidden="true" focusable="false">
-            <use xlink:href="#icon-reset">
+            <use xlink:href="#icon-reset"></use>
           </svg>
         </button>
+
         <button class="search__button field__button search__icon__color" aria-label="{{ 'general.search.search' | t }}">
           <svg class="icon icon-search" aria-hidden="true" focusable="false">
             <path fill="currentColor" fill-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 1 1 2.85 3.5a5.784 5.784 0 0 1 8.18 8.18m.26 1.12a6.78 6.78 0 1 1 .72-.7l5.4 5.4a.5.5 0 1 1-.71.7z" clip-rule="evenodd"/>
           </svg>
         </button>
       </div>
-  
-      {%- if settings.predictive_search_enabled -%}
-        <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
-          {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
-        </div>
-  
-        <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
-      {%- endif -%}
     </form>
-    {%- if settings.predictive_search_enabled -%}
-      </predictive-search>
-    {%- else -%}
-      </search-form>
-    {%- endif -%}
-  </div>
-  
+  </search-form>
+</div>
