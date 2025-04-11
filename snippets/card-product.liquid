@@ -29,7 +29,6 @@
   height: 100%;
   overflow: hidden;
   background: Lightgrey;
-
 }
 
 .card-image img {
@@ -51,7 +50,6 @@
 
 .product-title {
   font-family:var(--font-heading-family);
- 
 }
 
 .product-title a , .product-card-description a{
@@ -92,13 +90,11 @@
   border-radius: 4px;
 }
 
-
 .quantity-wrapper {
   display: flex;
   align-items: center;
   gap: 5px; 
-padding-right:10px;
-
+  padding-right:10px;
 }
 
 .quantity-wrapper button {
@@ -121,7 +117,6 @@ padding-right:10px;
   background-color: var(--color-primary-palest-green);
   font-weight:black;
   color: #fff;
-
 }
 
 .quantity-wrapper button:last-of-type {
@@ -150,7 +145,6 @@ padding-right:10px;
   margin-top: 2.1rem;
 }
 
-/* Style for both buttons */
 .add-to-cart, .how-to-use-link{
   font-family:var(--font-body-family);
   padding: 1rem 2rem;
@@ -164,28 +158,39 @@ padding-right:10px;
 }
 .how-to-use-link{
   border: 1px solid black ;
-
   background-color: white;
-  
 }
+
 .how-to-use-link a{
   text-decoration: none;
   color:#111;
-  
 }
+
 .add-to-cart:hover {
   background-color: var(--color-primary-palest-green);
-color:var(--color-body-text-black);
+  color:var(--color-body-text-black);
 }
 .how-to-use-link:hover {
   background-color: var(--color-primary-palest-green);
-
 }
 
+.variant-error-message {
+  display: none;
+  color: red;
+  font-size: 1rem;
+  padding-left: 6px;
+}
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 {% endstyle %}
-
-
 
 <div class="card-wrapper">
   <div class="card">
@@ -221,12 +226,9 @@ color:var(--color-body-text-black);
       {% if card_product.description != blank %}
         <p class="product-card-description">
         <a href="{{ card_product.url }}">
-
           {{ card_product.description | strip_html | truncate: 100 }}
         </a>
-      
         </p>
-
       {% endif %}
 
       <div class="product-price">
@@ -266,9 +268,12 @@ color:var(--color-body-text-black);
             +
           </button>
         </div>
+
         
       </div>
-
+      <div class="variant-error-message">
+        Please select a size before adjusting quantity.
+      </div>
       <div class="btn-row">
         <form method="post" action="/cart/add" class="btn-container" id="add-to-cart-form-{{ card_product.id }}">
           <input type="hidden" name="id" id="hidden-variant-id-{{ card_product.id }}" 
@@ -280,18 +285,16 @@ color:var(--color-body-text-black);
             {% if card_product.available == false %}Sold Out{% else %}Add to Cart{% endif %}
           </button>
         </form>
-        
 
         <button class="how-to-use-link">
           <a href="/pages/how-to-use?product_id={{ card_product.id }}" >How to Use</a>
         </button>
       </div>
-
     </div>
   </div>
 </div>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const select = document.getElementById("variant-select-{{ card_product.id }}");
     const hiddenVariantInput = document.getElementById("hidden-variant-id-{{ card_product.id }}");
     const quantityWrapper = document.querySelector('.card-wrapper:has(#variant-select-{{ card_product.id }}) .quantity-wrapper');
@@ -303,104 +306,118 @@ color:var(--color-body-text-black);
     const addToCartButton = addToCartForm ? addToCartForm.querySelector('.add-to-cart') : null;
 
     function updateHiddenQuantity(quantity) {
-      if (hiddenQuantityInput) {
-        hiddenQuantityInput.value = quantity;
-      }
+        if (hiddenQuantityInput) {
+            hiddenQuantityInput.value = quantity;
+        }
+    }
+
+    function showVariantError() {
+        const errorEl = document.querySelector('.card-wrapper:has(#variant-select-{{ card_product.id }}) .variant-error-message');
+        if (errorEl) {
+            errorEl.style.display = 'block';
+            setTimeout(() => {
+                errorEl.style.display = 'none';
+            }, 4000); // Hide after 4 seconds
+        }
     }
 
     if (quantityInput && hiddenQuantityInput) {
-      quantityInput.addEventListener('input', function() {
-        updateHiddenQuantity(this.value);
-      });
+        quantityInput.addEventListener('input', function() {
+            updateHiddenQuantity(this.value);
+        });
     }
 
     if (addToCartForm && addToCartButton) {
-      addToCartForm.addEventListener('submit', function(event) {
-        const selectedVariantId = hiddenVariantInput.value;
-        const selectedOption = select ? select.querySelector(`option[value="${selectedVariantId}"]`) : null;
-        const isSingleProductSoldOut = {{ card_product.available | json }} === false && !select;
+        addToCartForm.addEventListener('submit', function(event) {
+            const selectedVariantId = hiddenVariantInput.value;
+            const selectedOption = select ? select.querySelector(`option[value="${selectedVariantId}"]`) : null;
+            const isSingleProductSoldOut = {{ card_product.available | json }} === false && !select;
 
-        if ((selectedOption && selectedOption.disabled) || isSingleProductSoldOut) {
-          event.preventDefault(); // Prevent form submission
-          alert('This product is currently sold out.'); // Or display a more user-friendly message
-        } else {
-          const currentQuantity = quantityInput ? quantityInput.value : '1';
-          document.getElementById("quantity-{{ card_product.id }}").value = currentQuantity;
-        }
-      });
+            if ((selectedOption && selectedOption.disabled) || isSingleProductSoldOut) {
+                event.preventDefault(); // Prevent form submission
+                alert('This product is currently sold out.'); // Or display a more user-friendly message
+            } else {
+                const currentQuantity = quantityInput ? quantityInput.value : '1';
+                document.getElementById("quantity-{{ card_product.id }}").value = currentQuantity;
+            }
+        });
     }
 
     function disableQuantity() {
-      if (quantityInput && decreaseButton && increaseButton) {
-        quantityInput.disabled = true;
-        decreaseButton.disabled = true;
-        increaseButton.disabled = true;
-      }
+        if (quantityInput && decreaseButton && increaseButton) {
+            quantityInput.disabled = true;
+            decreaseButton.disabled = true;
+            increaseButton.disabled = true;
+        }
     }
 
     function enableQuantity() {
-      if (quantityInput && decreaseButton && increaseButton) {
-        quantityInput.disabled = false;
-        decreaseButton.disabled = false;
-        increaseButton.disabled = false;
-      }
+        if (quantityInput && decreaseButton && increaseButton) {
+            quantityInput.disabled = false;
+            decreaseButton.disabled = false;
+            increaseButton.disabled = false;
+        }
     }
 
     function updateAddToCartButtonState(isDisabled, text = 'Add to Cart') {
-      if (addToCartButton) {
-        addToCartButton.disabled = isDisabled;
-        addToCartButton.textContent = text;
-      }
+        if (addToCartButton) {
+            addToCartButton.disabled = isDisabled;
+            addToCartButton.textContent = text;
+        }
     }
 
-    // Initial state check
+    // Initially enable buttons, and handle the error for quantity adjustments
     const isSingleProduct = {{ card_product.variants.size | json }} <= 1;
     const isProductAvailable = {{ card_product.available | json }};
-
+    
     if (isSingleProduct && !isProductAvailable) {
-      updateAddToCartButtonState(true, 'Sold Out');
-      disableQuantity();
-    } else if (select) {
-      const initialVariantId = hiddenVariantInput.value;
-      const initialOption = select.querySelector(`option[value="${initialVariantId}"]`);
-      if (initialOption && initialOption.disabled) {
         updateAddToCartButtonState(true, 'Sold Out');
         disableQuantity();
-      } else {
-        disableQuantity(); // Initially disable if multiple variants and available
-      }
+    } else if (select) {
+        // Initially enable buttons so the error message can be triggered
+        enableQuantity(); // Temporarily enable quantity buttons to show the error message
+        updateAddToCartButtonState(false);
     } else if (isSingleProduct && isProductAvailable) {
-      enableQuantity();
-      updateAddToCartButtonState(false);
+        enableQuantity();
+        updateAddToCartButtonState(false);
     }
 
     // Variant selection change listener
     if (select) {
-      select.addEventListener("change", function () {
-        hiddenVariantInput.value = this.value;
-        const selectedOption = this.options[this.selectedIndex];
-        if (selectedOption.disabled) {
-          disableQuantity();
-          updateAddToCartButtonState(true, 'Sold Out');
-        } else {
-          enableQuantity();
-          updateAddToCartButtonState(false);
-        }
-      });
+        select.addEventListener("change", function () {
+            hiddenVariantInput.value = this.value;
+            const selectedOption = this.options[this.selectedIndex];
+            if (selectedOption.disabled) {
+                disableQuantity();
+                updateAddToCartButtonState(true, 'Sold Out');
+            } else {
+                enableQuantity();
+                updateAddToCartButtonState(false);
+            }
+        });
     }
 
     if (decreaseButton && quantityInput) {
-      decreaseButton.addEventListener('click', function() {
-        quantityInput.stepDown();
-        updateHiddenQuantity(quantityInput.value);
-      });
+        decreaseButton.addEventListener('click', function() {
+            if (!select.value) {
+                showVariantError();
+                return;
+            }
+            quantityInput.stepDown();
+            updateHiddenQuantity(quantityInput.value);
+        });
     }
 
     if (increaseButton && quantityInput) {
-      increaseButton.addEventListener('click', function() {
-        quantityInput.stepUp();
-        updateHiddenQuantity(quantityInput.value);
-      });
+        increaseButton.addEventListener('click', function() {
+            if (!select.value) {
+                showVariantError();
+                return;
+            }
+            quantityInput.stepUp();
+            updateHiddenQuantity(quantityInput.value);
+        });
     }
-  });
+});
 </script>
+

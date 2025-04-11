@@ -41,32 +41,22 @@
       }
     },
     {
-      "key": "long_description",
+      "key": "how_to_use_link",
       "namespace": "custom",
-      "name": "Long description",
-      "description": "Product's long description",
+      "name": "How To Use Link",
+      "description": "Link to \"How to Use\" page",
       "type": {
-        "name": "rich_text_field",
-        "category": "TEXT"
+        "name": "link",
+        "category": "LINK"
       }
     },
     {
-      "key": "product_features",
+      "key": "htu_link",
       "namespace": "custom",
-      "name": "Features",
-      "description": "Product features list",
+      "name": "How to Use Link",
+      "description": "Link to how to use page",
       "type": {
-        "name": "rich_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "cleans_up_list",
-      "namespace": "custom",
-      "name": "Cleans up list",
-      "description": "List of what the product cleans up",
-      "type": {
-        "name": "rich_text_field",
+        "name": "single_line_text_field",
         "category": "TEXT"
       }
     }
