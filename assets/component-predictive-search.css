@@ -2,7 +2,7 @@
   display: none;
   position: absolute;
   top: calc(100% + 0.1rem);
-  left: -0.1rem;
+  right: -0.2rem;
   border-width: var(--popup-border-width);
   border-style: solid;
   border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
@@ -222,4 +222,17 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
   grid-area: product-image;
   object-fit: contain;
   font-family: 'object-fit: contain';
+}
+
+@media screen and (min-width: 1320px) {
+  .predictive-search {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .predictive-search {
+    right: unset;
+    left: -0.1rem;
+  }
 }
