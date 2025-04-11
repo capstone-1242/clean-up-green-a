@@ -1,7 +1,6 @@
 {
   "article": [],
   "blog": [],
-  "brand": [],
   "collection": [],
   "company": [],
   "company_location": [],
@@ -58,6 +57,16 @@
       "type": {
         "name": "single_line_text_field",
         "category": "TEXT"
+      }
+    },
+    {
+      "key": "how_to_use_link",
+      "namespace": "custom",
+      "name": "How To Use Link",
+      "description": "Link to \"How to Use\" page",
+      "type": {
+        "name": "link",
+        "category": "LINK"
       }
     }
   ],

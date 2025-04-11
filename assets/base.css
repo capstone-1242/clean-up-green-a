@@ -1976,9 +1976,9 @@ input[type='checkbox'] {
   right: var(--inputs-border-width);
   bottom: var(--inputs-border-width);
   left: var(--inputs-border-width);
-  border: 0.1rem solid transparent;
+  /* border: 0.1rem solid transparent; */
   border-radius: var(--inputs-radius);
-  box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
+  /* box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity)); */
   transition: box-shadow var(--duration-short) ease;
   z-index: 1;
 }
@@ -3799,6 +3799,10 @@ details-disclosure > details {
   line-height: 36px !important;
 }
 
+product-info .page-width {
+  max-width: 1428px !important;
+}
+
 .shop-heading {
   text-align: left !important;
   color: var(--color-heading-deep-green) !important;
@@ -3838,6 +3842,9 @@ details-disclosure > details {
   color: var(--color-accent-deep-teal) !important;
 }
 
+.multicolumn {
+  margin: 0 auto;
+}
 
 @media screen and (min-width: 900px) {
   .multicolumn {
@@ -3845,6 +3852,6 @@ details-disclosure > details {
   }
 
   .multicolumn .page-width {
-    max-width: 14280px;
+    max-width: 1428px;
   }
 }
