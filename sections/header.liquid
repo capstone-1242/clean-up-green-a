@@ -402,6 +402,51 @@
 
   customElements.define('sticky-header', StickyHeader);
 
+  document.addEventListener("DOMContentLoaded", function () {
+      const wrapperSelector = ".header__inner";
+      let wrapper = document.querySelector(wrapperSelector);
+      let placeholder = document.createComment("header__inner placeholder");
+      let childrenBackup = [];
+  
+      if (wrapper) {
+        childrenBackup = Array.from(wrapper.childNodes);
+      }
+  
+      function unwrapHeaderInner() {
+        if (!document.querySelector(wrapperSelector)) return;
+  
+        const currentWrapper = document.querySelector(wrapperSelector);
+        currentWrapper.replaceWith(placeholder);
+        childrenBackup.forEach((child) => {
+          if (child.nodeType === Node.ELEMENT_NODE || child.nodeType === Node.TEXT_NODE) {
+            placeholder.parentNode.insertBefore(child, placeholder);
+          }
+        });
+      }
+  
+      function rewrapHeaderInner() {
+        if (document.querySelector(wrapperSelector)) return;
+  
+        const newWrapper = document.createElement("div");
+        newWrapper.className = "header__inner";
+        childrenBackup.forEach((child) => {
+          newWrapper.appendChild(child);
+        });
+        placeholder.replaceWith(newWrapper);
+      }
+  
+      function checkHeaderLayout() {
+        if (window.innerWidth >= 990) {
+          unwrapHeaderInner();
+        } else {
+          rewrapHeaderInner();
+        }
+      }
+  
+      checkHeaderLayout();
+      window.addEventListener("resize", checkHeaderLayout);
+    });
+
   
 {% endjavascript %}
 
@@ -442,58 +487,6 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const wrapperSelector = ".header__inner";
-      let wrapper = document.querySelector(wrapperSelector);
-      let originalParent = wrapper?.parentNode;
-      let placeholder = document.createComment("header__inner placeholder");
-      let childrenBackup = [];
-  
-      // Save the original children
-      if (wrapper) {
-        childrenBackup = Array.from(wrapper.childNodes);
-      }
-  
-      function unwrapHeaderInner() {
-        if (!document.querySelector(wrapperSelector)) return;
-  
-        // Insert children directly before wrapper and remove it
-        const currentWrapper = document.querySelector(wrapperSelector);
-        currentWrapper.replaceWith(placeholder);
-        childrenBackup.forEach((child) => {
-          if (child.nodeType === Node.ELEMENT_NODE || child.nodeType === Node.TEXT_NODE) {
-            placeholder.parentNode.insertBefore(child, placeholder);
-          }
-        });
-      }
-  
-      function rewrapHeaderInner() {
-        if (document.querySelector(wrapperSelector)) return;
-  
-        const newWrapper = document.createElement("div");
-        newWrapper.className = "header__inner";
-        childrenBackup.forEach((child) => {
-          newWrapper.appendChild(child);
-        });
-        placeholder.replaceWith(newWrapper);
-      }
-  
-      function checkHeaderLayout() {
-        if (window.innerWidth >= 990) {
-          unwrapHeaderInner();
-        } else {
-          rewrapHeaderInner();
-        }
-      }
-  
-      // Initial check
-      checkHeaderLayout();
-  
-      // On resize
-      window.addEventListener("resize", checkHeaderLayout);
-    });
   </script>
   
 {%- endif -%}

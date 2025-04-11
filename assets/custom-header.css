@@ -156,7 +156,7 @@ header {
 
   .header__icons {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
   }
 }
 
@@ -168,6 +168,48 @@ header {
   }
 
   .header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2rem;
     max-width: 1720px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
   }
+
+  .header__heading {
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  .header__inline-menu {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: nowrap;
+  }
+  
+  ul.list-menu {
+    padding-left: 6rem;
+  }
+
+  .desktop__searchbar {
+    grid-column: 3;
+    justify-self: center;
+    width: 50%;
+  }
+
+  .header__icons {
+    grid-column: 4;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.25rem;
+  }
+
+  .header__icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
 }

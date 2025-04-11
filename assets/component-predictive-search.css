@@ -233,10 +233,3 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
     width: 600px;
   }
 }
-
-@media screen and (min-width: 1920px) {
-  .predictive-search {
-    right: unset;
-    left: -0.1rem;
-  }
-}
