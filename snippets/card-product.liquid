@@ -206,7 +206,27 @@ color:var(--color-body-text-black);
 
 <div class="card-wrapper">
   <div class="card">
-    {% if card_product.featured_media %}
+    {% if card_product.metafields.custom.thumbnail_image %}
+      <div class="card-image">
+        <a href="{{ card_product.url }}">
+          <img
+            srcset="
+              {% if card_product.metafields.custom.thumbnail_image.width >= 165 %}{{ card_product.metafields.custom.thumbnail_image | image_url: width: 165 }} 165w,{% endif %}
+              {% if card_product.metafields.custom.thumbnail_image.width >= 360 %}{{ card_product.metafields.custom.thumbnail_image | image_url: width: 360 }} 360w,{% endif %}
+              {% if card_product.metafields.custom.thumbnail_image.width >= 533 %}{{ card_product.metafields.custom.thumbnail_image | image_url: width: 533 }} 533w,{% endif %}
+              {% if card_product.metafields.custom.thumbnail_image.width >= 720 %}{{ card_product.metafields.custom.thumbnail_image | image_url: width: 720 }} 720w,{% endif %}
+              {% if card_product.metafields.custom.thumbnail_image.width >= 940 %}{{ card_product.metafields.custom.thumbnail_image | image_url: width: 940 }} 940w,{% endif %}
+              {% if card_product.metafields.custom.thumbnail_image.width >= 1066 %}{{ card_product.metafields.custom.thumbnail_image | image_url: width: 1066 }} 1066w,{% endif %}
+              {{ card_product.metafields.custom.thumbnail_image | image_url }} {{ card_product.metafields.custom.thumbnail_image.width }}w
+            "
+            src="{{ card_product.metafields.custom.thumbnail_image | image_url: width: 533 }}"
+            alt="{{ card_product.metafields.custom.thumbnail_image.alt | escape }}"
+            class="motion-reduce"
+            loading="lazy" width="100%" height="auto"
+          >
+        </a>
+      </div>
+    {% elsif card_product.featured_media %}
       <div class="card-image">
         <a href="{{ card_product.url }}">
           <img
@@ -215,7 +235,7 @@ color:var(--color-body-text-black);
               {% if card_product.featured_media.width >= 360 %}{{ card_product.featured_media | image_url: width: 360 }} 360w,{% endif %}
               {% if card_product.featured_media.width >= 533 %}{{ card_product.featured_media | image_url: width: 533 }} 533w,{% endif %}
               {% if card_product.featured_media.width >= 720 %}{{ card_product.featured_media | image_url: width: 720 }} 720w,{% endif %}
-               {% if card_product.featured_media.width >= 940 %}{{ card_product.featured_media | image_url: width: 940 }} 940w,{% endif %}
+              {% if card_product.featured_media.width >= 940 %}{{ card_product.featured_media | image_url: width: 940 }} 940w,{% endif %}
               {% if card_product.featured_media.width >= 1066 %}{{ card_product.featured_media | image_url: width: 1066 }} 1066w,{% endif %}
               {{ card_product.featured_media | image_url }} {{ card_product.featured_media.width }}w
             "
@@ -227,6 +247,7 @@ color:var(--color-body-text-black);
         </a>
       </div>
     {% endif %}
+
 
     <div class="card-content">
       <h3 class="product-title">

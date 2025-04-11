@@ -95,7 +95,20 @@
                 {%- for item in cart.items -%}
                   <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
                     <td class="cart-item__media">
-                      {% if item.image %}
+                      {% if item.product.metafields.custom.thumbnail_image %}
+                        {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
+                        <a href="{{ item.url }}" class="cart-item__link" aria-hidden="true" tabindex="-1"> </a>
+                        <div class="cart-item__image-container gradient global-media-settings">
+                          <img
+                            src="{{ item.product.metafields.custom.thumbnail_image | image_url: width: 300 }}"
+                            class="cart-item__image"
+                            alt="{{ item.product.title | escape }}"
+                            loading="lazy"
+                            width="150"
+                            height="150"
+                          >
+                        </div>
+                      {% elsif item.image %}
                         {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
                         <a href="{{ item.url }}" class="cart-item__link" aria-hidden="true" tabindex="-1"> </a>
                         <div class="cart-item__image-container gradient global-media-settings">
@@ -110,6 +123,7 @@
                         </div>
                       {% endif %}
                     </td>
+              
 
                     <td class="cart-item__details">
                       {%- if settings.show_vendor -%}
