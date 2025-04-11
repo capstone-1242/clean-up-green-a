@@ -17,12 +17,8 @@
     }
 }
 
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 1200px) {
     .hero-section {
         max-width: 1150px;
-    }
-
-    .shop-hero-container h1 {
-        text-align: left !important;
     }
 }
