@@ -236,20 +236,17 @@ input[type="number"] {
       </div>
 
       <div class="variant-quantity-row">
-        {% if card_product.variants.size > 1 %}
-          <div class="variant-select">
-            <select name="id" id="variant-select-{{ card_product.id }}">
-              <option value="" disabled selected>Size</option>
-              {% for variant in card_product.variants %}
-                <option value="{{ variant.id }}" {% unless variant.available %}disabled{% endunless %}>
-                  {{ variant.title }} {% unless variant.available %}(Sold Out){% endunless %}
-                </option>
-              {% endfor %}
-            </select>
-          </div>
-        {% else %}
-          <input type="hidden" name="id" id="hidden-variant-id-{{ card_product.id }}" value="{{ card_product.variants.first.id }}" {% unless card_product.variants.first.available %}disabled{% endunless %}>
-        {% endif %}
+        <div class="variant-select">
+          <select name="id" id="variant-select-{{ card_product.id }}">
+            <option value="" disabled selected>Size</option>
+            {% for variant in card_product.variants %}
+              <option value="{{ variant.id }}" {% unless variant.available %}disabled{% endunless %}>
+                {{ variant.title }} {% unless variant.available %}(Sold Out){% endunless %}
+              </option>
+            {% endfor %}
+          </select>
+        </div>
+      
 
         <div class="quantity-wrapper">
           <button type="button" class="quantity-button quantity-decrease" 
