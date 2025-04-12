@@ -72,12 +72,6 @@
     border-radius: 16px;
 }
 
-/* Styles for tablets */
-/* @media screen and (min-width: 750px) and (max-width: 989px) { 
-
-} */
-
-
 /* Styles for desktops and larger screens */
 @media screen and (min-width: 990px) { 
     .desktop-container {
@@ -113,10 +107,11 @@
         height: 100%; 
         justify-content: start;
         flex-direction: unset;
-        gap: 2rem;
+        gap: 1rem;
     }
 
     .text-overlay {
+        left: 30%;
         position: absolute;
         color: white;
         font-size: 2.25rem;
@@ -129,8 +124,9 @@
     }
 
     .image-container {
-        min-width: 25.25rem;
-        height: 28rem;
+        display: flex;
+        min-width: 22.25rem;
+        height: 27rem;
         position: relative;
         overflow: hidden;
         border-radius: 1rem;
@@ -144,5 +140,20 @@
 
     .comparison-section h2 {
         text-align: unset;
+    }
+}
+
+@media screen and (min-width: 1320px) {
+    .images-section {
+        gap: 2rem;
+    }
+
+    .image-container {
+        min-width: 25.25rem;
+        display: unset;
+    }
+
+    .text-overlay {
+        left: 37%;
     }
 }
