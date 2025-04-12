@@ -1,6 +1,7 @@
 {
   "article": [],
   "blog": [],
+  "brand": [],
   "collection": [],
   "company": [],
   "company_location": [],
@@ -40,33 +41,13 @@
       }
     },
     {
-      "key": "how_to_use_link",
+      "key": "thumbnail_image",
       "namespace": "custom",
-      "name": "How To Use Link",
-      "description": "Link to \"How to Use\" page",
+      "name": "Thumbnail Image",
+      "description": "Transparent thumbnail image",
       "type": {
-        "name": "link",
-        "category": "LINK"
-      }
-    },
-    {
-      "key": "htu_link",
-      "namespace": "custom",
-      "name": "How to Use Link",
-      "description": "Link to how to use page",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "how_to_use_link",
-      "namespace": "custom",
-      "name": "How To Use Link",
-      "description": "Link to \"How to Use\" page",
-      "type": {
-        "name": "link",
-        "category": "LINK"
+        "name": "file_reference",
+        "category": "REFERENCE"
       }
     }
   ],
