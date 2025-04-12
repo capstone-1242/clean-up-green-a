@@ -233,7 +233,7 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
 }
 
 @media screen and (min-width: 1320px) {
-  .predictive-search {
+  header .predictive-search {
     width: 600px;
   }
 }
