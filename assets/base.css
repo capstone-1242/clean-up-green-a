@@ -3861,7 +3861,7 @@ product-info .page-width {
   padding: 30px 0;
 }
 
-.caption-large, .product-count__text {
+.facets__heading, .product-count__text {
   font-size: 24px !important;
 }
 
