@@ -3855,3 +3855,14 @@ product-info .page-width {
     max-width: 1428px;
   }
 }
+
+.template-search__header h1 {
+  color: var(--color-heading-deep-green) !important;
+  padding: 30px 0;
+}
+
+.caption-large, .product-count__text {
+  font-size: 24px !important;
+}
+
+

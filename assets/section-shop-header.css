@@ -13,12 +13,6 @@
 
 @media screen and (min-width: 750px) {
     .hero-section {
-        max-width: 900px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .hero-section {
-        max-width: 1150px;
+        max-width: 840px;
     }
 }
