@@ -23,8 +23,13 @@
 
 .where-to-buy-heading {
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .shop-product-inquiry-section a {
     margin: 16px;
+}
+
+.logo-grid-item {
+    align-self: center;
 }

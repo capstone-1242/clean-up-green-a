@@ -195,6 +195,7 @@
           </div>
           {%- endif -%}
         {%- endif -%}
+        {% render 'header-searchbar-desktop', class:'desktop__searchbar' %}
         <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
           <div class="desktop-localization-wrapper">
             {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
@@ -220,7 +221,6 @@
           </div>
           {% render 'header-search', input_id: 'Search-In-Modal'%}
           {% comment %} Searchbar Desktop View {% endcomment %}
-          {% render 'header-searchbar-desktop', class:'desktop__searchbar' %}
           {%- if shop.customer_accounts_enabled and section.settings.enable_customer_icon -%}
             <a
               href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
@@ -401,6 +401,53 @@
   }
 
   customElements.define('sticky-header', StickyHeader);
+
+  document.addEventListener("DOMContentLoaded", function () {
+      const wrapperSelector = ".header__inner";
+      let wrapper = document.querySelector(wrapperSelector);
+      let placeholder = document.createComment("header__inner placeholder");
+      let childrenBackup = [];
+  
+      if (wrapper) {
+        childrenBackup = Array.from(wrapper.childNodes);
+      }
+  
+      function unwrapHeaderInner() {
+        if (!document.querySelector(wrapperSelector)) return;
+  
+        const currentWrapper = document.querySelector(wrapperSelector);
+        currentWrapper.replaceWith(placeholder);
+        childrenBackup.forEach((child) => {
+          if (child.nodeType === Node.ELEMENT_NODE || child.nodeType === Node.TEXT_NODE) {
+            placeholder.parentNode.insertBefore(child, placeholder);
+          }
+        });
+      }
+  
+      function rewrapHeaderInner() {
+        if (document.querySelector(wrapperSelector)) return;
+  
+        const newWrapper = document.createElement("div");
+        newWrapper.className = "header__inner";
+        childrenBackup.forEach((child) => {
+          newWrapper.appendChild(child);
+        });
+        placeholder.replaceWith(newWrapper);
+      }
+  
+      function checkHeaderLayout() {
+        if (window.innerWidth >= 990) {
+          unwrapHeaderInner();
+        } else {
+          rewrapHeaderInner();
+        }
+      }
+  
+      checkHeaderLayout();
+      window.addEventListener("resize", checkHeaderLayout);
+    });
+
+  
 {% endjavascript %}
 
 <script type="application/ld+json">
@@ -441,6 +488,7 @@
       "url": {{ request.origin | append: page.url | json }}
     }
   </script>
+  
 {%- endif -%}
 
 {% schema %}

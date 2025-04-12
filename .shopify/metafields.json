@@ -41,33 +41,13 @@
       }
     },
     {
-      "key": "long_description",
+      "key": "thumbnail_image",
       "namespace": "custom",
-      "name": "Long description",
-      "description": "Product's long description",
+      "name": "Thumbnail Image",
+      "description": "Transparent thumbnail image",
       "type": {
-        "name": "rich_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "product_features",
-      "namespace": "custom",
-      "name": "Features",
-      "description": "Product features list",
-      "type": {
-        "name": "rich_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "cleans_up_list",
-      "namespace": "custom",
-      "name": "Cleans up list",
-      "description": "List of what the product cleans up",
-      "type": {
-        "name": "rich_text_field",
-        "category": "TEXT"
+        "name": "file_reference",
+        "category": "REFERENCE"
       }
     }
   ],

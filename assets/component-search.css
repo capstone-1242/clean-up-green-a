@@ -72,3 +72,8 @@ input::-webkit-search-decoration {
 .template-search__results {
   position: relative;
 }
+
+.search-modal__content,
+.search-modal__content .search__input.field__input {
+  background-color: var(--color-accent-deep-teal);
+}

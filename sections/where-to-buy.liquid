@@ -4,45 +4,41 @@
 <section class="where-to-buy-section">
     <div class="where-to-buy-container">
         <!-- heading -->
-        <h3 class="where-to-buy-heading">Clean-Up Green product kits are available in person at the following:</h3>
+        <h3 class="where-to-buy-heading">{{ section.settings.heading }}</h3>
 
 
         <div class="logo-grid">
+
             <div class="logo-grid-item">
-                <img src="{{ 'peavey-logo.png' | file_url }}" alt="Peavey Logo" width="226" height="90">
+                <a href="{{ section.settings.store1_link }}"><img src="{{ section.settings.logo1_image | file_url }}" alt="{{ section.settings.store1_alt }}"></a>
             </div>
 
             <div class="logo-grid-item">
-                <img src="{{ 'rcs-logo.png' | file_url }}" alt="RCS Logo" width="128.52" height="116">
+                <a href="{{ section.settings.store2_link }}"><img src="{{ section.settings.logo2_image | file_url }}" alt="{{ section.settings.store2_alt }}"></a>
             </div>
 
             <div class="logo-grid-item">
-                <img src="{{ 'wicked-logo.png' | file_url }}" alt="Wicked Workshops Logo" width="223.9" height="90">
+                <a href="{{ section.settings.store3_link }}"><img src="{{ section.settings.logo3_image | file_url }}" alt="{{ section.settings.store3_alt }}"></a>
             </div>
 
             <div class="logo-grid-item">
-                <img src="{{ 'pattersons-logo.png' | file_url }}" alt="Patterson's Part Supply Logo" width="148.9" height="100">
+                <a href="{{ section.settings.store4_link }}"><img src="{{ section.settings.logo4_image | file_url }}" alt="{{ section.settings.store4_alt }}"></a>
             </div>
 
             <div class="logo-grid-item">
-                <img src="{{ 'jsplace-logo.png' | file_url }}" alt="J's Place Logo" width="210.7" height="43">
+                <a href="{{ section.settings.store5_link }}"><img src="{{ section.settings.logo5_image | file_url }}" alt="{{ section.settings.store5_alt }}"></a>
             </div>
 
             <div class="logo-grid-item">
-                <img src="{{ 'advantage-logo.png' | file_url }}" alt="Advantage Recovery Systems Logo" width="285.85" height="72">
+                <a href="{{ section.settings.store6_link }}"><img src="{{ section.settings.logo6_image | file_url }}" alt="{{ section.settings.store6_alt }}"></a>
             </div>
-
-            <div class="logo-grid-item">
-                <img src="{{ 'yeg-logo.png' | file_url }}" alt="Yeg Epoxy Logo" width="184.67" height="104">
-            </div>
-
         </div>
 
         <div class="shop-product-inquiry-section">
-            <h4 class="where-to-buy-heading">Got Questions?</h4>
+            <h4 class="where-to-buy-heading">{{ section.settings.heading2 }}</h4>
 
-            <a href="pages/contact-us"class="button-rounded">
-            Product Inquiry
+            <a href="{{ section.settings.contact_link1 }}" class= "button-rounded">
+            {{ section.settings.contact_button1 }}
             <span class="arrow-circle">
             <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.22498 18H29.775" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
@@ -52,8 +48,8 @@
         </a>
 
           
-            <a href="pages/contact-us"class="button-rounded">
-                Become A Dealer
+            <a href="{{ section.settings.contact_link2 }}"class="button-rounded">
+            {{ section.settings.contact_button2 }}
             <span class="arrow-circle">
                 <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.22498 18H29.775" stroke="#1C2324" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
@@ -65,3 +61,156 @@
     </div>
 
 </section>
+
+{% schema %}
+{
+    "name": "Where to Buy Section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Clean-Up Green product kits are available in person at the following:"
+        },
+        {
+            "type": "text",
+            "id": "store1_link",
+            "label": "Store Link",
+            "default": "https://jsplace.ca/"
+        },
+        {
+            "type": "text",
+            "id": "logo1_image",
+            "label": "Store Logo",
+            "default": "jsplace-logo.png"
+        },
+        {
+            "type": "text",
+            "id": "store1_alt",
+            "label": "Store Logo Alt (Title of Store)",
+            "default": "Js Place"
+        },
+        {
+            "type": "text",
+            "id": "store2_link",
+            "label": "Store Link",
+            "default": "https://www.s5powersports.ca/"
+        },
+        {
+            "type": "text",
+            "id": "logo2_image",
+            "label": "Store Logo",
+            "default": "s5powersports-logo.png"
+        },
+        {
+            "type": "text",
+            "id": "store2_alt",
+            "label": "Store Logo Alt (Title of Store)",
+            "default": "S5 Powersports"
+        },
+        {
+            "type": "text",
+            "id": "store3_link",
+            "label": "Store Link",
+            "default": "https://yegepoxy.com/"
+        },
+        {
+            "type": "text",
+            "id": "logo3_image",
+            "label": "Store Logo",
+            "default": "yeg-logo.png"
+        },
+        {
+            "type": "text",
+            "id": "store3_alt",
+            "label": "Store Logo Alt (Title of Store)",
+            "default": "YEG Epoxy"
+        },
+        {
+            "type": "text",
+            "id": "store4_link",
+            "label": "Store Link",
+            "default": "https://royalcoatingsupply.com/"
+        },
+        {
+            "type": "text",
+            "id": "logo4_image",
+            "label": "Store Logo",
+            "default": "rcs-logo.png"
+        },
+        {
+            "type": "text",
+            "id": "store4_alt",
+            "label": "Store Logo Alt (Title of Store)",
+            "default": "Royal Coating Supply"
+        },
+        {
+            "type": "text",
+            "id": "store5_link",
+            "label": "Store Link",
+            "default": "https://thunder5.ca/"
+        },
+        {
+            "type": "text",
+            "id": "logo5_image",
+            "label": "Store Logo",
+            "default": "thunder5-logo.png"
+        },
+        {
+            "type": "text",
+            "id": "store5_alt",
+            "label": "Store Logo Alt (Title of Store)",
+            "default": "Thunder 5 Fuel"
+        },
+        {
+            "type": "text",
+            "id": "store6_link",
+            "label": "Store Link",
+            "default": "https://cornerstonepe.ca/"
+        },
+        {
+            "type": "text",
+            "id": "logo6_image",
+            "label": "Store Logo",
+            "default": "cpe-logo.png"
+        },
+        {
+            "type": "text",
+            "id": "store6_alt",
+            "label": "Store Logo Alt (Title of Store)",
+            "default": "Corner Stone PE"
+        },
+        {
+            "type": "text",
+            "id": "heading2",
+            "label": "Heading 2",
+            "default": "Got Questions?"
+        },
+        {
+            "type": "text",
+            "id": "contact_button1",
+            "label": "Button Label",
+            "default": "Product Inquiry"
+        },
+        {
+            "type": "text",
+            "id": "contact_button2",
+            "label": "Button Label",
+            "default": "Become a Dealer"
+        },
+        {
+            "type": "text",
+            "id": "contact_link1",
+            "label": "Contact Link",
+            "default": "https://cleanup-green.myshopify.com/pages/contact-us"
+        },
+        {
+            "type": "text",
+            "id": "contact_link2",
+            "label": "Contact Link",
+            "default": "https://cleanup-green.myshopify.com/pages/contact-us"
+        }
+    ]
+}
+
+{% endschema %}
