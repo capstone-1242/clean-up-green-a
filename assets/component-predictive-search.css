@@ -207,6 +207,10 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
   line-height: calc(1 + 0.4 / var(--font-body-scale));
 }
 
+.predictive-search__item span.svg-wrapper svg path {
+  color: var(--color-accent-deep-teal);
+}
+
 @media screen and (min-width: 750px) {
   .predictive-search__item--term {
     padding-top: 1rem;
