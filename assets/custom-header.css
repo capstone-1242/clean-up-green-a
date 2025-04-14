@@ -213,3 +213,53 @@ header {
   }
 
 }
+
+
+/* Split button styles for mobile navigation */
+.menu-drawer__split-button {
+  display: flex;
+  width: 100%;
+}
+
+.menu-drawer__menu-item--split-link {
+  flex-grow: 1;
+  padding: 1.3rem 3rem 1.3rem 2rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.menu-drawer__menu-item--split-toggle {
+  width: 4rem;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-drawer__menu-item--split-toggle .svg-wrapper {
+  height: 1.4rem;
+  width: 1.4rem;
+}
+
+/* Adjust the spacing and appearance for nested menu items */
+.menu-drawer__submenu .menu-drawer__menu-item {
+  padding-left: 3rem;
+}
+
+
+
+.menu-drawer__split-button details {
+  border: 1px solid var(--color-primary-palest-green);
+  border-radius: 16px;
+  padding: 0 16px;
+}
+
+.menu-drawer__menu-item--split-toggle {
+  padding: 16px 0;
+}
+
+.menu-drawer__split-button details:hover {
+  border: 1px solid var(--color-secondary-medium-green);
+}
