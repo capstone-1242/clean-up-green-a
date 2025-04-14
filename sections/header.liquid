@@ -195,7 +195,7 @@
           </div>
           {%- endif -%}
         {%- endif -%}
-        {% render 'header-searchbar-desktop', class:'desktop__searchbar' %}
+        {% render 'header-searchbar-desktop', class:'desktop__searchbar', input_id: 'Search-Desktop' %}
         <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
           <div class="desktop-localization-wrapper">
             {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
@@ -283,7 +283,7 @@
       </div>
     </div>
     {% comment %} Searchbar Desktop View {% endcomment %}
-    {% render 'header-searchbar-mobile' %}
+    {% render 'header-searchbar-mobile' input_id: 'Search-Mobile' %}
   </header>
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
 
