@@ -25,6 +25,14 @@ h2 {
   overflow: hidden;
   box-shadow: var(--drop-shadow);
   text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+}
+
+.solution-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05); 
+
 }
 
 .solution-card-header {
@@ -44,6 +52,8 @@ h2 {
 
 .solution-card-header .icon {
   margin-right: 8px;
+  margin-top: 8px;
+  
 }
 
 .solution-card-body {
