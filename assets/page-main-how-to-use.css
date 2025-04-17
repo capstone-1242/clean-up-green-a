@@ -75,8 +75,15 @@
   overflow: hidden;
   text-align: left;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
 .cleaning-description {
   padding-bottom: 24px;
 }
@@ -153,7 +160,7 @@
   }
 
   .card {
-    width: 90%;
+    width: 100%;
   }
 
   .cleaning-text {

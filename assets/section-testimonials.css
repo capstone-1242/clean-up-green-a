@@ -33,8 +33,16 @@
   padding: 2rem 4rem;
   border-radius: 10px;
   max-width: 500px;
-  box-shadow: var(--drop-shadow);
+  box-shadow: var(--drop-shadow); 
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
+.testimonial:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05); 
+
+}
+
 
 .dark-bg {
   grid-column: 1 / -1; 
