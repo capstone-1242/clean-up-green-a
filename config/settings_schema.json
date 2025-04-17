@@ -101,7 +101,7 @@
       }
     ]
   },
-  {
+   {
     "name": "t:settings_schema.typography.name",
     "settings": [
       {
@@ -148,6 +148,7 @@
       }
     ]
   },
+
   {
     "name": "t:settings_schema.layout.name",
     "settings": [
