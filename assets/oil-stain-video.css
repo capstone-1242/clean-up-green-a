@@ -6,7 +6,9 @@
 .oil-stain-video-section h2 , .oil-spill-soil-video-section h2{
   text-align: center;
 }
-
+video{
+  border: 1px solid #111;
+}
 .video-list ul {
   display: grid; 
   gap: 2rem;
