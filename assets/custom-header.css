@@ -25,30 +25,51 @@ header {
   z-index: 1;
 }
 
-.header__inline-menu a:hover {
-  text-decoration: underline #668A55;
+
+.menu-item:hover .main-link {
+  color: #111;
+  text-decoration: none;
 }
 
+/* Always remove underline on main link */
+.menu-item .main-link,
+.menu-item .main-link:focus {
+  text-decoration: none;
+}
+
+
+/* if the nav-item is active */
+.header__active-menu-item,.header__inline-menu a:hover{
+  text-decoration: underline #668A55 !important;
+
+}
 .menu-item {
   align-items: center;
   display: inline-flex;
-  padding: 0 1px;
+  margin: 0 4px; /* Add spacing BETWEEN items */
+  padding: 0px;     /* Remove the 1px padding */
 }
+
+/* if u hover over nav-links */
+.header__menu-item:hover .header__menu-item:hover , .menu-item:hover{
+  background-color: #668A55;
+  color: #111;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.header__menu-item:hover span {
+  color: #111;
+  text-decoration: none;
+}
+
 
 .menu-item:hover .header__submenu {
   display: block;
 }
 
-.menu-item:hover .main-link,
-.menu-item .main-link:focus {
-  text-decoration: underline;
-  text-decoration-color: green;
-}
 
-.menu-item:hover svg {
-  fill: #ffffff;
-  transform: rotate(180deg);
-}
+
+
 
 .menu-item svg {
   fill: #b0b0b0;
@@ -57,7 +78,10 @@ header {
   transition: transform 0.2s, fill 0.2s;
   width: 10px;
 }
-
+.menu-item:hover svg {
+  stroke: #111 !important;
+  transform: rotate(180deg);
+}
 .header__submenu {
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -159,7 +183,13 @@ header {
     gap: 1rem;
   }
 }
-
+/* sim */
+@media screen and (max-width: 1049px) {
+  .menu-item {
+    margin: 0 2px;
+    padding: 4px 6px;
+  }
+}
 @media screen and (min-width: 1320px) {
   header {
     flex-direction: row;
@@ -262,3 +292,5 @@ header {
 .menu-drawer__split-button details:hover {
   border: 1px solid var(--color-secondary-medium-green);
 }
+
+
